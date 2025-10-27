@@ -1,0 +1,242 @@
+/* ///////////////////////////////////////////////////////// */
+/* //////////////////// COLOR SCHEME /////////////////////// */
+/* Primary:   #1E1E2F (charcoal navy) */
+/* Accent:    #00BFFF (deep sky blue) */
+/* Highlight: #5CDB95 (mint green) */
+/* Background: #F7F9FC (very light grey-blue) */
+/* ///////////////////////////////////////////////////////// */
+
+/* ///////////////////////////////////////////////////////// */
+/* ////////////////// UTILITY CLASSES /////////////////////// */
+/* ///////////////////////////////////////////////////////// */
+/* ANIMATION */
+/* ///////////////////////////////// */
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Typing animation 1 */
+@keyframes typing1 {
+  0% {
+    width: 0;
+    border-right: 2px solid var(--background-color);
+  }
+  99% {
+    border-right: 2px solid var(--background-color);
+  }
+  100% {
+    width: 33.5ch;
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typing2 {
+  0% {
+    width: 0;
+    border-right: 2px solid var(--highlight-color);
+  }
+  99% {
+    border-right: 2px solid var(--highlight-color);
+  }
+  100% {
+    width: 14ch;
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typing3 {
+  0% {
+    width: 0;
+    border-right: 2px solid var(--background-color);
+  }
+  99% {
+    border-right: 2px solid var(--background-color);
+  }
+  100% {
+    width: 18.5ch;
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typing4 {
+  0% {
+    width: 0;
+    border-right: 2px solid var(--highlight-color);
+  }
+  99% {
+    border-right: 2px solid var(--highlight-color);
+  }
+  100% {
+    width: 19ch;
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typing5 {
+  0% {
+    width: 0;
+    border-right: 2px solid var(--highlight-color);
+  }
+  99% {
+    border-right: 2px solid var(--highlight-color);
+  }
+  100% {
+    width: 23.5ch;
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typing6 {
+  0% {
+    width: 0;
+    border-right: 2px solid var(--background-color);
+  }
+  99% {
+    border-right: 2px solid var(--background-color);
+  }
+  100% {
+    width: 19ch;
+    border-right-color: transparent;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: white;
+  }
+}
+
+/* COLOR VARIABLES */
+/* ///////////////////////////////// */
+:root {
+  --primary-color: #1e1e2f;
+  --secondary-color: #00bfff;
+  --highlight-color: #5cdb95;
+  --background-color: #f7f9fc;
+}
+
+/* ///////////////////////////////////////////////////////// */
+/* ////////////////// GENERAL CLASSES ////////////////////// */
+/* ///////////////////////////////////////////////////////// */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Jura", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  font-family: "Jura", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  line-height: 1;
+}
+
+/* LANGUAGE SWITCHER BUTTON */
+/* /////////////////////////////////////// */
+.language-switcher-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  position: fixed;
+  bottom: 5rem;
+  right: 5rem;
+  z-index: 1000;
+
+  font-size: 2rem;
+  padding: 1rem 1rem;
+
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.language-switcher-btn ion-icon {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+
+  transition: all 0.3s ease;
+}
+
+.language-switcher-btn:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.08);
+}
+
+.language-switcher-btn:hover ion-icon {
+  transform: rotate(180deg);
+}
+
+/* PRIMARY BUTTON */
+/* ///////////////////////////// */
+.primary-btn {
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+
+  padding: 1rem 2rem;
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 6px 12px rgba(35, 138, 173, 0.3);
+}
+
+.primary-btn:hover {
+  background-color: var(--highlight-color);
+  color: var(--primary-color);
+  transform: translateY(-4px);
+}
+
+/* SECONDARY BUTTON */
+/* ///////////////////////////// */
+.secondary-btn {
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+
+  padding: 1rem 2rem;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 6px 12px rgba(35, 138, 173, 0.3);
+}
+
+.secondary-btn:hover {
+  background-color: var(--highlight-color);
+  color: var(--primary-color);
+  transform: translateY(-4px);
+}

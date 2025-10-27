@@ -1,0 +1,222 @@
+/* ///////////////////////////////////////////////////////// */
+/* //////////////////// SERVICES SECTION /////////////////// */
+/* ///////////////////////////////////////////////////////// */
+.services-section {
+  padding: 6rem 12rem;
+  background-color: #f0f4f8;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.services-section h3 {
+  font-size: 2.6rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+
+  margin-bottom: 2rem;
+  background: linear-gradient(
+    to right,
+    var(--secondary-color),
+    var(--highlight-color)
+  );
+  background-size: 150%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Typing Animation / Style */
+.typing3 {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--primary-color);
+  width: 0;
+
+  animation: typing2 2s steps(14, end) forwards;
+}
+
+/* SERVICES INTRO */
+/* //////////////////////////////// */
+.services-intro {
+  font-size: 1.4rem;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+  font-weight: bold;
+  color: var(--primary-color);
+
+  margin-bottom: 6rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  margin-top: 4rem;
+}
+
+/* SERVICE CARD*/
+/* ///////////////////////////// */
+.service-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Side-by-side layout */
+  flex-direction: column; /* Key change: side layout */
+  cursor: pointer;
+  gap: 2rem;
+
+  padding: 3rem;
+  border-radius: 4px;
+  transition: all 0.4s ease;
+
+  border: 4px solid transparent;
+}
+
+.service-image {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 10px solid #e6f2f6;
+  background-color: rgba(0, 191, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 191, 255, 0.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+  animation: float 3s ease-in-out infinite;
+}
+
+.service-image img {
+  width: 80%;
+  height: 80%;
+  border: 5px solid var(--secondary-color);
+  border-radius: 500px;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.service-image:hover img {
+  width: 95%;
+  height: 95%;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.service-card h4 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+
+  color: var(--primary-color);
+}
+
+.service-card p {
+  font-size: 1.2rem;
+
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  line-height: 1.6;
+  color: var(--primary-color);
+
+  transition: all 0.4s ease;
+}
+
+/* SERVICE CARD STATES*/
+/* ///////////////////////////// */
+.service-card:hover {
+  transform: translateY(-12px);
+  border: 4px solid var(--secondary-color);
+
+  background-color: var(--background-color);
+  box-shadow: 0 8px 24px rgba(0, 191, 255, 0.3);
+}
+
+.service-card:hover p {
+  color: var(--secondary-color);
+}
+
+/* LEARN MORE BUTTON / STATES */
+/* ///////////////////////////////////// */
+.service-card a:link,
+.education-card a:link,
+.service-card a:visited,
+.education-card a:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+
+  background: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 2rem;
+
+  letter-spacing: 1px;
+  text-decoration: underline solid 2px transparent;
+  text-underline-offset: 2px;
+  transition: all 0.4s ease;
+
+  position: relative;
+}
+
+.education-card a:link,
+.education-card a:visited {
+  font-size: 1.4rem;
+}
+
+/* Add arrow (→) with ::after */
+.service-card a::after,
+.education-card a::after {
+  content: "→";
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.4s ease;
+  position: absolute;
+  right: -2rem;
+  top: 0;
+}
+
+/* Show arrow on hover */
+.service-card a:hover,
+.education-card a:hover,
+.service-card a:active,
+.education-card a:active {
+  transform: scale(1.08);
+  text-decoration: underline solid 2px var(--secondary-color);
+}
+
+.service-card:hover .service-icon {
+  color: white;
+}
+
+.service-card a:hover::after,
+.education-card a:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* SERVICE CARD ICON */
+/* ///////////////////////////////////// */
+.service-icon {
+  width: 5rem;
+  padding: 1rem;
+  margin-bottom: -1.5rem;
+  background-color: rgba(0, 191, 255, 0.9);
+  border-radius: 50%;
+
+  transition: all 0.4s ease;
+}

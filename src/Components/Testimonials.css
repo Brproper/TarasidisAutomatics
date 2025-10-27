@@ -1,0 +1,105 @@
+/* ///////////////////////////////////////////////////////// */
+/* ////////////////// TESTIMONIALS SECTION ////////////////// */
+/* ///////////////////////////////////////////////////////// */
+.testimonials-section {
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  z-index: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgb(216, 216, 216),
+    rgba(233, 233, 233, 1)
+  );
+}
+
+.testimonials-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animated Heading */
+.testimonials-wrapper h2 {
+  font-size: 2.6rem;
+  margin-bottom: 6rem;
+
+  letter-spacing: 2.5px;
+
+  background: linear-gradient(
+    to left,
+    var(--secondary-color),
+    var(--highlight-color)
+  );
+  background-size: 150%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Typing Animation / Style */
+.typing4 {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--primary-color);
+  width: 0;
+
+  animation: typing4 3s steps(19, end) forwards;
+}
+
+.testimonials-list {
+  display: grid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+/* Testimonial Cards (match hero p) */
+.testimonial-card {
+  max-width: 400px;
+  letter-spacing: 1.5px;
+  line-height: 1.6;
+  background-color: rgba(247, 249, 252, 0.3);
+  color: var(--primary-color);
+  padding: 2rem 3rem;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 5px transparent, 0 6px 12px rgba(138, 138, 138, 0.2);
+  cursor: pointer;
+
+  transition: all 0.4s ease;
+}
+
+.testimonial-card:hover {
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+  box-shadow: inset 0 0 0 5px var(--secondary-color),
+    0 8px 24px rgba(0, 110, 147, 0.3);
+}
+
+.testimonial-text {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+}
+
+.testimonial-role {
+  font-size: 1.1rem;
+  color: #a8a8a8;
+}

@@ -1,0 +1,107 @@
+/* FAQ Section Styles */
+.faq-section {
+  background: linear-gradient(to top, #f0f8ff, #ffffff);
+  padding: 6rem 8rem;
+}
+
+/* Wrapper with max width and spacing */
+.faq-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+/* Section title styling */
+.faq-wrapper h2 {
+  font-size: 2.6rem;
+  letter-spacing: 2.5px;
+  color: var(--secondary-color);
+}
+
+/* Typing Animation / Style */
+.typing5 {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--background-color);
+  width: 0;
+
+  animation: typing5 4s steps(30, end) forwards;
+}
+
+/* List of FAQ items */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Each FAQ card */
+.faq-item {
+  border-radius: 4px;
+  padding: 1.5rem;
+  cursor: pointer;
+  box-shadow: inset 0 0 0px 4px transparent;
+  overflow: hidden;
+
+  transition: all 0.4s ease;
+}
+
+/* Hover effect */
+.faq-item:hover {
+  box-shadow: inset 0 0 0px 4px rgba(0, 191, 255, 0.81);
+}
+
+/* FAQ question row (title + arrow) */
+.faq-question {
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Arrow style & rotation transition */
+.faq-arrow {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  transform: rotate(0deg);
+
+  transition: all 0.4s ease;
+}
+
+/* Rotate arrow when active */
+.faq-item.active .faq-arrow {
+  transform: rotate(90deg);
+}
+
+/* FAQ answer container with transition */
+.faq-answer {
+  border-top: 1px solid transparent;
+
+  padding: 0 0.5rem;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  letter-spacing: 1.5px;
+  margin-top: 1.5rem;
+
+  /* Hidden by default */
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  /* transform: translateY(-5px); */
+  transition: all 0.4s ease;
+}
+
+/* Expand answer when active */
+.faq-item.active .faq-answer {
+  border-top: 1px solid rgb(233, 233, 233);
+  padding: 1rem 0.5rem;
+  max-height: 500px; /* large enough to accommodate content */
+  opacity: 1;
+}

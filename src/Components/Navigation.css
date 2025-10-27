@@ -1,0 +1,105 @@
+/* ///////////////////////////////////////////////////////// */
+/* //////////////////// NAVIGATION BAR ///////////////////// */
+/* ///////////////////////////////////////////////////////// */
+.navigation-bar {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem 3rem;
+
+  background: linear-gradient(to right, #00bfff, #a9dae1);
+  position: fixed;
+  z-index: 1500;
+  top: 0;
+  left: 0;
+}
+
+/* LOGO */
+/* ///////////////////////////// */
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--background-color)
+  );
+  background-size: 200%;
+  background-position: left;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  cursor: pointer;
+
+  transition: background-position 1s ease, transform 0.4s ease;
+}
+
+.logo:hover {
+  background-position: right;
+  transform: scale(1.04);
+}
+
+/* NAVIGATION LINKS */
+/* ///////////////////////////// */
+.navigation-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.navigation-link:link,
+.navigation-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  color: var(--primary-color);
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 191, 255, 0.008);
+
+  transition: all 0.4s ease;
+}
+
+.navigation-link:hover {
+  color: var(--secondary-color);
+  background-color: var(--background-color);
+  box-shadow: 0 4px 12px rgba(0, 191, 255, 0.2);
+
+  transform: scale(1.08);
+}
+
+/* GET STARTED BUTTON */
+/* ///////////////////////////// */
+.get-started:visited,
+.get-started:link {
+  text-decoration: none;
+
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem 1.5rem;
+  letter-spacing: 2px;
+  border: none;
+
+  border-radius: 6px;
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 191, 255, 0.2);
+}
+
+.get-started:hover {
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+  transform: scale(1.06);
+}
