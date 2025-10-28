@@ -196,7 +196,11 @@
   border: none;
 }
 
+<<<<<<< HEAD
 .contact-info h3 {
+=======
+.contact-info h4 {
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
   background: linear-gradient(to left, #1864ab, var(--primary-color));
   background-clip: text;
   -webkit-background-clip: text;
@@ -255,7 +259,11 @@
 
 /* WHY CHOOSE TARASIDIS AUTOMATICS LIST */
 /* //////////////////////////////// */
+<<<<<<< HEAD
 .why-choose-list h3 {
+=======
+.why-choose-list h4 {
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
   text-align: center;
 }
 

@@ -17,6 +17,7 @@ function Hero({ lang, t }) {
       ([entry]) => {
         if (entry.isIntersecting) {
           setInView(true);
+<<<<<<< HEAD
           observer.unobserve(entry.target); // Animate only once
         }
       },
@@ -30,6 +31,29 @@ function Hero({ lang, t }) {
   return (
     <header className="hero-section" id="about" ref={ref}>
       {/* Background Video */}
+=======
+          observer.unobserve(entry.target); // Optional: animate only once
+        }
+      },
+      {
+        threshold: 1, // Adjust this if needed
+      }
+    );
+
+    if (headerRef.current) {
+      observer.observe(headerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+  return (
+    /* ///////////////////////////////////////////////////
+      /////////////////HERO SECTION//////////////////////////
+      //////////////////////////////////////////////////// */
+
+    <header className="hero-section" id="about" ref={ref}>
+      {/* Background Video */}{" "}
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
       {inViewVideo && (
         <video
           autoPlay
@@ -38,6 +62,7 @@ function Hero({ lang, t }) {
           playsInline
           className="background-video"
           preload="none"
+<<<<<<< HEAD
           aria-hidden="true" // Accessibility: hide video from screen readers
           poster="/assets/images/hero-poster.jpg" // Optional fallback image
         >
@@ -106,6 +131,69 @@ function Hero({ lang, t }) {
           {t.exploreServices}
         </a>
       </div>
+=======
+        >
+          <source src={landingVideo} type="video/mp4" />
+        </video>
+      )}
+      {/* <div className="background-overlay" /> */}
+      <div className="video-overlay"></div>
+      {/* HERO HEADERS */}
+      {/* ////////////////////////////////////// */}
+      <h2 ref={headerRef} className={`${inView ? "typing1" : ""}`}>
+        {t.heroTitle}
+      </h2>
+      <h3>{t.heroSubtitle}</h3>
+      <div className="hero-description">
+        {/* HERO DESCRIPTION MAIN PARAGRAPHS */}
+        {/* ////////////////////////////////////// */}
+
+        {lang === "en" ? (
+          <p>
+            At <strong>TarasidisAutomatics</strong>, we specialize in{" "}
+            <strong>AI voice agents</strong>, <strong>AI automations</strong>,{" "}
+            <strong>chatbots</strong>, and <strong>consultation bots</strong>{" "}
+            tailored for <strong>healthcare professionals</strong> and{" "}
+            <strong>coaches</strong>. Our solutions automate client interactions
+            and streamline workflows.
+          </p>
+        ) : (
+          <p>
+            Στην <strong>TarasidisAutomatics</strong>, ειδικευόμαστε σε{" "}
+            <strong>φωνητικούς πράκτορες AI</strong>,
+            <strong>αυτοματισμούς</strong>, <strong>chatbots</strong> και{" "}
+            <strong>bots συμβουλευτικής</strong> προσαρμοσμένα για{" "}
+            <strong>επαγγελματίες υγείας</strong> και{" "}
+            <strong>συμβούλους</strong>. Οι λύσεις μας αυτοματοποιούν την
+            επικοινωνία με τους πελάτες και απλοποιούν την εργασία.
+          </p>
+        )}
+        {lang === "en" ? (
+          <p>
+            Whether you’re a private clinic, wellness coach, or a digital health
+            platform, our AI-powered systems are built to{" "}
+            <strong>scale your business impact</strong>,{" "}
+            <strong>improve your client retention</strong>, and{" "}
+            <strong>boost your operational efficiency</strong>. We offer 24/7
+            hour support.
+          </p>
+        ) : (
+          <p>
+            Είτε είστε ιδιωτικό ιατρείο, σύμβουλος ευεξίας ή ψηφιακή πλατφόρμα
+            υγείας, τα συστήματά μας με τεχνητή νοημοσύνη είναι σχεδιασμένα για
+            να <strong>επεκτείνουν την επίδρασή σας</strong>,{" "}
+            <strong>βελτιώσουν την διατήρηση πελατών</strong> και{" "}
+            <strong>να ενισχύσουν την αποδοτικότητα των λειτουργιών σας</strong>
+            . Προσφέρουμε υποστήριξη 24/7.
+          </p>
+        )}
+      </div>
+      {/*PRIMARY BTN */}
+      {/* ////////////////////////////////////// */}
+      <a href="#services" className="primary-btn">
+        {t.exploreServices}
+      </a>
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
     </header>
   );
 }

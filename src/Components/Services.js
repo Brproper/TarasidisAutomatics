@@ -87,6 +87,7 @@ function Services({ lang, t }) {
               παρέχουν <strong>συνεπή εξυπηρέτηση 24/7</strong>.
             </p>
           )}
+<<<<<<< HEAD
           <a href="#contact" className="learn-more-btn">
             {t.learnMore}
           </a>
@@ -98,6 +99,17 @@ function Services({ lang, t }) {
 
         <div className="service-image">
           <img src={Sound} alt="Voice assistant " />
+=======
+          <a href="#contact">{t.learnMore}</a>
+        </div>
+
+        <div className="service-image">
+          <img src={ChatbotsImg} alt="Service visual" />
+        </div>
+
+        <div className="service-image">
+          <img src={Sound} alt="Service visual" />
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
         </div>
 
         {/*SERVICE CARD */}
@@ -136,9 +148,13 @@ function Services({ lang, t }) {
               <strong>προσβάσιμες-πρώτες εμπειρίες</strong>.
             </p>
           )}
+<<<<<<< HEAD
           <a href="#contact" className="learn-more-btn">
             {t.learnMore}
           </a>
+=======
+          <a href="#contact">{t.learnMore}</a>
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
         </div>
 
         {/*SERVICE CARD */}
@@ -176,6 +192,7 @@ function Services({ lang, t }) {
               <strong>βελτιστοποιούν αποφάσεις</strong> σε πραγματικό χρόνο.
             </p>
           )}
+<<<<<<< HEAD
           <a href="#contact" className="learn-more-btn">
             {t.learnMore}
           </a>
@@ -187,6 +204,17 @@ function Services({ lang, t }) {
 
         <div className="service-image">
           <img src={TechBrainAi} alt="Custom Ai" />
+=======
+          <a href="#contact">{t.learnMore}</a>
+        </div>
+
+        <div className="service-image">
+          <img src={DataImg} alt="Service visual" />
+        </div>
+
+        <div className="service-image">
+          <img src={TechBrainAi} alt="Service visual" />
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
         </div>
 
         {/*SERVICE CARD */}
@@ -225,9 +253,13 @@ function Services({ lang, t }) {
               <strong>ανταγωνιστικό πλεονέκτημα</strong>.
             </p>
           )}
+<<<<<<< HEAD
           <a href="#contact" className="learn-more-btn">
             {t.learnMore}
           </a>
+=======
+          <a href="#contact">{t.learnMore}</a>
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
         </div>
       </div>
     </section>

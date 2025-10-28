@@ -49,7 +49,10 @@ export default function App() {
       <div className="language-switcher">
         <button
           className="language-switcher-btn"
+<<<<<<< HEAD
           aria-label="language-switcher-btn"
+=======
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
           onClick={() => {
             LanguageSwitcher();
             ToggleLanguage();

@@ -58,7 +58,10 @@ function Education({ lang, t }) {
           playsInline
           className="background-video2"
           preload="none"
+<<<<<<< HEAD
           aria-hidden="true"
+=======
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
         >
           <source src={landingVideo2} type="video/mp4" />
         </video>
@@ -96,7 +99,10 @@ function Education({ lang, t }) {
       <div className="carousel-wrapper">
         {/* CAROUSEL LEFT BUTTON */}
         <button
+<<<<<<< HEAD
           aria-label="Scroll carousel left"
+=======
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
           className="carousel-btn left"
           onClick={() => scrollCarousel(-1)}
         >
@@ -107,7 +113,11 @@ function Education({ lang, t }) {
           {/* EDUCATION CARD */}
           <div className="education-card">
             <div className="card-inner">
+<<<<<<< HEAD
               <h3>{t.educationCard1Title}</h3>
+=======
+              <h4>{t.educationCard1Title}</h4>
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
               {lang === "en" ? (
                 <p>
                   Discover how <strong>AI-powered voice agents</strong> can
@@ -128,6 +138,7 @@ function Education({ lang, t }) {
                   διαχείριση.
                 </p>
               )}
+<<<<<<< HEAD
               <a
                 href="#contact"
                 aria-label={`Learn more about ${t.educationCard1Title}`}
@@ -135,13 +146,20 @@ function Education({ lang, t }) {
               >
                 {t.learnMore}
               </a>
+=======
+              <a href="#contact">{t.learnMore}</a>
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
             </div>
           </div>
 
           {/* EDUCATION CARD */}
           <div className="education-card">
             <div className="card-inner">
+<<<<<<< HEAD
               <h3>{t.educationCard2Title}</h3>
+=======
+              <h4>{t.educationCard2Title}</h4>
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
               {lang === "en" ? (
                 <p>
                   Learn how to design and deploy{" "}
@@ -169,6 +187,7 @@ function Education({ lang, t }) {
                   .
                 </p>
               )}
+<<<<<<< HEAD
               <a
                 href="#contact"
                 aria-label={`Learn more about ${t.educationCard2Title}`}
@@ -176,13 +195,20 @@ function Education({ lang, t }) {
               >
                 {t.learnMore}
               </a>
+=======
+              <a href="#contact">{t.learnMore}</a>
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
             </div>
           </div>
 
           {/* EDUCATION CARD */}
           <div className="education-card">
             <div className="card-inner">
+<<<<<<< HEAD
               <h3>{t.educationCard3Title}</h3>
+=======
+              <h4>{t.educationCard3Title}</h4>
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
               {lang === "en" ? (
                 <p>
                   Explore how <strong>practice automation</strong>—from billing
@@ -203,6 +229,7 @@ function Education({ lang, t }) {
                   ενσωμάτωσης για μικρές ομάδες.
                 </p>
               )}
+<<<<<<< HEAD
               <a
                 href="#contact"
                 aria-label={`Learn more about ${t.educationCard3Title}`}
@@ -210,13 +237,20 @@ function Education({ lang, t }) {
               >
                 {t.learnMore}
               </a>
+=======
+              <a href="#contact">{t.learnMore}</a>
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
             </div>
           </div>
 
           {/* EDUCATION CARD */}
           <div className="education-card">
             <div className="card-inner">
+<<<<<<< HEAD
               <h3>{t.educationCard4Title}</h3>
+=======
+              <h4>{t.educationCard4Title}</h4>
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
               {lang === "en" ? (
                 <p>
                   Discover <strong>AI tools</strong> that support mental health
@@ -233,6 +267,7 @@ function Education({ lang, t }) {
                   <strong> ιδιωτικότητα και ενσυναίσθηση</strong>.
                 </p>
               )}
+<<<<<<< HEAD
               <a
                 href="#contact"
                 aria-label={`Learn more about ${t.educationCard4Title}`}
@@ -240,13 +275,19 @@ function Education({ lang, t }) {
               >
                 {t.learnMore}
               </a>
+=======
+              <a href="#contact">{t.learnMore}</a>
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
             </div>
           </div>
         </div>
 
         {/* CAROUSEL RIGHT BUTTON */}
         <button
+<<<<<<< HEAD
           aria-label="Scroll carousel right"
+=======
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
           className="carousel-btn right"
           onClick={() => scrollCarousel(1)}
         >

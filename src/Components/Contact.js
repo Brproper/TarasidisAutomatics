@@ -38,7 +38,10 @@ function Contact({ lang, t }) {
     <section id="contact" className="contact-section" ref={ref}>
       {inViewVideo && (
         <video
+<<<<<<< HEAD
           aria-hidden="true"
+=======
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
           autoPlay
           muted
           loop
@@ -70,7 +73,10 @@ function Contact({ lang, t }) {
           {/* ////////////////////////////////////// */}
           <form className="contact-form">
             <input
+<<<<<<< HEAD
               id="name"
+=======
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
               type="text"
               name="name"
               placeholder={t.namePlaceholder}
@@ -88,11 +94,15 @@ function Contact({ lang, t }) {
               rows="5"
               required
             ></textarea>
+<<<<<<< HEAD
             <button
               type="submit"
               className="primary-btn"
               aria-label="send message"
             >
+=======
+            <button type="submit" className="primary-btn">
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
               {t.sendMessage}
             </button>
           </form>
@@ -102,9 +112,15 @@ function Contact({ lang, t }) {
         {/* ////////////////////////////////////// */}
         <div className="contact-info">
           <div className="contact-email">
+<<<<<<< HEAD
             <h3>{t.contactInfoTitle}</h3>
             <div>
               <button aria-label="Send email">
+=======
+            <h4>{t.contactInfoTitle}</h4>
+            <div>
+              <button>
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
                 <ion-icon name="mail-outline"></ion-icon>
               </button>
               <a href="mailto:tarasidisautomatics@gmail.com">
@@ -116,37 +132,53 @@ function Contact({ lang, t }) {
           {/* SOCIALS CONTAINER */}
           {/* ////////////////////////////////////// */}
           <div className="socials-container">
+<<<<<<< HEAD
             <h3>{t.followUs}</h3>
+=======
+            <h4>{t.followUs}</h4>
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
             <div className="social-links">
               <a
                 href="https://www.facebook.com/profile.php?id=100013231872326"
                 target="_blank"
                 rel="noopener noreferrer"
               >
+<<<<<<< HEAD
                 <ion-icon
                   name="logo-facebook"
                   aria-label="Visit our Facebook page"
                 ></ion-icon>
+=======
+                <ion-icon name="logo-facebook"></ion-icon>
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
               </a>
               <a
                 href="https://www.linkedin.com/company/tarasidisautomatics"
                 target="_blank"
                 rel="noopener noreferrer"
               >
+<<<<<<< HEAD
                 <ion-icon
                   name="logo-linkedin"
                   aria-label="Visit our Linkedin"
                 ></ion-icon>
+=======
+                <ion-icon name="logo-linkedin"></ion-icon>
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
               </a>
               <a
                 href="https://www.instagram.com/tarasidisautomatics"
                 target="_blank"
                 rel="noopener noreferrer"
               >
+<<<<<<< HEAD
                 <ion-icon
                   name="logo-instagram"
                   aria-label="Visit our Instagram page"
                 ></ion-icon>
+=======
+                <ion-icon name="logo-instagram"></ion-icon>
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
               </a>
             </div>
           </div>
@@ -154,7 +186,11 @@ function Contact({ lang, t }) {
           {/* WHY CHOOSE TARASIDIS AUTOMATICS LIST */}
           {/* ////////////////////////////////////// */}
           <div className="why-choose-list">
+<<<<<<< HEAD
             <h3>{t.whyChooseTitle}</h3>
+=======
+            <h4>{t.whyChooseTitle}</h4>
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
             <ul>
               {lang === "el" ? (
                 <>
@@ -198,9 +234,13 @@ function Contact({ lang, t }) {
             </ul>
           </div>
 
+<<<<<<< HEAD
           <button className="secondary-btn" aria-label="Book call">
             {t.bookCall}
           </button>
+=======
+          <button className="secondary-btn">{t.bookCall}</button>
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
         </div>
       </div>
     </section>

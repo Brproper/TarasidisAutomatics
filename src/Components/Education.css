@@ -133,7 +133,11 @@
   transition: all 0.5s ease;
 }
 
+<<<<<<< HEAD
 .education-card h3 {
+=======
+.education-card h4 {
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
   font-size: 2rem;
   letter-spacing: 2px;
   text-align: center;
@@ -155,7 +159,11 @@
   background-color: rgb(255, 255, 255);
 }
 
+<<<<<<< HEAD
 .education-card:hover h3 {
+=======
+.education-card:hover h4 {
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
   color: var(--secondary-color);
 }
 

@@ -4,10 +4,13 @@
 .services-section {
   padding: 6rem 12rem;
   background-color: #f0f4f8;
+<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+=======
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
   text-align: center;
   color: var(--primary-color);
 }
@@ -30,6 +33,7 @@
   color: transparent;
 }
 
+<<<<<<< HEAD
 .service-card h4 {
   font-size: 1.8rem;
   font-weight: bold;
@@ -49,6 +53,8 @@
   transition: all 0.4s ease;
 }
 
+=======
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
 /* Typing Animation / Style */
 .typing3 {
   display: inline-block;
@@ -61,12 +67,20 @@
 }
 
 /* SERVICES INTRO */
+<<<<<<< HEAD
+=======
+/* //////////////////////////////// */
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
 .services-intro {
   font-size: 1.4rem;
   letter-spacing: 1.5px;
   line-height: 1.5;
   font-weight: bold;
   color: var(--primary-color);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
   margin-bottom: 6rem;
 }
 
@@ -77,22 +91,39 @@
   margin-top: 4rem;
 }
 
+<<<<<<< HEAD
 /* SERVICE CARD */
 .service-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+=======
+/* SERVICE CARD*/
+/* ///////////////////////////// */
+.service-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Side-by-side layout */
+  flex-direction: column; /* Key change: side layout */
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
   cursor: pointer;
   gap: 2rem;
 
   padding: 3rem;
   border-radius: 4px;
   transition: all 0.4s ease;
+<<<<<<< HEAD
   border: 4px solid transparent;
 }
 
 /* SERVICE IMAGE */
+=======
+
+  border: 4px solid transparent;
+}
+
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
 .service-image {
   width: 500px;
   height: 500px;
@@ -101,6 +132,10 @@
   border: 10px solid #e6f2f6;
   background-color: rgba(0, 191, 255, 0.1);
   box-shadow: 0 8px 24px rgba(0, 191, 255, 0.2);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
   display: flex;
   align-items: center;
   justify-content: center;
@@ -122,6 +157,7 @@
   height: 95%;
 }
 
+<<<<<<< HEAD
 /* SERVICE CARD HOVER */
 .service-card:hover {
   transform: translateY(-12px);
@@ -145,6 +181,9 @@
 }
 
 /* FLOAT ANIMATION */
+=======
+/* Floating animation */
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
 @keyframes float {
   0%,
   100% {
@@ -155,6 +194,7 @@
   }
 }
 
+<<<<<<< HEAD
 /* ///////////////////////////////////////////////////////// */
 /* ////////////////////// MEDIA QUERIES ///////////////////// */
 /* ///////////////////////////////////////////////////////// */
@@ -237,4 +277,111 @@
   .service-card p {
     font-size: 1rem;
   }
+=======
+.service-card h4 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+
+  color: var(--primary-color);
+}
+
+.service-card p {
+  font-size: 1.2rem;
+
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  line-height: 1.6;
+  color: var(--primary-color);
+
+  transition: all 0.4s ease;
+}
+
+/* SERVICE CARD STATES*/
+/* ///////////////////////////// */
+.service-card:hover {
+  transform: translateY(-12px);
+  border: 4px solid var(--secondary-color);
+
+  background-color: var(--background-color);
+  box-shadow: 0 8px 24px rgba(0, 191, 255, 0.3);
+}
+
+.service-card:hover p {
+  color: var(--secondary-color);
+}
+
+/* LEARN MORE BUTTON / STATES */
+/* ///////////////////////////////////// */
+.service-card a:link,
+.education-card a:link,
+.service-card a:visited,
+.education-card a:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+
+  background: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 2rem;
+
+  letter-spacing: 1px;
+  text-decoration: underline solid 2px transparent;
+  text-underline-offset: 2px;
+  transition: all 0.4s ease;
+
+  position: relative;
+}
+
+.education-card a:link,
+.education-card a:visited {
+  font-size: 1.4rem;
+}
+
+/* Add arrow (→) with ::after */
+.service-card a::after,
+.education-card a::after {
+  content: "→";
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.4s ease;
+  position: absolute;
+  right: -2rem;
+  top: 0;
+}
+
+/* Show arrow on hover */
+.service-card a:hover,
+.education-card a:hover,
+.service-card a:active,
+.education-card a:active {
+  transform: scale(1.08);
+  text-decoration: underline solid 2px var(--secondary-color);
+}
+
+.service-card:hover .service-icon {
+  color: white;
+}
+
+.service-card a:hover::after,
+.education-card a:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* SERVICE CARD ICON */
+/* ///////////////////////////////////// */
+.service-icon {
+  width: 5rem;
+  padding: 1rem;
+  margin-bottom: -1.5rem;
+  background-color: rgba(0, 191, 255, 0.9);
+  border-radius: 50%;
+
+  transition: all 0.4s ease;
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
 }

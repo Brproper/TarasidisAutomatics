@@ -129,11 +129,14 @@
 /* ///////////////////////////////////////////////////////// */
 /* ////////////////// GENERAL CLASSES ////////////////////// */
 /* ///////////////////////////////////////////////////////// */
+<<<<<<< HEAD
 html,
 body {
   overflow-x: hidden;
 }
 
+=======
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
 * {
   padding: 0;
   margin: 0;
@@ -245,6 +248,7 @@ body {
   color: var(--primary-color);
   transform: translateY(-4px);
 }
+<<<<<<< HEAD
 
 /* LEARN MORE BUTTON */
 /* ///////////////////////////// */
@@ -287,3 +291,5 @@ body {
   opacity: 1;
   transform: translateX(0);
 }
+=======
+>>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
