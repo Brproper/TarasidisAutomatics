@@ -1,0 +1,64 @@
+/* ///////////////////////////////////////////////////////// */
+/* //////////////////// FOOTER SECTION ///////////////////// */
+/* ///////////////////////////////////////////////////////// */
+.footer-section {
+  background-color: #1e1e2f;
+  color: var(--background-color);
+  padding: 2rem 4rem;
+  text-align: center;
+}
+
+/* FOOTER CONTAINER */
+/* //////////////////////////////// */
+.footer-container {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-container p {
+  font-size: 1.2rem;
+}
+
+/* FOOTER LINKS */
+/* //////////////////////////////// */
+.footer-links ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer-links a {
+  color: var(--background-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+
+  transition: color 0.4s ease;
+}
+
+.footer-links a:hover {
+  color: var(--secondary-color);
+}
+
+/* FOOTER SOCIALS */
+/* //////////////////////////////// */
+.footer-socials {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.footer-socials ion-icon {
+  font-size: 1.6rem;
+  color: var(--highlight-color);
+
+  transition: transform 0.5s ease;
+}
+
+.footer-socials ion-icon:hover {
+  transform: scale(1.2);
+  color: var(--secondary-color);
+}
