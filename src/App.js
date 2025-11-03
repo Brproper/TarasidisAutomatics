@@ -1,29 +1,18 @@
-import React, { useState } from "react";
 import "./index.css";
 
 import Navigation from "./Components/Navigation";
 import Hero from "./Components/Hero";
 import Services from "./Components/Services";
-import Education from "./Components/Education";
+import WhoWeHelp from "./Components/WhoWeHelp.js";
+import HowItWorks from "./Components/HowItWorks.js";
 import Faq from "./Components/Faq";
-import Testimonials from "./Components/Testimonials.js";
+import WhyMedfitAI from "./Components/WhyMedfitAi.js";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import translations from "./Components/translations";
 
 export default function App() {
-  const [lang, setLang] = useState("en"); // "el" για ελληνικά
-  const [fi, setFi] = useState("fi fi-gb");
-
-  function LanguageSwitcher() {
-    setLang((prevLang) => (prevLang === "en" ? "el" : "en"));
-  }
-
-  function ToggleLanguage() {
-    setFi((prev) => (prev === "fi fi-gr" ? "fi fi-gb" : "fi fi-gr"));
-  }
-
-  const t = translations[lang];
+  const t = translations.en;
 
   return (
     <>
@@ -32,79 +21,57 @@ export default function App() {
         /* Navigation / Hero Sections 
       /////////////////////////////////*/
       }
-      <Navigation
-        lang={lang}
-        t={t}
-        toggleLanguage={ToggleLanguage}
-        switchLanguage={LanguageSwitcher}
-        fi={fi}
-      />
-      <Hero lang={lang} t={t} />
+      <Navigation t={t} />
+      <Hero t={t} />
 
       {
         ////////////////////////////////////
-        /* Language Switcher 
+        /* Who We help 
       /////////////////////////////////*/
       }
-      <div className="language-switcher">
-        <button
-          className="language-switcher-btn"
-<<<<<<< HEAD
-          aria-label="language-switcher-btn"
-=======
->>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
-          onClick={() => {
-            LanguageSwitcher();
-            ToggleLanguage();
-          }}
-        >
-          <ion-icon name="swap-horizontal-outline"></ion-icon>
-
-          <span className={fi}></span>
-        </button>
-      </div>
+      <WhoWeHelp />
 
       {
         ////////////////////////////////////
         /* Services Section
       /////////////////////////////////*/
       }
-      <Services lang={lang} t={t} />
+      <Services t={t} />
 
       {
         ////////////////////////////////////
         /* Education Section
       /////////////////////////////////*/
       }
-      <Education lang={lang} t={t} />
+      <HowItWorks t={t} />
 
       {
         ////////////////////////////////////
-        /* Testimonials Section
+        /* Why MedFitAi Section
       /////////////////////////////////*/
       }
-      <Testimonials lang={lang} />
+      <WhyMedfitAI />
 
       {
         ////////////////////////////////////
         /* FAQ Section
       /////////////////////////////////*/
       }
-      <Faq lang={lang} />
+      <Faq t={t} />
 
       {
         ////////////////////////////////////
         /* Contact Section
       /////////////////////////////////*/
       }
-      <Contact lang={lang} t={t} />
+      <Contact t={t} />
 
       {
         ////////////////////////////////////
         /* Footer Section
       /////////////////////////////////*/
       }
-      <Footer lang={lang} t={t} />
+      <Footer t={t} />
     </>
   );
 }

@@ -1,67 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!-- ✅ Basic Metadata -->
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="MedFit AI — AI voice agents and automations for healthcare and fitness professionals."
     />
+    <title>MedFit AI | Intelligent Healthcare & Fitness Automation</title>
+
+    <!-- ✅ Favicon & Manifest -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ✅ Google Fonts (Single Optimized Request) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Nova+Mono&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Space+Grotesk:wght@300..700&family=Tektur:wght@400..900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- ✅ Flag Icons (deferred loading for non-critical assets) -->
     <link
-      rel="stylesheet"
+      rel="preload"
       href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"
+      />
+    </noscript>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <!-- ✅ Structured Data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "MedFit AI",
+        "url": "https://medfit.ai",
+        "logo": "%PUBLIC_URL%/logo192.png",
+        "description": "AI solutions for healthcare and fitness professionals.",
+        "sameAs": [
+          "https://www.linkedin.com/company/medfitai",
+          "https://twitter.com/medfitai"
+        ]
+      }
+    </script>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-
+    <!-- ✅ Ionicons (defer loading to avoid render-blocking) -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      defer
     ></script>
     <script
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+      defer
     ></script>
+
+    <!-- ✅ Preload Critical CSS -->
+    <link rel="preload" href="/static/css/main.css" as="style" />
+  </head>
+
+  <body>
+    <noscript>
+      <strong>
+        We’re sorry — this app works best with JavaScript enabled.
+      </strong>
+    </noscript>
+
+    <!-- ✅ React Root -->
+    <div id="root"></div>
+
+    <!-- ✅ Main JS Bundle -->
+    <script src="%PUBLIC_URL%/static/js/bundle.js" defer></script>
   </body>
 </html>

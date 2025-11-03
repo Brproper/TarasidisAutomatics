@@ -1,77 +1,43 @@
 const faqData = {
   en: [
     {
-      question: "What is TarasidisAutomatics?",
+      question: "How long does setup take?",
       answer:
-        "TarasidisAutomatics is a company specializing in AI voice agents, automations, chatbots, and consultation bots for healthcare professionals and coaches.",
+        "Most clinics and fitness businesses are fully operational within a few days.",
     },
     {
-      question: "Who are your services for?",
-      answer:
-        "Our solutions are ideal for private clinics, wellness coaches, and digital health platforms aiming to automate communication and streamline workflows.",
+      question: "Do I need technical skills?",
+      answer: "Not at all — we handle everything for you.",
     },
     {
-      question: "What kind of AI solutions do you provide?",
-      answer:
-        "We offer AI chatbots, voice assistants, AI-powered analytics, and custom AI models tailored to your business needs.",
+      question: "Which platforms are supported?",
+      answer: "Google Calendar, WhatsApp, Meta, CRMs, and booking tools.",
     },
     {
-      question: "Can AI help improve client retention?",
-      answer:
-        "Absolutely. Our bots can engage with clients consistently, answer FAQs, follow up with leads, and ensure a smoother customer experience.",
+      question: "Is my data secure?",
+      answer: "Yes — fully GDPR-compliant and encrypted.",
     },
     {
-      question: "Do you offer 24/7 support?",
+      question: "How does pricing work?",
       answer:
-        "Yes, all our AI solutions come with 24/7 support to ensure uninterrupted service and assistance.",
+        "Custom plans based on your business size and call volume. No hidden fees.",
     },
     {
-      question: "How fast can I deploy a solution?",
-      answer:
-        "Depending on the complexity, some solutions can be ready in a few days, while custom models may take 1–2 weeks.",
+      question: "Can the AI speak multiple languages?",
+      answer: "Yes — English, Greek, and others on request.",
     },
     {
-      question: "Do I need technical knowledge to use your services?",
+      question: "What results can I expect?",
       answer:
-        "Not at all. We provide user-friendly dashboards, onboarding, and training so you can manage your AI easily.",
-    },
-  ],
-  el: [
-    {
-      question: "Τι είναι το TarasidisAutomatics;",
-      answer:
-        "Το TarasidisAutomatics είναι μια εταιρεία που ειδικεύεται σε φωνητικούς πράκτορες AI, αυτοματισμούς, chatbots και συμβουλευτικά bots για επαγγελματίες υγείας και coaches.",
+        "While MedFit AI is new, similar systems deliver: -30–40% fewer no-shows, 10+ admin hours saved weekly, faster responses and happier clients",
     },
     {
-      question: "Για ποιους προορίζονται οι υπηρεσίες σας;",
-      answer:
-        "Οι λύσεις μας είναι ιδανικές για ιδιωτικά ιατρεία, coaches ευεξίας και ψηφιακές πλατφόρμες υγείας που θέλουν να αυτοματοποιήσουν την επικοινωνία και να βελτιστοποιήσουν τις ροές εργασίας.",
+      question: "Does this replace my staff?",
+      answer: "No — it supports your staff by automating repetitive tasks.",
     },
     {
-      question: "Τι είδους λύσεις AI προσφέρετε;",
-      answer:
-        "Προσφέρουμε AI chatbots, φωνητικούς βοηθούς, ανάλυση δεδομένων με AI και προσαρμοσμένα μοντέλα τεχνητής νοημοσύνης για τις ανάγκες σας.",
-    },
-    {
-      question: "Μπορεί η ΤΝ να βελτιώσει τη διατήρηση πελατών;",
-      answer:
-        "Απολύτως. Τα bots μας μπορούν να επικοινωνούν με πελάτες, να απαντούν σε συχνές ερωτήσεις, να κάνουν follow-up και να προσφέρουν συνεπή εξυπηρέτηση.",
-    },
-    {
-      question: "Παρέχετε υποστήριξη 24/7;",
-      answer:
-        "Ναι, όλες οι λύσεις μας συνοδεύονται από υποστήριξη 24/7 για αδιάλειπτη λειτουργία και βοήθεια.",
-    },
-    {
-      question: "Πόσο γρήγορα μπορώ να εφαρμόσω μια λύση;",
-      answer:
-        "Ανάλογα με την πολυπλοκότητα, κάποιες λύσεις εφαρμόζονται σε λίγες μέρες, ενώ τα προσαρμοσμένα μοντέλα απαιτούν 1–2 εβδομάδες.",
-    },
-    {
-      question:
-        "Χρειάζομαι τεχνικές γνώσεις για να χρησιμοποιήσω τις υπηρεσίες σας;",
-      answer:
-        "Καθόλου. Παρέχουμε εύχρηστο περιβάλλον, οδηγίες και εκπαίδευση για να διαχειρίζεστε εύκολα τις λύσεις μας.",
+      question: "What if I need updates or support later?",
+      answer: "We monitor and optimize your AI continuously.",
     },
   ],
 };

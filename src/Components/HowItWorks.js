@@ -1,0 +1,176 @@
+import React, { useEffect, useRef, useState } from "react";
+import "./HowItWorks.css";
+import { useInView } from "react-intersection-observer";
+import landingVideo2 from "../assets/videos/LandingPageAi2.mp4";
+
+function HowItWorks({ t }) {
+  const { ref, inView: inViewVideo } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
+  const headerRef = useRef(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.unobserve(entry.target); // Optional: animate only once
+        }
+      },
+      {
+        threshold: 1, // Adjust this if needed
+      }
+    );
+
+    if (headerRef.current) {
+      observer.observe(headerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const carouselRef = useRef(null);
+
+  const scrollCarousel = (direction) => {
+    if (!carouselRef.current) return;
+    const cardWidth =
+      carouselRef.current.querySelector(".how-it-works-card").offsetWidth;
+    carouselRef.current.scrollBy({
+      left: direction * (cardWidth + 32), // Assuming the gap between cards is 32px
+      behavior: "smooth",
+    });
+  };
+
+  return (
+    /* ///////////////////////////////////////////////////
+      /////////////////EDUCATION SECTION/////////////////////////
+      //////////////////////////////////////////////////// */
+    <section className="how-it-works-section" id="howItWorks" ref={ref}>
+      {/* Background Video */}
+      {inViewVideo && (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="background-video2"
+          preload="none"
+          aria-hidden="true"
+        >
+          <source src={landingVideo2} type="video/mp4" />
+        </video>
+      )}
+
+      {/* <div className="background-overlay" /> */}
+      <div className="video-overlay2"></div>
+
+      <div className="header-container">
+        {/* EDUCATION HEADER */}
+        <h2
+          ref={headerRef}
+          className={`section-heading ${inView ? "typing2" : ""}`}
+        >
+          {t.howItWorksTitle}
+        </h2>
+        <p className="section-subheading">
+          It all starts with a <strong>30-minute discovery call</strong> where
+          we map your current <strong>workflow</strong> — how you manage{" "}
+          <strong>calls, inquiries, bookings, and reminders</strong>. You simply
+          walk us through your daily process, and together we uncover how{" "}
+          <strong>AI can save time</strong>,{" "}
+          <strong>reduce missed revenue</strong>, and make your operations run
+          effortlessly.
+        </p>
+      </div>
+
+      <div className="carousel-wrapper">
+        {/* CAROUSEL LEFT BUTTON */}
+        <button
+          aria-label="Scroll carousel left"
+          className="carousel-btn left"
+          onClick={() => scrollCarousel(-1)}
+        >
+          <span>&#10094;</span>
+        </button>
+
+        <div className="carousel" id="education-carousel" ref={carouselRef}>
+          {/* EDUCATION CARD */}
+          <div className="how-it-works-card">
+            <div className="card-inner">
+              <h3>{t.howItWorksStep1}</h3>
+              <p>
+                We start with a <strong>30-minute call</strong> to understand
+                your current
+                <strong> workflow</strong> — how you handle{" "}
+                <strong>calls, inquiries, bookings, and reminders</strong>. You
+                simply walk us through your process, and we identify where{" "}
+                <strong>AI can save the most time</strong> and{" "}
+                <strong>reduce missed revenue</strong>.
+              </p>
+              <p className="italic">
+                <span></span>Takes just <strong>30 minutes</strong> — no
+                <strong> technical setup</strong> required.
+              </p>
+            </div>
+          </div>
+
+          {/* EDUCATION CARD */}
+          <div className="how-it-works-card">
+            <div className="card-inner">
+              <h3>{t.howItWorksStep2}</h3>
+              <p>
+                We design your{" "}
+                <strong>custom AI Voice Agent and Chatbot</strong> to match your
+                <strong> communication style, tone, and workflow</strong>.
+                Everything connects directly to your tools —{" "}
+                <strong>calendar, CRM, or Google Sheets</strong>. Once ready, we
+                test it in real-world scenarios to ensure it
+                <strong> sounds natural</strong> and{" "}
+                <strong>performs flawlessly</strong>.
+              </p>
+              <p className="italic">
+                Your system is <strong>ready</strong> within a{" "}
+                <strong>few days</strong>.
+              </p>
+            </div>
+          </div>
+
+          {/* EDUCATION CARD */}
+          <div className="how-it-works-card">
+            <div className="card-inner">
+              <h3>{t.howItWorksStep3}</h3>
+              <p>
+                From here, <strong>MedFit AI takes care of the rest</strong>: -{" "}
+                <strong>Every call answered</strong> — no missed opportunities -{" "}
+                <strong>Leads qualified and booked automatically</strong>-{" "}
+                <strong>Appointments confirmed and reminders sent</strong>-{" "}
+                <strong>Follow-ups handled seamlessly</strong>
+              </p>
+              <p className="italic">
+                Fewer{" "}
+                <strong>
+                  no-shows<strong>, </strong>more bookings
+                </strong>
+                , and <strong>10+ hours</strong> saved <strong>weekly</strong> —
+                while you focus on care and results.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* CAROUSEL RIGHT BUTTON */}
+        <button
+          aria-label="Scroll carousel right"
+          className="carousel-btn right"
+          onClick={() => scrollCarousel(1)}
+        >
+          <span>&#10095;</span>
+        </button>
+      </div>
+    </section>
+  );
+}
+export default HowItWorks;

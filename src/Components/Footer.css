@@ -23,21 +23,12 @@
 
 /* FOOTER LINKS */
 /* //////////////////////////////// */
-<<<<<<< HEAD
 .footer-links ul {
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
-=======
-.footer-links {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
->>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
 }
 
 .footer-links a {

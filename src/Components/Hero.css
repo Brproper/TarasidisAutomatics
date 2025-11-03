@@ -4,44 +4,28 @@
 .hero-section {
   position: relative; /* Needed to layer background */
   overflow: hidden;
-<<<<<<< HEAD
   padding: 4rem 3rem;
-=======
-  padding: 4rem 4rem;
->>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
   margin-top: 80px;
   z-index: 0; /* ensures it’s above background */
 }
 
-=======
-  gap: 4rem;
-  margin-top: 80px;
-  z-index: 0; /* ensures it’s above background */
-}
->>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
 /* Background video styling */
 .background-video {
   position: absolute;
   top: 0;
   left: 0;
+  aspect-ratio: 16 / 9;
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: -2;
-<<<<<<< HEAD
 }
 
 /* Overlay on top of video */
-=======
-  /* opacity: 0.8; */
-}
-
->>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
 .video-overlay {
   position: absolute;
   top: 0;
@@ -55,7 +39,6 @@
   );
   z-index: -1;
 }
-<<<<<<< HEAD
 
 /* Hero Content Container */
 .hero-content {
@@ -77,17 +60,8 @@
   margin-bottom: 1rem;
   line-height: 1.4; /* <-- allows comfortable spacing between lines */
   text-align: center;
-  max-width: 800px; /* <-- forces line break naturally */
-  white-space: normal; /* <-- allow wrapping */
+  /* max-width: 800px;  */
   word-break: break-word;
-=======
-/* //////////////////////////////// */
-
-.hero-section h2 {
-  font-size: 2.6rem;
-  letter-spacing: 3px;
-  margin-bottom: 2rem;
->>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
 
   background: linear-gradient(to right, #abebef, var(--secondary-color));
   background-size: 150%;
@@ -107,24 +81,8 @@
   animation: typing1 5s steps(33, end) forwards;
 }
 
-<<<<<<< HEAD
 /* HERO SUBTITLE */
 .hero-section h2 {
-=======
-/* HERO DESCRIPTION (CONTAINER) */
-/* ///////////////////////////////////// */
-.hero-description {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 1300px;
-  gap: 4rem;
-}
-
-/* HERO SUBHEADER */
-/* //////////////////////////////// */
-.hero-section h3 {
->>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
   font-size: 1.6rem;
   font-weight: bold;
   letter-spacing: 1.5px;
@@ -133,7 +91,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-<<<<<<< HEAD
   margin-bottom: 1.5rem;
 }
 
@@ -145,15 +102,12 @@
   flex-direction: row;
   gap: 4rem;
   max-width: 100%;
-=======
->>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
 }
 
 .hero-description p {
   font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: 1.5px;
-<<<<<<< HEAD
   max-width: 100%;
   width: 100%;
   padding: 1.5rem 2rem;
@@ -164,28 +118,21 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   transition: all 0.4s ease;
   cursor: pointer;
-=======
-  max-width: 550px;
-  padding: 2rem 3rem;
-  line-height: 1.8;
-  border-radius: 4px;
-  background-color: rgba(30, 30, 47, 0.3);
-  cursor: pointer;
-  color: var(--background-color);
+}
 
-  box-shadow: inset 0 0 0 5px transparent; /* initial state for inner shadow */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* outer shadow */
-  transition: all 0.4s ease;
->>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
+.hero-description p strong {
+  transition: all 0.3s ease;
 }
 
 .hero-description p:hover {
   background-color: var(--primary-color);
-  color: var(--secondary-color);
-<<<<<<< HEAD
   transform: scale(1.02);
-  box-shadow: inset 0 0 0 5px var(--secondary-color),
+  box-shadow: inset 0 0 0 4px var(--secondary-color),
     0 8px 24px rgba(0, 110, 147, 0.3);
+}
+
+.hero-description p:hover strong {
+  color: var(--secondary-color);
 }
 
 /* PRIMARY BUTTON */
@@ -330,10 +277,4 @@
     text-align: center;
     font-size: 1rem;
   }
-=======
-  transform: scale(1.05);
-
-  box-shadow: inset 0 0 0 5px var(--secondary-color),
-    /* inner border */ 0 8px 24px rgba(0, 110, 147, 0.3); /* outer shadow */
->>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
 }

@@ -1,7 +1,7 @@
 /* ///////////////////////////////////////////////////////// */
-/* //////////////////// EDUCATION SECTION ////////////////// */
+/* //////////////////// HOW IT WORKS SECTION /////////////// */
 /* ///////////////////////////////////////////////////////// */
-.education-section {
+.how-it-works-section {
   padding: 4rem 12rem;
   position: relative;
 }
@@ -30,7 +30,7 @@
   background: linear-gradient(
     to top,
     rgba(30, 30, 47, 1),
-    rgba(0, 191, 255, 0.3)
+    rgba(0, 191, 255, 0.4)
   );
   z-index: -1;
 }
@@ -42,8 +42,12 @@
   letter-spacing: 2px;
   margin-bottom: 2rem;
 
-  background: linear-gradient(to left, #abebef, var(--secondary-color));
-  background-size: 150%;
+  background: linear-gradient(
+    to left,
+    var(--highlight-color),
+    var(--secondary-color)
+  );
+  background-size: 200%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -58,7 +62,7 @@
   width: 0;
 
   border-right: 2px solid var(--primary-color);
-  animation: typing3 3s steps(19, end) forwards;
+  animation: typing3 2s steps(15, end) forwards;
 }
 
 .header-container {
@@ -72,15 +76,19 @@
   font-size: 1.4rem;
   line-height: 1.6;
   letter-spacing: 1.5px;
-  font-weight: bold;
+  font-weight: bolder;
   margin-bottom: 6rem;
 
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
 
-  background: linear-gradient(to left, #abebef, var(--secondary-color));
-  background-size: 150%;
+  background: linear-gradient(
+    to left,
+    var(--highlight-color),
+    var(--secondary-color)
+  );
+  background-size: 200%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -111,78 +119,6 @@
   -ms-overflow-style: none; /* IE 10+ */
 }
 
-/* EDUCATION CARD */
-/* //////////////////////////////// */
-.education-card {
-  flex: 0 0 100%;
-  width: 100%;
-  scroll-snap-align: start;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-  cursor: pointer;
-
-  box-shadow: inset 0 0 0px 8px transparent;
-
-  padding: 2.5rem 4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: blur(5px);
-
-  transition: all 0.5s ease;
-}
-
-<<<<<<< HEAD
-.education-card h3 {
-=======
-.education-card h4 {
->>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
-  font-size: 2rem;
-  letter-spacing: 2px;
-  text-align: center;
-
-  transition: all 0.4s ease;
-}
-
-.education-card p {
-  font-size: 1.4rem;
-  line-height: 1.6;
-  letter-spacing: 1.5px;
-
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-.education-card:hover {
-  box-shadow: inset 0 0 0px 8px rgba(0, 191, 255, 0.81);
-  background-color: rgb(255, 255, 255);
-}
-
-<<<<<<< HEAD
-.education-card:hover h3 {
-=======
-.education-card:hover h4 {
->>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
-  color: var(--secondary-color);
-}
-
-/* EDUCATION CARD INNER */
-/* //////////////////////////////// */
-.card-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-
-  transition: all 0.4s ease;
-}
-
-.education-card:hover .card-inner {
-  transform: scale(0.95); /* or whatever scale you want */
-}
-
 /* CAROUSEL BUTTON */
 /* //////////////////////////////// */
 .carousel-btn {
@@ -206,7 +142,7 @@
 }
 
 .carousel-btn:hover {
-  background-color: var(--primary-color);
+  background-color: var(--highlight-color);
 }
 
 .carousel-btn.left {
@@ -215,4 +151,92 @@
 
 .carousel-btn.right {
   right: 14.5%;
+}
+
+/* HOW IT WORKS CARD */
+/* //////////////////////////////// */
+.how-it-works-card {
+  flex: 0 0 100%;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 3rem 4rem;
+  text-align: center;
+  scroll-snap-align: start;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.2);
+
+  cursor: pointer;
+
+  transition: all 0.5s ease;
+}
+
+.how-it-works-card h3 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  background: linear-gradient(
+    to right,
+    var(--highlight-color),
+    var(--secondary-color)
+  );
+  background-clip: text;
+  background-size: 125%;
+  font-weight: bolder;
+
+  background-position: left center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.4s ease;
+}
+
+.how-it-works-card p {
+  font-size: 1.3rem;
+  letter-spacing: 1.5px;
+  line-height: 1.6;
+  font-weight: 500;
+
+  color: rgba(240, 240, 255, 0.8);
+  transition: all 0.4s ease;
+}
+
+.how-it-works-card p strong {
+  transition: all 0.4s ease;
+}
+
+/* HOW IT WORKS CARD HOVER STATES */
+/* //////////////////////////////// */
+
+.how-it-works-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.how-it-works-card:hover h3 {
+  background-position: right center;
+}
+
+.how-it-works-card:hover p strong {
+  color: var(--highlight-color);
+}
+
+.how-it-works-card .italic {
+  font-style: italic;
+}
+
+.how-it-works-card:hover .italic strong {
+  color: var(--secondary-color);
+}
+
+/* HOW IT WORKS CARD INNER */
+/* //////////////////////////////// */
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+
+  transition: all 0.4s ease;
+}
+
+.how-it-works-card:hover .card-inner {
+  transform: scale(0.95); /* or whatever scale you want */
 }

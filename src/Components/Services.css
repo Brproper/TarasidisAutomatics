@@ -4,14 +4,12 @@
 .services-section {
   padding: 6rem 12rem;
   background-color: #f0f4f8;
-<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-=======
->>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
   text-align: center;
+  gap: 6rem;
   color: var(--primary-color);
 }
 
@@ -33,28 +31,6 @@
   color: transparent;
 }
 
-<<<<<<< HEAD
-.service-card h4 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-
-  color: var(--primary-color);
-}
-
-.service-card p {
-  font-size: 1.2rem;
-
-  font-weight: 400;
-  letter-spacing: 1.5px;
-  line-height: 1.6;
-  color: var(--primary-color);
-
-  transition: all 0.4s ease;
-}
-
-=======
->>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
 /* Typing Animation / Style */
 .typing3 {
   display: inline-block;
@@ -67,63 +43,98 @@
 }
 
 /* SERVICES INTRO */
-<<<<<<< HEAD
-=======
-/* //////////////////////////////// */
->>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
 .services-intro {
   font-size: 1.4rem;
   letter-spacing: 1.5px;
   line-height: 1.5;
   font-weight: bold;
   color: var(--primary-color);
-<<<<<<< HEAD
-=======
-
->>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
-  margin-bottom: 6rem;
 }
 
 .services-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6rem;
-  margin-top: 4rem;
+  row-gap: 3rem;
+  column-gap: 6rem;
 }
 
-<<<<<<< HEAD
 /* SERVICE CARD */
 .service-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-=======
-/* SERVICE CARD*/
-/* ///////////////////////////// */
-.service-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Side-by-side layout */
-  flex-direction: column; /* Key change: side layout */
->>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
   cursor: pointer;
-  gap: 2rem;
+  gap: 2.5rem;
 
   padding: 3rem;
-  border-radius: 4px;
+  border-radius: 8px;
   transition: all 0.4s ease;
-<<<<<<< HEAD
   border: 4px solid transparent;
+}
+
+/* TEXT ANIMATION */
+.service-card h4 {
+  background: linear-gradient(
+    to right,
+    var(--secondary-color),
+    var(--highlight-color)
+  );
+  background-position: right center;
+  background-size: 150%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 2rem;
+
+  transition: all 0.4s ease;
+}
+
+.service-card p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  line-height: 1.4;
+  color: var(--primary-color);
+
+  transition: all 0.4s ease;
+}
+
+.service-card p strong {
+  transition: all 0.4s ease;
+}
+
+.service-card ul {
+  list-style: none;
+}
+
+.service-card ul li {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: left;
+  line-height: 1.6;
+  color: var(--primary-color);
+
+  transition: all 0.4s ease;
+}
+
+.service-card ul li span {
+  display: inline-block;
+  font-size: 1.6rem;
+
+  margin-right: 0.5rem;
+  color: var(--secondary-color);
+
+  transition: all 0.3s ease;
 }
 
 /* SERVICE IMAGE */
-=======
-
-  border: 4px solid transparent;
-}
-
->>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
 .service-image {
   width: 500px;
   height: 500px;
@@ -132,33 +143,27 @@
   border: 10px solid #e6f2f6;
   background-color: rgba(0, 191, 255, 0.1);
   box-shadow: 0 8px 24px rgba(0, 191, 255, 0.2);
-<<<<<<< HEAD
-=======
-
->>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
   display: flex;
-  align-items: center;
+  align-self: center;
   justify-content: center;
   transition: all 0.5s ease;
   animation: float 3s ease-in-out infinite;
 }
 
 .service-image img {
-  width: 80%;
-  height: 80%;
+  width: 85%;
+  height: 85%;
   border: 5px solid var(--secondary-color);
   border-radius: 500px;
   object-fit: cover;
+
+  display: flex;
+  align-self: center;
+  justify-content: center;
   transition: all 0.5s ease;
 }
 
-.service-image:hover img {
-  width: 95%;
-  height: 95%;
-}
-
-<<<<<<< HEAD
-/* SERVICE CARD HOVER */
+/* SERVICE CARD HOVER EFFECTS*/
 .service-card:hover {
   transform: translateY(-12px);
   border: 4px solid var(--secondary-color);
@@ -166,24 +171,63 @@
   box-shadow: 0 8px 24px rgba(0, 191, 255, 0.3);
 }
 
-.service-card:hover p {
-  color: var(--secondary-color);
+.service-card:hover p strong {
+  color: var(--highlight-color);
+}
+.service-card:hover h4 {
+  background-position: left center;
 }
 
-/* SERVICE ICON */
-.service-icon {
-  width: 5rem;
-  padding: 1rem;
-  margin-bottom: -1.5rem;
-  background-color: rgba(0, 191, 255, 0.9);
-  border-radius: 50%;
-  transition: all 0.4s ease;
+/* On hover, animate the gradient smoothly */
+.service-card:hover ul li {
+  color: var(--secondary-color);
+  font-weight: 800;
+}
+
+.service-card:hover ul span {
+  transform: scale(1.2);
+  color: var(--highlight-color);
+}
+
+/* Glow expand on hover */
+.service-card:hover .icon {
+  transform: scale(1.15);
+  box-shadow: 0 0 30px rgba(0, 191, 255, 0.8);
+  background-position: right center;
+}
+
+/* Hover glow effect */
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-image:hover img {
+  width: 95%;
+  height: 95%;
+}
+
+.servives-data-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.servives-data-container p {
+  font-size: 1.15rem;
+  font-style: italic;
+  font-weight: 400;
+  background: linear-gradient(
+    to right,
+    var(--secondary-color),
+    var(--highlight-color)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* gradient text effect */
 }
 
 /* FLOAT ANIMATION */
-=======
-/* Floating animation */
->>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
 @keyframes float {
   0%,
   100% {
@@ -194,10 +238,60 @@
   }
 }
 
-<<<<<<< HEAD
 /* ///////////////////////////////////////////////////////// */
 /* ////////////////////// MEDIA QUERIES ///////////////////// */
 /* ///////////////////////////////////////////////////////// */
+
+/* ====== Large screens (1600px and below) ====== */
+@media (max-width: 1600px) {
+  .services-section {
+    padding: 5rem 10rem;
+  }
+
+  .services-grid {
+    column-gap: 5rem;
+  }
+
+  .service-image {
+    width: 480px;
+    height: 480px;
+  }
+}
+
+/* ====== Medium-large screens (1400px and below) ====== */
+@media (max-width: 1400px) {
+  .services-section {
+    padding: 5rem 8rem;
+  }
+
+  .services-grid {
+    column-gap: 4rem;
+    row-gap: 3rem;
+  }
+
+  .service-card {
+    padding: 2.5rem;
+  }
+
+  .service-image {
+    width: 420px;
+    height: 420px;
+  }
+
+  .services-section h3 {
+    font-size: 2.4rem;
+  }
+
+  .service-card h4 {
+    font-size: 1.9rem;
+  }
+
+  .service-card p {
+    font-size: 1.15rem;
+  }
+}
+
+/* ====== Tablets landscape / Small desktops (1250px and below) ====== */
 @media (max-width: 1250px) {
   .services-section {
     padding: 4rem 6rem;
@@ -208,180 +302,171 @@
   }
 
   .service-image {
-    width: 450px;
-    height: 450px;
+    width: 400px;
+    height: 400px;
+  }
+
+  .service-card h4 {
+    font-size: 1.8rem;
+  }
+
+  .service-card p {
+    font-size: 1.1rem;
   }
 }
 
-@media (max-width: 1100px) {
+/* ====== Tablets portrait / Medium screens (992px and below) ====== */
+@media (max-width: 1075px) {
   .services-section {
     padding: 4rem 8rem;
-  }
-
-  .services-section h3 {
-    font-size: 2.3rem;
-  }
-
-  .services-intro {
-    font-size: 1.2rem;
+    gap: 4rem;
   }
 
   .services-grid {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-  }
-
-  .service-image {
-    width: 450px;
-    height: 450px;
+    gap: 4rem;
   }
 
   .service-card {
-    padding: 2rem;
+    padding: 2rem 3rem;
+    gap: 2rem;
+    max-width: 600px;
+  }
+
+  .service-image {
+    width: 380px;
+    height: 380px;
+  }
+
+  .services-section h3 {
+    font-size: 2.4rem;
+  }
+
+  .services-intro {
+    font-size: 1.25rem;
+  }
+
+  .service-card h4 {
+    font-size: 1.8rem;
+  }
+
+  .service-card p,
+  .service-card ul li {
+    font-size: 1.05rem;
   }
 }
 
-@media (max-width: 700px) {
+/* ====== Mobile landscape / Small tablets (768px and below) ====== */
+@media (max-width: 850px) {
   .services-section {
-    padding: 4rem 5rem;
+    padding: 3.5rem 4rem;
+  }
+
+  .services-section h3 {
+    font-size: 2.2rem;
+  }
+
+  .services-intro {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+
+  .service-card {
+    padding: 2rem 2.5rem;
+  }
+
+  .service-card h4 {
+    font-size: 1.7rem;
+  }
+
+  .service-card p,
+  .service-card ul li {
+    font-size: 1.05rem;
+  }
+
+  .servives-data-container p {
+    font-size: 1rem;
+  }
+}
+
+/* ====== Mobile portrait / Large phones (576px and below) ====== */
+@media (max-width: 576px) {
+  .services-section {
+    padding: 3rem;
+    gap: 4rem;
   }
 
   .services-section h3 {
     font-size: 2rem;
   }
 
-  .services-grid {
-    gap: 4rem;
-  }
-
-  .service-image {
-    width: 350px;
-    height: 350px;
+  .services-intro {
+    font-size: 1.05rem;
   }
 
   .service-card {
-    padding: 1.5rem;
-    gap: 1.5rem;
+    padding: 2rem;
+    /* gap: 1.5rem; */
   }
 
-  .services-intro {
-    font-size: 1.1rem;
+  .service-image {
+    width: 300px;
+    height: 300px;
+    border: 8px solid #e6f2f6;
   }
 
   .service-card h4 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
-  .service-card p {
-    font-size: 1rem;
+  .service-card p,
+  .service-card ul li {
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
-=======
-.service-card h4 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  letter-spacing: 1.5px;
 
-  color: var(--primary-color);
+  .servives-data-container p {
+    font-size: 0.95rem;
+  }
 }
 
-.service-card p {
-  font-size: 1.2rem;
+/* ====== Extra small phones (400px and below) ====== */
+@media (max-width: 400px) {
+  .services-section {
+    padding: 2.5rem 1.5rem;
+  }
 
-  font-weight: 400;
-  letter-spacing: 1.5px;
-  line-height: 1.6;
-  color: var(--primary-color);
+  .services-section h3 {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
 
-  transition: all 0.4s ease;
-}
+  .services-intro {
+    font-size: 0.95rem;
+  }
 
-/* SERVICE CARD STATES*/
-/* ///////////////////////////// */
-.service-card:hover {
-  transform: translateY(-12px);
-  border: 4px solid var(--secondary-color);
+  .service-card {
+    padding: 1.3rem;
+  }
 
-  background-color: var(--background-color);
-  box-shadow: 0 8px 24px rgba(0, 191, 255, 0.3);
-}
+  .service-image {
+    width: 220px;
+    height: 220px;
+    border: 6px solid #e6f2f6;
+  }
 
-.service-card:hover p {
-  color: var(--secondary-color);
-}
+  .service-card h4 {
+    font-size: 1.2rem;
+  }
 
-/* LEARN MORE BUTTON / STATES */
-/* ///////////////////////////////////// */
-.service-card a:link,
-.education-card a:link,
-.service-card a:visited,
-.education-card a:visited {
-  display: inline-block;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: var(--secondary-color);
+  .service-card p,
+  .service-card ul li {
+    font-size: 0.9rem;
+  }
 
-  background: none;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: 2rem;
-
-  letter-spacing: 1px;
-  text-decoration: underline solid 2px transparent;
-  text-underline-offset: 2px;
-  transition: all 0.4s ease;
-
-  position: relative;
-}
-
-.education-card a:link,
-.education-card a:visited {
-  font-size: 1.4rem;
-}
-
-/* Add arrow (→) with ::after */
-.service-card a::after,
-.education-card a::after {
-  content: "→";
-  opacity: 0;
-  transform: translateX(-10px);
-  transition: all 0.4s ease;
-  position: absolute;
-  right: -2rem;
-  top: 0;
-}
-
-/* Show arrow on hover */
-.service-card a:hover,
-.education-card a:hover,
-.service-card a:active,
-.education-card a:active {
-  transform: scale(1.08);
-  text-decoration: underline solid 2px var(--secondary-color);
-}
-
-.service-card:hover .service-icon {
-  color: white;
-}
-
-.service-card a:hover::after,
-.education-card a:hover::after {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* SERVICE CARD ICON */
-/* ///////////////////////////////////// */
-.service-icon {
-  width: 5rem;
-  padding: 1rem;
-  margin-bottom: -1.5rem;
-  background-color: rgba(0, 191, 255, 0.9);
-  border-radius: 50%;
-
-  transition: all 0.4s ease;
->>>>>>> 37aacfb7b23791eb8e546c149e5c2b292afdc6bd
+  .servives-data-container p {
+    font-size: 0.9rem;
+  }
 }
