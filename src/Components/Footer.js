@@ -16,6 +16,9 @@ function Footer() {
             <li>
               <a href="#whyMedfitAI">About</a>
             </li>
+            <li>
+              <a href="#who-we-help">Who We help</a>
+            </li>
             {/* <li>
               <a href="#who-we-help">Who We Help</a>
             </li> */}
@@ -24,9 +27,6 @@ function Footer() {
             </li>
             <li>
               <a href="#contact">Contact</a>
-            </li>
-            <li>
-              <a href="mailto:hello@medfitai.com">Email Us</a>
             </li>
           </ul>
         </nav>
