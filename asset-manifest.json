@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/TarasidisAutomatics/static/css/main.da88bd52.css",
-    "main.js": "/TarasidisAutomatics/static/js/main.b7a5e329.js",
+    "main.css": "/TarasidisAutomatics/static/css/main.8973ed2c.css",
+    "main.js": "/TarasidisAutomatics/static/js/main.48cb065a.js",
     "static/media/LandingPageAi1.mp4": "/TarasidisAutomatics/static/media/LandingPageAi1.733e01027a8efdcfbbcd.mp4",
     "static/media/LandingPageAi4.mp4": "/TarasidisAutomatics/static/media/LandingPageAi4.6b6f2b8e367127f60d2b.mp4",
     "static/media/LandingPageAi2.mp4": "/TarasidisAutomatics/static/media/LandingPageAi2.03f152469fe3786825e0.mp4",
     "static/media/Sound.jpg": "/TarasidisAutomatics/static/media/Sound.6803e7c4bceb85729abe.jpg",
     "static/media/TechBrainAi3.jpg": "/TarasidisAutomatics/static/media/TechBrainAi3.c4935fec44d3ae6cac94.jpg",
     "static/media/ChatBots.jpg": "/TarasidisAutomatics/static/media/ChatBots.e74720afc4c8fd63a18c.jpg",
+    "static/media/Founder.jpg": "/TarasidisAutomatics/static/media/Founder.bc85dd436fcf1b9d8968.jpg",
     "index.html": "/TarasidisAutomatics/index.html",
-    "main.da88bd52.css.map": "/TarasidisAutomatics/static/css/main.da88bd52.css.map",
-    "main.b7a5e329.js.map": "/TarasidisAutomatics/static/js/main.b7a5e329.js.map"
+    "main.8973ed2c.css.map": "/TarasidisAutomatics/static/css/main.8973ed2c.css.map",
+    "main.48cb065a.js.map": "/TarasidisAutomatics/static/js/main.48cb065a.js.map"
   },
   "entrypoints": [
-    "static/css/main.da88bd52.css",
-    "static/js/main.b7a5e329.js"
+    "static/css/main.8973ed2c.css",
+    "static/js/main.48cb065a.js"
   ]
 }
