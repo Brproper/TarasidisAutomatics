@@ -191,7 +191,7 @@ function Services({ t }) {
 
           <p>
             Let AI handle the <strong>repetitive tasks</strong> that drain your
-            time. We <strong>automate</strong>
+            time. We <strong>automate </strong>
             <strong>reminders, cancellations,</strong> and{" "}
             <strong>post-visit</strong> messages — so you{" "}
             <strong>never lose</strong> a client again.

@@ -22,7 +22,7 @@
 }
 
 /* Typing animation 1 */
-@keyframes typing1 {
+@keyframes typingHero {
   0% {
     width: 0;
     border-right: 2px solid var(--background-color);
@@ -36,7 +36,7 @@
   }
 }
 
-@keyframes typing2 {
+@keyframes typingWhoWeHelp {
   0% {
     width: 0;
     border-right: 2px solid var(--highlight-color);
@@ -45,12 +45,26 @@
     border-right: 2px solid var(--highlight-color);
   }
   100% {
-    width: 14ch;
+    width: 10.5ch;
     border-right-color: transparent;
   }
 }
 
-@keyframes typing3 {
+@keyframes typingServices {
+  0% {
+    width: 0;
+    border-right: 2px solid var(--highlight-color);
+  }
+  99% {
+    border-right: 2px solid var(--highlight-color);
+  }
+  100% {
+    width: 13.5ch;
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typingHowItWorks {
   0% {
     width: 0;
     border-right: 2px solid var(--background-color);
@@ -64,21 +78,7 @@
   }
 }
 
-@keyframes typing4 {
-  0% {
-    width: 0;
-    border-right: 2px solid var(--highlight-color);
-  }
-  99% {
-    border-right: 2px solid var(--highlight-color);
-  }
-  100% {
-    width: 19ch;
-    border-right-color: transparent;
-  }
-}
-
-@keyframes typing5 {
+@keyframes typingFaq {
   0% {
     width: 0;
     border-right: 2px solid var(--highlight-color);
@@ -92,7 +92,7 @@
   }
 }
 
-@keyframes typing6 {
+@keyframes typingContact {
   0% {
     width: 0;
     border-right: 2px solid var(--background-color);
@@ -106,7 +106,7 @@
   }
 }
 
-@keyframes typing7 {
+@keyframes typingWhyMedFit {
   0% {
     width: 0;
     border-right: 2px solid var(--highlight-color);
@@ -166,47 +166,6 @@ body {
   font-style: normal;
   line-height: 1;
 }
-
-/* LANGUAGE SWITCHER BUTTON */
-/* /////////////////////////////////////// */
-/* .language-switcher-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-
-  position: fixed;
-  bottom: 5rem;
-  right: 5rem;
-  z-index: 1000;
-
-  font-size: 2rem;
-  padding: 1rem 1rem;
-
-  background-color: var(--secondary-color);
-  border: none;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-
-  cursor: pointer;
-  transition: all 0.4s;
-}
-
-.language-switcher-btn ion-icon {
-  font-size: 1.4rem;
-  color: var(--primary-color);
-
-  transition: all 0.3s ease;
-}
-
-.language-switcher-btn:hover {
-  background-color: #f0f0f0;
-  transform: scale(1.08);
-}
-
-.language-switcher-btn:hover ion-icon {
-  transform: rotate(180deg);
-} */
 
 /* PRIMARY BUTTON */
 /* ///////////////////////////// */

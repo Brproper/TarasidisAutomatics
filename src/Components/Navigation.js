@@ -1,17 +1,40 @@
 import React, { useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom"; // ✅ added useNavigate
 import "./Navigation.css";
 
-const handleLogoClick = () => window.location.reload();
+const handleLogoClick = (navigate) => {
+  navigate("/"); // navigate to homepage
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
 
 function Navigation({ t }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate(); // ✅ define navigate here
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
 
+  const handleScrollToSection = (id) => {
+    setMenuOpen(false);
+
+    if (location.pathname !== "/") {
+      // navigate to homepage first if not there
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 300);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
-    /* ///////////////////////////////////////////////////
-      /////////////////NAVIGATION SECTION//////////////////
-      //////////////////////////////////////////////////// */
     <nav
       className="navigation-bar"
       role="navigation"
@@ -20,20 +43,18 @@ function Navigation({ t }) {
       {/* LOGO */}
       <h1 className="logo">
         <button
-          onClick={handleLogoClick}
-          aria-label="Reload page"
+          onClick={() => handleLogoClick(navigate)} // ✅ pass navigate
+          aria-label="Go to homepage"
           className="logo-btn"
         >
           MedFitAI
         </button>
       </h1>
 
-      {/* HAMBURGER BUTTON FOR MOBILE */}
+      {/* HAMBURGER MENU */}
       <button
         className={`hamburger ${menuOpen ? "active" : ""}`}
         aria-label={menuOpen ? "Close menu" : "Open menu"}
-        aria-expanded={menuOpen}
-        aria-controls="navigation-menu"
         onClick={toggleMenu}
       >
         <span></span>
@@ -41,58 +62,62 @@ function Navigation({ t }) {
         <span></span>
       </button>
 
-      {/* NAVIGATION LINKS */}
-      <ul
-        className={`navigation-links ${menuOpen ? "active" : ""}`}
-        id="navigation-menu"
-      >
+      {/* LINKS */}
+      <ul className={`navigation-links ${menuOpen ? "active" : ""}`}>
         <li>
-          <a
+          <Link
             className="navigation-link"
-            href="#whyMedfitAI"
+            to="/founder"
             onClick={() => setMenuOpen(false)}
           >
-            {t.about}
-          </a>
+            About
+          </Link>
         </li>
+
         <li>
-          <a
+          <button
             className="navigation-link"
-            href="#services"
-            onClick={() => setMenuOpen(false)}
+            onClick={() => handleScrollToSection("who-we-help")}
           >
-            {t.services}
-          </a>
+            Who We Help
+          </button>
         </li>
+
         <li>
-          <a
+          <button
             className="navigation-link"
-            href="#howItWorks"
-            onClick={() => setMenuOpen(false)}
+            onClick={() => handleScrollToSection("services")}
           >
-            {t.howItWorks}
-          </a>
+            Services
+          </button>
         </li>
+
         <li>
-          <a
+          <button
             className="navigation-link"
-            href="#contact"
-            onClick={() => setMenuOpen(false)}
+            onClick={() => handleScrollToSection("howItWorks")}
           >
-            {t.contact}
-          </a>
+            How It Works
+          </button>
+        </li>
+
+        <li>
+          <button
+            className="navigation-link"
+            onClick={() => handleScrollToSection("contact")}
+          >
+            Contact
+          </button>
         </li>
       </ul>
 
-      {/* GET STARTED BUTTON (hidden on mobile) */}
-      <a
-        href="#contact"
+      {/* GET STARTED */}
+      <button
         className="get-started"
-        role="button"
-        aria-label="Get started with us"
+        onClick={() => handleScrollToSection("contact")}
       >
-        {t.getStarted}
-      </a>
+        {t?.getStarted || "Get Started"}
+      </button>
     </nav>
   );
 }

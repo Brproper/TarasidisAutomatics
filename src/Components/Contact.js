@@ -3,7 +3,7 @@ import "./Contact.css";
 import { useInView } from "react-intersection-observer";
 import landingVideo3 from "../assets/videos/LandingPageAi1.mp4";
 
-function Contact({ t }) {
+function Contact() {
   const { ref, inView: inViewVideo } = useInView({
     triggerOnce: true,
     threshold: 0.3,
@@ -70,12 +70,12 @@ function Contact({ t }) {
             <strong>AI is transforming</strong> how professionals communicate,
             schedule, and care for clients. <strong>MedFit AI</strong> makes
             that transformation
-            <strong>simple, personal, and reliable</strong>.
+            <strong> simple, personal, and reliable</strong>.
           </p>
           <p>
             Whether you run a <strong>private clinic</strong> or a
             <strong> fitness studio</strong>, our solutions help you
-            <strong>save time</strong>, <strong>reduce stress</strong>, and
+            <strong> save time</strong>, <strong>reduce stress</strong>, and
             <strong> focus on the people you serve</strong>.
           </p>
         </div>
@@ -98,7 +98,7 @@ function Contact({ t }) {
           {/* SOCIALS CONTAINER */}
           {/* ////////////////////////////////////// */}
           <div className="socials-container">
-            <h3>{t.followUs}</h3>
+            <h3>Follow Us</h3>
             <div className="social-links">
               <a
                 href="mailto:hello@medfitai.com"
@@ -110,7 +110,7 @@ function Contact({ t }) {
                   aria-label="send us an email"
                 ></ion-icon>
               </a>
-              <a
+              {/* <a
                 href="https://www.facebook.com/profile.php?id=100013231872326"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -119,7 +119,7 @@ function Contact({ t }) {
                   name="logo-facebook"
                   aria-label="Visit our Facebook page"
                 ></ion-icon>
-              </a>
+              </a> */}
               <a
                 href="https://www.linkedin.com/company/tarasidisautomatics"
                 target="_blank"
@@ -134,7 +134,7 @@ function Contact({ t }) {
           </div>
 
           <button className="secondary-btn" aria-label="Book call">
-            {t.bookCall}
+            Book a Call
           </button>
         </div>
 
@@ -173,10 +173,6 @@ function Contact({ t }) {
             <strong>JMIR</strong>.
           </p>
         </div>
-        {/* 
-        <button className="secondary-btn" aria-label="Book call">
-          {t.bookCall}
-        </button> */}
       </div>
     </section>
   );

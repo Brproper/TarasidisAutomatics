@@ -71,9 +71,9 @@ function HowItWorks({ t }) {
         {/* EDUCATION HEADER */}
         <h2
           ref={headerRef}
-          className={`section-heading ${inView ? "typing2" : ""}`}
+          className={`section-heading ${inView ? "typing4" : ""}`}
         >
-          {t.howItWorksTitle}
+          How It Works
         </h2>
         <p className="section-subheading">
           It all starts with a <strong>30-minute discovery call</strong> where
@@ -133,7 +133,8 @@ function HowItWorks({ t }) {
               </p>
               <p className="italic">
                 Your system is <strong>ready</strong> within a{" "}
-                <strong>few days</strong>.
+                <strong>few days</strong> or <strong>weeks</strong> depending of
+                the <strong>project’s complexity</strong>.
               </p>
             </div>
           </div>

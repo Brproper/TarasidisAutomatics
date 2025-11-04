@@ -78,7 +78,7 @@
   border-right: 2px solid var(--primary-color);
   width: 0;
 
-  animation: typing1 5s steps(33, end) forwards;
+  animation: typingHero 5s steps(33, end) forwards;
 }
 
 /* HERO SUBTITLE */

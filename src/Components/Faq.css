@@ -21,7 +21,6 @@
   letter-spacing: 2.5px;
   display: flex;
   align-self: center;
-  justify-content: center;
   color: var(--secondary-color);
 }
 
@@ -33,7 +32,7 @@
   border-right: 2px solid var(--background-color);
   width: 0;
 
-  animation: typing5 4s steps(30, end) forwards;
+  animation: typingFaq 4s steps(30, end) forwards;
 }
 
 /* List of FAQ items */

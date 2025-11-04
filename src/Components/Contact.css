@@ -75,7 +75,7 @@
   border-right: 2px solid var(--background-color);
   width: 0;
 
-  animation: typing6 3s steps(20, end) forwards;
+  animation: typingContact 2.5s steps(18, end) forwards;
 }
 
 /* Description text above columns */

@@ -39,7 +39,8 @@
   white-space: nowrap;
   border-right: 2px solid var(--primary-color);
   width: 0;
-  animation: typing2 2s steps(19, end) forwards;
+
+  animation: typingWhoWeHelp 2s steps(14, end) forwards;
 }
 
 /* Intro paragraph before the cards */

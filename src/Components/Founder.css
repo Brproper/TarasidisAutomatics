@@ -1,0 +1,133 @@
+/* ///////////////////////////////////////////////////////// */
+/* //////////////////// FOUNDER SECTION //////////////////// */
+/* ///////////////////////////////////////////////////////// */
+
+.founder-page {
+  min-height: 100vh;
+  padding: 16rem 8rem 8rem 12rem;
+  background-color: var(--background-color); /* same as Who We Help */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.founder-img {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: 175px;
+  height: auto;
+  border-radius: 50%;
+  border: 12px solid var(--background-color);
+  transform: translate(50%, -50%);
+
+  z-index: 100;
+}
+
+/* MAIN CONTAINER */
+.founder-container {
+  background-color: rgba(255, 255, 255, 0.95); /* light card for contrast */
+  color: var(--primary-color); /* text matches Who We Help */
+  position: relative;
+  padding: 6rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 191, 255, 0.15);
+  max-width: 900px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.founder-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 191, 255, 0.25);
+}
+
+/* HEADINGS */
+.founder-container h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 4rem;
+  background: linear-gradient(
+    to right,
+    var(--secondary-color),
+    var(--highlight-color)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* PARAGRAPHS */
+.founder-container p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  color: var(--primary-color);
+}
+
+/* Strong emphasis text */
+.founder-container strong {
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+/* SIGNATURE */
+.signature {
+  margin-top: 3rem;
+  text-align: right;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--secondary-color);
+  border-top: 1px solid rgba(0, 191, 255, 0.15);
+  padding-top: 1.5rem;
+}
+
+/* Responsive design */
+@media screen and (max-width: 1024px) {
+  .founder-page {
+    padding: 6rem 4rem;
+  }
+
+  .founder-container {
+    padding: 3rem 4rem;
+  }
+
+  .founder-container h2 {
+    font-size: 2.2rem;
+  }
+
+  .founder-container p {
+    font-size: 1.25rem;
+  }
+
+  .signature {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .founder-page {
+    padding: 4rem 2rem;
+  }
+
+  .founder-container {
+    padding: 2rem 2rem;
+  }
+
+  .founder-container h2 {
+    font-size: 2rem;
+  }
+
+  .founder-container p {
+    font-size: 1.1rem;
+  }
+
+  .signature {
+    font-size: 1.1rem;
+  }
+}

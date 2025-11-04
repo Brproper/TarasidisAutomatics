@@ -39,7 +39,7 @@
   border-right: 2px solid var(--primary-color);
   width: 0;
 
-  animation: typing2 2s steps(14, end) forwards;
+  animation: typingServices 2s steps(14, end) forwards;
 }
 
 /* SERVICES INTRO */

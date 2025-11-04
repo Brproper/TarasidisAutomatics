@@ -127,7 +127,7 @@
   white-space: nowrap;
   border-right: 2px solid var(--primary-color);
   width: 0;
-  animation: typing7 2s steps(13, end) forwards;
+  animation: typingWhyMedFit 2s steps(14, end) forwards;
 }
 
 /* Responsive */

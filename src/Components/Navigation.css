@@ -55,6 +55,21 @@
   gap: 1rem;
 }
 
+.navigation-link {
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  color: var(--primary-color);
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 191, 255, 0.008);
+
+  transition: all 0.4s ease;
+}
 .navigation-link:link,
 .navigation-link:visited {
   display: inline-block;
@@ -78,8 +93,7 @@
 }
 
 /* GET STARTED BUTTON */
-.get-started:visited,
-.get-started:link {
+.get-started {
   text-decoration: none;
 
   font-size: 1.2rem;

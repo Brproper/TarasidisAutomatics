@@ -55,14 +55,14 @@
 }
 
 /* Typing Animation / Style */
-.typing2 {
+.typing4 {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
   width: 0;
 
   border-right: 2px solid var(--primary-color);
-  animation: typing3 2s steps(15, end) forwards;
+  animation: typingHowItWorks 2s steps(13, end) forwards;
 }
 
 .header-container {

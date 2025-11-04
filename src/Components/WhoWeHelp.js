@@ -48,7 +48,7 @@ function WhoWeHelp() {
           {/* Card Intro */}
           <p>
             Our AI systems help <strong>clinics</strong> and{" "}
-            <strong>independent doctors</strong>
+            <strong>independent doctors </strong>
             save <strong>time</strong>, reduce <strong>stress</strong>, and
             deliver a<strong> smoother patient experience</strong> — without
             hiring extra staff or missing opportunities.
@@ -85,10 +85,10 @@ function WhoWeHelp() {
           {/* Card Intro */}
           <p>
             We help <strong>gym owners</strong> and{" "}
-            <strong>fitness professionals</strong>
+            <strong>fitness professionals </strong>
             manage <strong>leads</strong>, <strong>bookings</strong>, and
             <strong> follow-ups</strong> — so you can spend more time
-            <strong>training clients</strong>, not chasing messages.
+            <strong> training clients</strong>, not chasing messages.
           </p>
           {/* Card List */}
           <ul>
