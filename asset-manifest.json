@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/TarasidisAutomatics/static/css/main.395e8890.css",
-    "main.js": "/TarasidisAutomatics/static/js/main.b13eda41.js",
+    "main.js": "/TarasidisAutomatics/static/js/main.e0db4735.js",
     "static/media/LandingPageAi1.mp4": "/TarasidisAutomatics/static/media/LandingPageAi1.733e01027a8efdcfbbcd.mp4",
     "static/media/LandingPageAi4.mp4": "/TarasidisAutomatics/static/media/LandingPageAi4.6b6f2b8e367127f60d2b.mp4",
     "static/media/LandingPageAi2.mp4": "/TarasidisAutomatics/static/media/LandingPageAi2.03f152469fe3786825e0.mp4",
@@ -11,10 +11,10 @@
     "static/media/Founder.jpg": "/TarasidisAutomatics/static/media/Founder.bc85dd436fcf1b9d8968.jpg",
     "index.html": "/TarasidisAutomatics/index.html",
     "main.395e8890.css.map": "/TarasidisAutomatics/static/css/main.395e8890.css.map",
-    "main.b13eda41.js.map": "/TarasidisAutomatics/static/js/main.b13eda41.js.map"
+    "main.e0db4735.js.map": "/TarasidisAutomatics/static/js/main.e0db4735.js.map"
   },
   "entrypoints": [
     "static/css/main.395e8890.css",
-    "static/js/main.b13eda41.js"
+    "static/js/main.e0db4735.js"
   ]
 }
