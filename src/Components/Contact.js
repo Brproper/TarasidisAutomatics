@@ -135,22 +135,12 @@ function Contact() {
           <button
             className="secondary-btn"
             aria-label="Book a Call"
-            onClick={() => {
-              if (window.Calendly) {
-                window.Calendly.initPopupWidget({
-                  url: "https://calendly.com/tarasidis17/discovery-call",
-                  onPopupOpen: () => {
-                    // Optional: remove iframe scrollbar
-                    const iframe = document.querySelector(
-                      ".calendly-popup iframe"
-                    );
-                    if (iframe) {
-                      iframe.style.overflow = "hidden"; // hide scrollbar
-                    }
-                  },
-                });
-              }
-            }}
+            onClick={() =>
+              window.open(
+                "https://calendly.com/tarasidis17/discovery-call",
+                "_blank" // opens in a new tab
+              )
+            }
           >
             Book a Call
           </button>
