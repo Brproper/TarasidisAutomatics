@@ -23,33 +23,37 @@ export default function App() {
 
   return (
     <Router basename="/TarasidisAutomatics">
-      {" "}
-      {/* ✅ important for GitHub Pages */}
+      {/* ✅ Always visible on every page */}
       <Navigation t={t} />
-      <Routes>
-        {/* 🏠 Main Page */}
-        <Route
-          path="/"
-          element={
-            <>
-              <Hero t={t} />
-              <WhoWeHelp />
-              <Services t={t} />
-              <HowItWorks t={t} />
-              <WhyMedfitAI />
-              <Faq />
-              <Contact />
-              <Footer />
-            </>
-          }
-        />
 
-        {/* 👨‍⚕️ Founder Page */}
-        <Route path="/founder" element={<Founder />} />
+      <main>
+        <Routes>
+          {/* 🏠 Main Landing Page */}
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero t={t} />
+                <WhoWeHelp />
+                <Services t={t} />
+                <HowItWorks t={t} />
+                <WhyMedfitAI />
+                <Faq />
+                <Contact />
+              </>
+            }
+          />
 
-        {/* 🔄 Redirect unknown routes */}
-        <Route path="*" element={<Navigate to="/" />} />
-      </Routes>
+          {/* 👨‍⚕️ Founder Page */}
+          <Route path="/founder" element={<Founder />} />
+
+          {/* 🔄 Redirect unknown routes */}
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </main>
+
+      {/* ✅ Footer stays visible always */}
+      <Footer />
     </Router>
   );
 }

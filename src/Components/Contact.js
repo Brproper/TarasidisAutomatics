@@ -13,24 +13,23 @@ function Contact() {
   const [inView, setInView] = useState(false);
 
   useEffect(() => {
+    const element = headerRef.current;
+    if (!element) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setInView(true);
-          observer.unobserve(entry.target); // Optional: animate only once
+          observer.unobserve(entry.target); // Stop observing permanently
         }
       },
-      {
-        threshold: 1, // Adjust this if needed
-      }
+      { threshold: 0.5 } // triggers when 50% is visible
     );
 
-    if (headerRef.current) {
-      observer.observe(headerRef.current);
-    }
+    observer.observe(element);
 
     return () => observer.disconnect();
-  }, []);
+  }, []); // ✅ empty deps — only run once
   return (
     /* ///////////////////////////////////////////////////
 /////////////////CONTACT SECTION/////////////////////////
@@ -133,7 +132,26 @@ function Contact() {
             </div>
           </div>
 
-          <button className="secondary-btn" aria-label="Book call">
+          <button
+            className="secondary-btn"
+            aria-label="Book a Call"
+            onClick={() => {
+              if (window.Calendly) {
+                window.Calendly.initPopupWidget({
+                  url: "https://calendly.com/tarasidis17/discovery-call",
+                  onPopupOpen: () => {
+                    // Optional: remove iframe scrollbar
+                    const iframe = document.querySelector(
+                      ".calendly-popup iframe"
+                    );
+                    if (iframe) {
+                      iframe.style.overflow = "hidden"; // hide scrollbar
+                    }
+                  },
+                });
+              }
+            }}
+          >
             Book a Call
           </button>
         </div>

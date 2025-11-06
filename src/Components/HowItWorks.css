@@ -1,23 +1,24 @@
 /* ///////////////////////////////////////////////////////// */
 /* //////////////////// HOW IT WORKS SECTION /////////////// */
 /* ///////////////////////////////////////////////////////// */
+
 .how-it-works-section {
   padding: 4rem 12rem;
   position: relative;
+  overflow: hidden;
 }
 
 /* Background video styling */
 .background-video2 {
   position: absolute;
-  top: -0px;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
-  z-index: -1;
+  z-index: -2;
   opacity: 1;
+  will-change: transform, opacity; /* GPU acceleration */
 }
 
 .video-overlay2 {
@@ -26,7 +27,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-
   background: linear-gradient(
     to top,
     rgba(30, 30, 47, 1),
@@ -41,7 +41,6 @@
   font-size: 2.6rem;
   letter-spacing: 2px;
   margin-bottom: 2rem;
-
   background: linear-gradient(
     to left,
     var(--highlight-color),
@@ -54,13 +53,11 @@
   color: transparent;
 }
 
-/* Typing Animation / Style */
 .typing4 {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
   width: 0;
-
   border-right: 2px solid var(--primary-color);
   animation: typingHowItWorks 2s steps(13, end) forwards;
 }
@@ -78,11 +75,9 @@
   letter-spacing: 1.5px;
   font-weight: bolder;
   margin-bottom: 6rem;
-
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
-
   background: linear-gradient(
     to left,
     var(--highlight-color),
@@ -99,75 +94,52 @@
 /* //////////////////////////////// */
 .carousel-wrapper {
   position: relative;
-  overflow: hidden;
   padding: 2rem;
+
+  overflow: hidden;
 }
 
 .carousel {
-  display: flex;
-  margin: 0 auto;
   max-width: 750px;
-  position: relative;
 
+  margin: 0 auto;
   overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
 
-  /* Hide scrollbar across all browsers */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-/* CAROUSEL BUTTON */
-/* //////////////////////////////// */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-
-  font-size: 2.4rem;
-  background-color: var(--secondary-color);
-  color: var(--background-color);
-  border: none;
-  padding: 0.4rem 1.4rem;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10;
-  transition: all 0.4s ease;
-}
-
-.carousel-btn span {
-  text-align: center;
-}
-
-.carousel-btn:hover {
-  background-color: var(--highlight-color);
-}
-
-.carousel-btn.left {
-  left: 14.5%;
-}
-
-.carousel-btn.right {
-  right: 14.5%;
+.carousel::-webkit-scrollbar {
+  display: none;
 }
 
 /* HOW IT WORKS CARD */
 /* //////////////////////////////// */
+.cards-container {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4rem;
+}
 .how-it-works-card {
   flex: 0 0 100%;
   background: rgba(255, 255, 255, 0.08);
+  max-width: 750px;
   border-radius: 8px;
   padding: 3rem 4rem;
   text-align: center;
   scroll-snap-align: start;
   backdrop-filter: blur(8px);
   box-shadow: 0 0 15px rgba(0, 191, 255, 0.2);
-
   cursor: pointer;
-
   transition: all 0.5s ease;
+  will-change: transform, background;
 }
 
 .how-it-works-card h3 {
@@ -181,7 +153,6 @@
   background-clip: text;
   background-size: 125%;
   font-weight: bolder;
-
   background-position: left center;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -193,20 +164,13 @@
   letter-spacing: 1.5px;
   line-height: 1.6;
   font-weight: 500;
-
   color: rgba(240, 240, 255, 0.8);
   transition: all 0.4s ease;
 }
 
-.how-it-works-card p strong {
-  transition: all 0.4s ease;
-}
-
-/* HOW IT WORKS CARD HOVER STATES */
-/* //////////////////////////////// */
-
 .how-it-works-card:hover {
   background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-6px);
 }
 
 .how-it-works-card:hover h3 {
@@ -225,18 +189,47 @@
   color: var(--secondary-color);
 }
 
-/* HOW IT WORKS CARD INNER */
-/* //////////////////////////////// */
 .card-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 3rem;
-
   transition: all 0.4s ease;
 }
 
-.how-it-works-card:hover .card-inner {
-  transform: scale(0.95); /* or whatever scale you want */
+/* CAROUSEL BUTTON */
+/* //////////////////////////////// */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  font-size: 2rem;
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  border: none;
+  padding: 0.4rem 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.4s ease;
+  opacity: 0.9;
 }
+
+.carousel-btn:hover {
+  background-color: var(--highlight-color);
+  transform: scale(1.1);
+}
+
+.carousel-btn.left {
+  left: 0rem;
+  transform: translate(-50%, -50%);
+}
+
+.carousel-btn.right {
+  right: 0rem;
+  transform: translate(50%, -50%);
+}
+
+/* ///////////////////////////////////////////////////////// */
+/* ////////////////////// MEDIA QUERIES ///////////////////// */
+/* ///////////////////////////////////////////////////////// */

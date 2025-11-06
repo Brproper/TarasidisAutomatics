@@ -1,36 +1,40 @@
 import React, { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom"; // ✅ added useNavigate
+import { useLocation, useNavigate } from "react-router-dom";
 import "./Navigation.css";
 
-const handleLogoClick = (navigate) => {
-  navigate("/"); // navigate to homepage
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
-
-function Navigation({ t }) {
+function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
-  const navigate = useNavigate(); // ✅ define navigate here
+  const navigate = useNavigate();
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
+
+  const handleLogoClick = () => {
+    if (location.pathname !== "/") {
+      navigate("/");
+      // Wait for navigation to complete
+      setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 300);
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   const handleScrollToSection = (id) => {
     setMenuOpen(false);
 
-    if (location.pathname !== "/") {
-      // navigate to homepage first if not there
-      navigate("/");
-      setTimeout(() => {
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 300);
-    } else {
+    const scroll = () => {
       const element = document.getElementById(id);
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
+    };
+
+    if (location.pathname !== "/") {
+      // Go home first, then scroll
+      navigate("/");
+      setTimeout(scroll, 400);
+    } else {
+      scroll();
     }
   };
 
@@ -43,7 +47,7 @@ function Navigation({ t }) {
       {/* LOGO */}
       <h1 className="logo">
         <button
-          onClick={() => handleLogoClick(navigate)} // ✅ pass navigate
+          onClick={handleLogoClick}
           aria-label="Go to homepage"
           className="logo-btn"
         >
@@ -64,14 +68,18 @@ function Navigation({ t }) {
 
       {/* LINKS */}
       <ul className={`navigation-links ${menuOpen ? "active" : ""}`}>
+        {/* ✅ Use navigate instead of Link to avoid reloads on GitHub Pages */}
         <li>
-          <Link
+          <button
             className="navigation-link"
-            to="/founder"
-            onClick={() => setMenuOpen(false)}
+            onClick={() => {
+              setMenuOpen(false);
+              navigate("/founder");
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
           >
             About
-          </Link>
+          </button>
         </li>
 
         <li>
@@ -116,7 +124,7 @@ function Navigation({ t }) {
         className="get-started"
         onClick={() => handleScrollToSection("contact")}
       >
-        {t?.getStarted || "Get Started"}
+        Get Started
       </button>
     </nav>
   );

@@ -13,19 +13,23 @@ function Hero({ t }) {
   const [inView, setInView] = useState(false);
 
   useEffect(() => {
+    const element = headerRef.current;
+    if (!element) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setInView(true);
-          observer.unobserve(entry.target); // Animate only once
+          observer.unobserve(entry.target); // Stop observing permanently
         }
       },
-      { threshold: 1 }
+      { threshold: 0.5 } // triggers when 50% is visible
     );
 
-    if (headerRef.current) observer.observe(headerRef.current);
+    observer.observe(element);
+
     return () => observer.disconnect();
-  }, []);
+  }, []); // ✅ empty deps — only run once
 
   return (
     <header className="hero-section" id="about" ref={ref}>

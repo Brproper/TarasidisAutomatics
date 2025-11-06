@@ -87,89 +87,89 @@ function HowItWorks({ t }) {
       </div>
 
       <div className="carousel-wrapper">
-        {/* CAROUSEL LEFT BUTTON */}
-        <button
-          aria-label="Scroll carousel left"
-          className="carousel-btn left"
-          onClick={() => scrollCarousel(-1)}
-        >
-          <span>&#10094;</span>
-        </button>
-
         <div className="carousel" id="education-carousel" ref={carouselRef}>
-          {/* EDUCATION CARD */}
-          <div className="how-it-works-card">
-            <div className="card-inner">
-              <h3>{t.howItWorksStep1}</h3>
-              <p>
-                We start with a <strong>30-minute call</strong> to understand
-                your current
-                <strong> workflow</strong> — how you handle{" "}
-                <strong>calls, inquiries, bookings, and reminders</strong>. You
-                simply walk us through your process, and we identify where{" "}
-                <strong>AI can save the most time</strong> and{" "}
-                <strong>reduce missed revenue</strong>.
-              </p>
-              <p className="italic">
-                <span></span>Takes just <strong>30 minutes</strong> — no
-                <strong> technical setup</strong> required.
-              </p>
+          <div className="cards-container">
+            {/* CAROUSEL LEFT BUTTON */}
+            <button
+              aria-label="Scroll carousel left"
+              className="carousel-btn left"
+              onClick={() => scrollCarousel(-1)}
+            >
+              <span>&#10094;</span>
+            </button>
+            {/* STEP 1 */}
+            <div className="how-it-works-card">
+              <div className="card-inner">
+                <h3>{t.howItWorksStep1}</h3>
+                <p>
+                  We start with a <strong>30-minute call</strong> to understand
+                  your <strong>workflow</strong> — how you handle{" "}
+                  <strong>calls, inquiries, bookings, and reminders</strong>.
+                  You simply walk us through your process, and we identify where{" "}
+                  <strong>AI can save the most time</strong> and{" "}
+                  <strong>reduce missed revenue</strong>.
+                </p>
+                <p className="italic">
+                  Takes just <strong>30 minutes</strong> — no{" "}
+                  <strong>technical setup</strong> required.
+                </p>
+              </div>
             </div>
-          </div>
 
-          {/* EDUCATION CARD */}
-          <div className="how-it-works-card">
-            <div className="card-inner">
-              <h3>{t.howItWorksStep2}</h3>
-              <p>
-                We design your{" "}
-                <strong>custom AI Voice Agent and Chatbot</strong> to match your
-                <strong> communication style, tone, and workflow</strong>.
-                Everything connects directly to your tools —{" "}
-                <strong>calendar, CRM, or Google Sheets</strong>. Once ready, we
-                test it in real-world scenarios to ensure it
-                <strong> sounds natural</strong> and{" "}
-                <strong>performs flawlessly</strong>.
-              </p>
-              <p className="italic">
-                Your system is <strong>ready</strong> within a{" "}
-                <strong>few days</strong> or <strong>weeks</strong> depending of
-                the <strong>project’s complexity</strong>.
-              </p>
+            {/* STEP 2 */}
+            <div className="how-it-works-card">
+              <div className="card-inner">
+                <h3>{t.howItWorksStep2}</h3>
+                <p>
+                  We design your{" "}
+                  <strong>custom AI Voice Agent and Chatbot</strong> to match
+                  your <strong>communication style, tone, and workflow</strong>.
+                  Everything connects directly to your tools —{" "}
+                  <strong>calendar, CRM, or Google Sheets</strong>. Once ready,
+                  we test it to ensure it <strong>sounds natural</strong> and{" "}
+                  <strong>performs flawlessly</strong>.
+                </p>
+                <p className="italic">
+                  Your system is <strong>ready</strong> within a{" "}
+                  <strong>few days</strong> or <strong>weeks</strong> depending
+                  on the <strong>project’s complexity</strong>.
+                </p>
+              </div>
             </div>
-          </div>
 
-          {/* EDUCATION CARD */}
-          <div className="how-it-works-card">
-            <div className="card-inner">
-              <h3>{t.howItWorksStep3}</h3>
-              <p>
-                From here, <strong>MedFit AI takes care of the rest</strong>: -{" "}
-                <strong>Every call answered</strong> — no missed opportunities -{" "}
-                <strong>Leads qualified and booked automatically</strong>-{" "}
-                <strong>Appointments confirmed and reminders sent</strong>-{" "}
-                <strong>Follow-ups handled seamlessly</strong>
-              </p>
-              <p className="italic">
-                Fewer{" "}
-                <strong>
-                  no-shows<strong>, </strong>more bookings
-                </strong>
-                , and <strong>10+ hours</strong> saved <strong>weekly</strong> —
-                while you focus on care and results.
-              </p>
+            {/* STEP 3 */}
+            <div className="how-it-works-card">
+              <div className="card-inner">
+                <h3>{t.howItWorksStep3}</h3>
+                <p>
+                  From here, <strong>MedFit AI takes care of the rest</strong>:
+                  <br />– <strong>Every call answered</strong> — no missed
+                  opportunities
+                  <br />–{" "}
+                  <strong>Leads qualified and booked automatically</strong>
+                  <br />–{" "}
+                  <strong>Appointments confirmed and reminders sent</strong>
+                  <br />– <strong>Follow-ups handled seamlessly</strong>
+                </p>
+                <p className="italic">
+                  Fewer <strong>no-shows</strong>, more{" "}
+                  <strong>bookings</strong>, and{" "}
+                  <strong>10+ hours saved weekly</strong> — while you focus on
+                  care and results.
+                </p>
+              </div>
             </div>
+
+            {/* CAROUSEL RIGHT BUTTON */}
+            <button
+              aria-label="Scroll carousel right"
+              className="carousel-btn right"
+              onClick={() => scrollCarousel(1)}
+            >
+              <span>&#10095;</span>
+            </button>
           </div>
         </div>
-
-        {/* CAROUSEL RIGHT BUTTON */}
-        <button
-          aria-label="Scroll carousel right"
-          className="carousel-btn right"
-          onClick={() => scrollCarousel(1)}
-        >
-          <span>&#10095;</span>
-        </button>
       </div>
     </section>
   );
