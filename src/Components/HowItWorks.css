@@ -6,6 +6,11 @@
   padding: 4rem 12rem;
   position: relative;
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Background video styling */
@@ -90,43 +95,15 @@
   color: transparent;
 }
 
-/* CAROUSEL WRAPPER */
-/* //////////////////////////////// */
-.carousel-wrapper {
-  position: relative;
-  padding: 2rem;
-
-  overflow: hidden;
-}
-
-.carousel {
-  max-width: 750px;
-
-  margin: 0 auto;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.carousel::-webkit-scrollbar {
-  display: none;
-}
-
 /* HOW IT WORKS CARD */
 /* //////////////////////////////// */
 .cards-container {
-  position: relative;
-
   display: flex;
   align-items: center;
-  justify-content: center;
-
-  gap: 4rem;
+  gap: 2rem;
+  overflow: visible; /* important */
 }
+
 .how-it-works-card {
   flex: 0 0 100%;
   background: rgba(255, 255, 255, 0.08);
@@ -198,38 +175,273 @@
   transition: all 0.4s ease;
 }
 
+/* CAROUSEL WRAPPER */
+/* //////////////////////////////// */
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+}
+
+.carousel {
+  position: relative;
+  max-width: 750px;
+  margin: 0 auto;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
 /* CAROUSEL BUTTON */
 /* //////////////////////////////// */
 .carousel-btn {
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   font-size: 2rem;
   background-color: var(--secondary-color);
   color: var(--background-color);
   border: none;
-  padding: 0.4rem 1.2rem;
+  padding: 0.6rem 1.3rem;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 100;
-  transition: all 0.4s ease;
-  opacity: 0.9;
+  z-index: 10;
+  transition: all 0.3s ease;
 }
 
 .carousel-btn:hover {
   background-color: var(--highlight-color);
-  transform: scale(1.1);
+  transform: translateY(-50%) scale(1.1);
 }
 
+/* BUTTON POSITION */
 .carousel-btn.left {
-  left: 0rem;
-  transform: translate(-50%, -50%);
+  left: 0;
+  transform: translateX(-50%);
 }
 
 .carousel-btn.right {
-  right: 0rem;
-  transform: translate(50%, -50%);
+  right: 0;
+  transform: translateX(50%);
 }
 
 /* ///////////////////////////////////////////////////////// */
-/* ////////////////////// MEDIA QUERIES ///////////////////// */
+/* /////////////////////// MEDIA QUERIES //////////////////// */
 /* ///////////////////////////////////////////////////////// */
+
+/* ---------- XXL Screens (≥1600px) ---------- */
+@media (min-width: 1600px) {
+  .how-it-works-section {
+    padding: 6rem 18rem;
+  }
+
+  .section-heading {
+    font-size: 3rem;
+  }
+
+  .section-subheading {
+    font-size: 1.6rem;
+  }
+
+  .how-it-works-card {
+    padding: 4rem 4rem;
+  }
+
+  .carousel-btn {
+    font-size: 2rem;
+  }
+}
+
+/* ---------- Large Screens (1200px–1599px) ---------- */
+@media (max-width: 1599px) {
+  .how-it-works-section {
+    padding: 4rem 12rem;
+  }
+
+  .section-heading {
+    font-size: 2.8rem;
+  }
+}
+
+/* ---------- Medium Desktops (992px–1199px) ---------- */
+@media (max-width: 1199px) {
+  .how-it-works-section {
+    padding: 4rem 10rem;
+  }
+
+  .section-subheading {
+    font-size: 1.3rem;
+    margin-bottom: 5rem;
+  }
+
+  .how-it-works-card {
+    padding: 3rem 3.5rem;
+  }
+}
+
+/* ---------- Tablets (768px–991px) ---------- */
+@media (max-width: 1050px) {
+  .how-it-works-section {
+    padding: 4rem 6rem;
+  }
+
+  .section-heading {
+    font-size: 2.4rem;
+  }
+
+  .section-subheading {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+
+  .how-it-works-card {
+    padding: 2.5rem 2.5rem;
+  }
+
+  .how-it-works-card h3 {
+    font-size: 1.8rem;
+  }
+
+  .how-it-works-card p {
+    font-size: 1.2rem;
+  }
+
+  .carousel {
+    max-width: 625px;
+  }
+
+  .carousel-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 1.8rem;
+  }
+}
+
+/* ---------- Large Mobile (576px–767px) ---------- */
+@media (max-width: 800px) {
+  .how-it-works-section {
+    padding: 4rem;
+  }
+
+  .section-heading {
+    font-size: 2.3rem;
+  }
+
+  .section-subheading {
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+  }
+
+  .cards-container {
+    gap: 2.5rem;
+  }
+
+  .how-it-works-card {
+    padding: 2rem 2.5rem;
+  }
+
+  .how-it-works-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .how-it-works-card p {
+    font-size: 1.1rem;
+  }
+
+  .carousel {
+    max-width: 550px;
+  }
+
+  .carousel-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 1.6rem;
+  }
+}
+
+/* ---------- Small Mobile (≤575px) ---------- */
+@media (max-width: 650px) {
+  .how-it-works-section {
+    padding: 2.5rem 3rem;
+  }
+
+  .section-heading {
+    font-size: 2.2rem;
+  }
+
+  .section-subheading {
+    font-size: 1.1rem;
+    margin-bottom: 4rem;
+  }
+
+  .how-it-works-card {
+    padding: 2rem 2rem;
+  }
+
+  .how-it-works-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .how-it-works-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .carousel {
+    max-width: 475px;
+  }
+
+  /* Hide buttons, rely on swipe */
+  .carousel-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* ---------- Tiny Screens (≤400px) ---------- */
+@media (max-width: 550px) {
+  .how-it-works-section {
+    padding: 2rem 2.5rem;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .section-subheading {
+    font-size: 1.05rem;
+  }
+
+  .card-inner {
+    gap: 2.5rem;
+  }
+
+  .how-it-works-card {
+    padding: 1.5rem;
+  }
+
+  .how-it-works-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .how-it-works-card p {
+    font-size: 0.95rem;
+  }
+
+  .carousel {
+    max-width: 400px;
+  }
+
+  /* Hide buttons, rely on swipe */
+  .carousel-btn {
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+  }
+}

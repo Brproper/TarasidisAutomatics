@@ -135,10 +135,11 @@ function Contact() {
           <button
             className="secondary-btn"
             aria-label="Book a Call"
+            id="getStarted"
             onClick={() =>
               window.open(
                 "https://calendly.com/tarasidis17/discovery-call",
-                "_blank" // opens in a new tab
+                "_blank"
               )
             }
           >

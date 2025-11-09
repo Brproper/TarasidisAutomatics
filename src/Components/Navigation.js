@@ -122,7 +122,17 @@ function Navigation() {
       {/* GET STARTED */}
       <button
         className="get-started"
-        onClick={() => handleScrollToSection("contact")}
+        onClick={() => {
+          const element = document.getElementById("getStarted");
+          if (element) {
+            const yOffset = -500; // adjust this value to move up (negative = higher)
+            const y =
+              element.getBoundingClientRect().top +
+              window.pageYOffset +
+              yOffset;
+            window.scrollTo({ top: y, behavior: "smooth" });
+          }
+        }}
       >
         Get Started
       </button>

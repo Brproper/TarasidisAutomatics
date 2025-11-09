@@ -35,11 +35,17 @@ function HowItWorks({ t }) {
   const carouselRef = useRef(null);
 
   const scrollCarousel = (direction) => {
-    if (!carouselRef.current) return;
-    const cardWidth =
-      carouselRef.current.querySelector(".how-it-works-card").offsetWidth;
-    carouselRef.current.scrollBy({
-      left: direction * (cardWidth + 32), // Assuming the gap between cards is 32px
+    const el = carouselRef.current;
+    if (!el) return;
+
+    const card = el.querySelector(".how-it-works-card");
+    if (!card) return;
+
+    const scrollAmount = card.offsetWidth + 32;
+    const newScroll = el.scrollLeft + direction * scrollAmount;
+
+    el.scrollTo({
+      left: Math.max(0, Math.min(newScroll, el.scrollWidth)),
       behavior: "smooth",
     });
   };
@@ -87,16 +93,18 @@ function HowItWorks({ t }) {
       </div>
 
       <div className="carousel-wrapper">
+        {/* LEFT BUTTON outside carousel */}
+        <button
+          aria-label="Scroll carousel left"
+          className="carousel-btn left"
+          onClick={() => scrollCarousel(-1)}
+        >
+          <span>&#10094;</span>
+        </button>
+
+        {/* CAROUSEL */}
         <div className="carousel" id="education-carousel" ref={carouselRef}>
           <div className="cards-container">
-            {/* CAROUSEL LEFT BUTTON */}
-            <button
-              aria-label="Scroll carousel left"
-              className="carousel-btn left"
-              onClick={() => scrollCarousel(-1)}
-            >
-              <span>&#10094;</span>
-            </button>
             {/* STEP 1 */}
             <div className="how-it-works-card">
               <div className="card-inner">
@@ -123,7 +131,8 @@ function HowItWorks({ t }) {
                 <p>
                   We design your{" "}
                   <strong>custom AI Voice Agent and Chatbot</strong> to match
-                  your <strong>communication style, tone, and workflow</strong>.
+                  your <strong>communication style</strong>,{" "}
+                  <strong>tone</strong>, and <strong>workflow</strong>.
                   Everything connects directly to your tools —{" "}
                   <strong>calendar, CRM, or Google Sheets</strong>. Once ready,
                   we test it to ensure it <strong>sounds natural</strong> and{" "}
@@ -143,33 +152,31 @@ function HowItWorks({ t }) {
                 <h3>{t.howItWorksStep3}</h3>
                 <p>
                   From here, <strong>MedFit AI takes care of the rest</strong>:
-                  <br />– <strong>Every call answered</strong> — no missed
-                  opportunities
+                  <br />– <strong>Every call answered</strong>
                   <br />–{" "}
                   <strong>Leads qualified and booked automatically</strong>
-                  <br />–{" "}
-                  <strong>Appointments confirmed and reminders sent</strong>
+                  <br />– <strong>Appointments confirmed</strong> and{" "}
+                  <strong>reminders sent</strong>
                   <br />– <strong>Follow-ups handled seamlessly</strong>
                 </p>
                 <p className="italic">
                   Fewer <strong>no-shows</strong>, more{" "}
                   <strong>bookings</strong>, and{" "}
-                  <strong>10+ hours saved weekly</strong> — while you focus on
-                  care and results.
+                  <strong>10+ hours saved weekly</strong>.
                 </p>
               </div>
             </div>
-
-            {/* CAROUSEL RIGHT BUTTON */}
-            <button
-              aria-label="Scroll carousel right"
-              className="carousel-btn right"
-              onClick={() => scrollCarousel(1)}
-            >
-              <span>&#10095;</span>
-            </button>
           </div>
         </div>
+
+        {/* RIGHT BUTTON outside carousel */}
+        <button
+          aria-label="Scroll carousel right"
+          className="carousel-btn right"
+          onClick={() => scrollCarousel(1)}
+        >
+          <span>&#10095;</span>
+        </button>
       </div>
     </section>
   );

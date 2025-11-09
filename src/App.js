@@ -22,7 +22,7 @@ export default function App() {
   const t = translations.en;
 
   return (
-    <Router basename="/TarasidisAutomatics">
+    <Router>
       {/* ✅ Always visible on every page */}
       <Navigation t={t} />
 
