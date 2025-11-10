@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/static/css/main.e5abeef0.css",
-    "main.js": "/static/js/main.9bba2d3e.js",
-    "static/media/LandingPageAi1.mp4": "/static/media/LandingPageAi1.733e01027a8efdcfbbcd.mp4",
-    "static/media/LandingPageAi4.mp4": "/static/media/LandingPageAi4.6b6f2b8e367127f60d2b.mp4",
-    "static/media/LandingPageAi2.mp4": "/static/media/LandingPageAi2.03f152469fe3786825e0.mp4",
-    "static/media/Sound.jpg": "/static/media/Sound.6803e7c4bceb85729abe.jpg",
-    "static/media/TechBrainAi3.jpg": "/static/media/TechBrainAi3.c4935fec44d3ae6cac94.jpg",
-    "static/media/ChatBots.jpg": "/static/media/ChatBots.e74720afc4c8fd63a18c.jpg",
-    "static/media/Founder.jpg": "/static/media/Founder.bc85dd436fcf1b9d8968.jpg",
+    "main.js": "/static/js/main.e5024af3.js",
+    "static/media/LandingPageAi1.mp4": "/static/media/LandingPageAi1.d457bddb3902da70aa04.mp4",
+    "static/media/LandingPageAi2.mp4": "/static/media/LandingPageAi2.449d530f67b8eaa06707.mp4",
+    "static/media/LandingPageAi4.mp4": "/static/media/LandingPageAi4.1a21e643c0cf64cef707.mp4",
+    "static/media/Sound.webp": "/static/media/Sound.bee0ba662e051a8c1e6a.webp",
+    "static/media/TechBrainAi3.webp": "/static/media/TechBrainAi3.05c604aec49cc385ccef.webp",
+    "static/media/ChatBots.webp": "/static/media/ChatBots.b3baf3be2a68d9ca8a83.webp",
+    "static/media/Founder.webp": "/static/media/Founder.3125cccd8ebeb0a08358.webp",
     "index.html": "/index.html",
     "main.e5abeef0.css.map": "/static/css/main.e5abeef0.css.map",
-    "main.9bba2d3e.js.map": "/static/js/main.9bba2d3e.js.map"
+    "main.e5024af3.js.map": "/static/js/main.e5024af3.js.map"
   },
   "entrypoints": [
     "static/css/main.e5abeef0.css",
-    "static/js/main.9bba2d3e.js"
+    "static/js/main.e5024af3.js"
   ]
 }
