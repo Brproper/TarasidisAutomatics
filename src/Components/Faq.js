@@ -1,5 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import faqData from "../Components/faqData";
+import useInViewHeader from "../Components/useInViewHeader";
+
 import "./Faq.css";
 
 export default function Faq() {
@@ -10,23 +12,7 @@ export default function Faq() {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
-  const headerRef = useRef(null);
-  const [inView, setInView] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-          observer.unobserve(entry.target); // Animate only once
-        }
-      },
-      { threshold: 1 }
-    );
-
-    if (headerRef.current) observer.observe(headerRef.current);
-    return () => observer.disconnect();
-  }, []);
+  const { headerRef, inView } = useInViewHeader();
 
   return (
     <section className="faq-section">

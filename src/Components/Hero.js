@@ -1,6 +1,6 @@
 import "./Hero.css";
-import React, { useEffect, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import useInViewHeader from "../Components/useInViewHeader";
 import landingVideo from "../assets/videos/LandingPageAi4.mp4";
 
 function Hero({ t }) {
@@ -9,27 +9,7 @@ function Hero({ t }) {
     threshold: 0.3,
   });
 
-  const headerRef = useRef(null);
-  const [inView, setInView] = useState(false);
-
-  useEffect(() => {
-    const element = headerRef.current;
-    if (!element) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-          observer.unobserve(entry.target); // Stop observing permanently
-        }
-      },
-      { threshold: 0.5 } // triggers when 50% is visible
-    );
-
-    observer.observe(element);
-
-    return () => observer.disconnect();
-  }, []); // ✅ empty deps — only run once
+  const { headerRef, inView } = useInViewHeader();
 
   return (
     <header className="hero-section" id="about" ref={ref}>

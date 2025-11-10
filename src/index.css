@@ -167,6 +167,27 @@ body {
   line-height: 1;
 }
 
+/* BACKGROUND VIDEO */
+/* ///////////////////////////// */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%; /* fill parent container */
+  object-fit: cover;
+
+  aspect-ratio: 16 / 9; /* reserve space to reduce layout shift */
+  transform-origin: center; /* keep video centered while scaling */
+
+  z-index: -1;
+  opacity: 1;
+
+  /* Prevent video from causing scrollbars */
+  display: block;
+}
+
 /* PRIMARY BUTTON */
 /* ///////////////////////////// */
 .primary-btn {

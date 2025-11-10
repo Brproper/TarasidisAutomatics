@@ -1,31 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
 import "./Services.css";
+import useInViewHeader from "../Components/useInViewHeader";
 import ChatbotsImg from "../assets/imgs/ChatBots.webp";
 import Sound from "../assets/imgs/Sound.webp";
 import TechBrainAi from "../assets/imgs/TechBrainAi3.webp";
 
 function Services({ t }) {
-  const headerRef = useRef(null);
-  const [inView, setInView] = useState(false);
-
-  useEffect(() => {
-    const element = headerRef.current;
-    if (!element) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-          observer.unobserve(entry.target); // Stop observing permanently
-        }
-      },
-      { threshold: 0.5 } // triggers when 50% is visible
-    );
-
-    observer.observe(element);
-
-    return () => observer.disconnect();
-  }, []); // ✅ empty deps — only run once
+  const { headerRef, inView } = useInViewHeader();
 
   return (
     /* ///////////////////////////////////////////////////

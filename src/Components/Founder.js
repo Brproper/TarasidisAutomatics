@@ -1,4 +1,3 @@
-import React from "react";
 import "./Founder.css";
 import FounderImg from "../assets/imgs/Founder.webp";
 

@@ -1,24 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import useInViewHeader from "../Components/useInViewHeader";
+
 import "./WhyMedfitAI.css";
 
 export default function WhyMedfitAI() {
-  const headerRef = useRef(null);
-  const [inView, setInView] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 1 }
-    );
-
-    if (headerRef.current) observer.observe(headerRef.current);
-    return () => observer.disconnect();
-  }, []);
+  const { headerRef, inView } = useInViewHeader();
 
   return (
     <section className="why-medfit-section" id="whyMedfitAI">

@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
 import "./Contact.css";
 import { useInView } from "react-intersection-observer";
+import useInViewHeader from "../Components/useInViewHeader";
 import landingVideo3 from "../assets/videos/LandingPageAi1.mp4";
 
 function Contact() {
@@ -9,27 +9,8 @@ function Contact() {
     threshold: 0.3,
   });
 
-  const headerRef = useRef(null);
-  const [inView, setInView] = useState(false);
+  const { headerRef, inView } = useInViewHeader();
 
-  useEffect(() => {
-    const element = headerRef.current;
-    if (!element) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-          observer.unobserve(entry.target); // Stop observing permanently
-        }
-      },
-      { threshold: 0.5 } // triggers when 50% is visible
-    );
-
-    observer.observe(element);
-
-    return () => observer.disconnect();
-  }, []); // ✅ empty deps — only run once
   return (
     /* ///////////////////////////////////////////////////
 /////////////////CONTACT SECTION/////////////////////////
@@ -42,7 +23,7 @@ function Contact() {
           muted
           loop
           playsInline
-          className="background-video3"
+          className="background-video"
           preload="none"
         >
           <source src={landingVideo3} type="video/webm" />

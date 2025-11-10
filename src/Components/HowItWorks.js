@@ -1,36 +1,17 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import "./HowItWorks.css";
 import { useInView } from "react-intersection-observer";
+import useInViewHeader from "../Components/useInViewHeader";
+
 import landingVideo2 from "../assets/videos/LandingPageAi2.mp4";
 
 function HowItWorks({ t }) {
+  const { headerRef, inView } = useInViewHeader();
+
   const { ref, inView: inViewVideo } = useInView({
     triggerOnce: true,
     threshold: 0.3,
   });
-
-  const headerRef = useRef(null);
-  const [inView, setInView] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-          observer.unobserve(entry.target); // Optional: animate only once
-        }
-      },
-      {
-        threshold: 1, // Adjust this if needed
-      }
-    );
-
-    if (headerRef.current) {
-      observer.observe(headerRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   const carouselRef = useRef(null);
 
@@ -62,7 +43,7 @@ function HowItWorks({ t }) {
           muted
           loop
           playsInline
-          className="background-video2"
+          className="background-video"
           preload="none"
           aria-hidden="true"
         >
