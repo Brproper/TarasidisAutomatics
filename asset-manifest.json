@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.ce07a48c.css",
+    "main.css": "/static/css/main.e5abeef0.css",
     "main.js": "/static/js/main.9bba2d3e.js",
     "static/media/LandingPageAi1.mp4": "/static/media/LandingPageAi1.733e01027a8efdcfbbcd.mp4",
     "static/media/LandingPageAi4.mp4": "/static/media/LandingPageAi4.6b6f2b8e367127f60d2b.mp4",
@@ -10,11 +10,11 @@
     "static/media/ChatBots.jpg": "/static/media/ChatBots.e74720afc4c8fd63a18c.jpg",
     "static/media/Founder.jpg": "/static/media/Founder.bc85dd436fcf1b9d8968.jpg",
     "index.html": "/index.html",
-    "main.ce07a48c.css.map": "/static/css/main.ce07a48c.css.map",
+    "main.e5abeef0.css.map": "/static/css/main.e5abeef0.css.map",
     "main.9bba2d3e.js.map": "/static/js/main.9bba2d3e.js.map"
   },
   "entrypoints": [
-    "static/css/main.ce07a48c.css",
+    "static/css/main.e5abeef0.css",
     "static/js/main.9bba2d3e.js"
   ]
 }
