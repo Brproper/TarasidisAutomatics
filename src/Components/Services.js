@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Services.css";
-import ChatbotsImg from "../assets/imgs/ChatBots.jpg";
-import Sound from "../assets/imgs/Sound.jpg";
-import TechBrainAi from "../assets/imgs/TechBrainAi3.jpg";
+import ChatbotsImg from "../assets/imgs/ChatBots.webp";
+import Sound from "../assets/imgs/Sound.webp";
+import TechBrainAi from "../assets/imgs/TechBrainAi3.webp";
 
 function Services({ t }) {
   const headerRef = useRef(null);
@@ -111,11 +111,11 @@ function Services({ t }) {
         </div>
 
         <div className="service-image">
-          <img src={ChatbotsImg} alt="Group of Chatbots" />
+          <img src={ChatbotsImg} alt="Group of Chatbots" loading="lazy" />
         </div>
 
         <div className="service-image">
-          <img src={Sound} alt="Voice assistant " />
+          <img src={Sound} alt="Voice assistant " loading="lazy" />
         </div>
 
         {/*SERVICE CARD */}
@@ -244,7 +244,7 @@ function Services({ t }) {
         </div>
 
         <div className="service-image">
-          <img src={TechBrainAi} alt="Custom Ai" />
+          <img src={TechBrainAi} alt="Custom Ai" loading="lazy" />
         </div>
       </div>
 

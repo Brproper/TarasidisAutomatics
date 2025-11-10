@@ -1,6 +1,6 @@
 import React from "react";
 import "./Founder.css";
-import FounderImg from "../assets/imgs/Founder.jpg";
+import FounderImg from "../assets/imgs/Founder.webp";
 
 export default function Founder() {
   return (

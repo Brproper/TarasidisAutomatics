@@ -42,7 +42,6 @@ function Hero({ t }) {
           playsInline
           className="background-video"
           preload="none"
-          poster="/assets/images/hero-poster.jpg"
           aria-hidden="true"
           loading="lazy"
         >
