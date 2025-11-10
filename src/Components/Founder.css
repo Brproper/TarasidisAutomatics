@@ -87,14 +87,74 @@
   padding-top: 1.5rem;
 }
 
-/* Responsive design */
-@media screen and (max-width: 1024px) {
+/* ========================================================= */
+/* =============== FOUNDER RESPONSIVENESS =================== */
+/* ========================================================= */
+
+/* 💻 Large screens (≤1200px) */
+@media screen and (max-width: 1200px) {
   .founder-page {
-    padding: 6rem 4rem;
+    padding: 10rem 6rem 6rem 6rem;
   }
 
   .founder-container {
-    padding: 3rem 4rem;
+    padding: 5rem;
+    max-width: 850px;
+  }
+
+  .founder-container h2 {
+    font-size: 2.4rem;
+  }
+
+  .founder-container p {
+    font-size: 1.3rem;
+  }
+
+  .founder-img {
+    width: 160px;
+    border-width: 10px;
+  }
+}
+
+/* 📱 Tablets (≤992px) */
+@media screen and (max-width: 992px) {
+  .founder-page {
+    padding: 10rem 4rem 4rem 5rem;
+  }
+
+  .founder-container {
+    padding: 5rem 4rem 4rem 4rem;
+  }
+
+  .founder-container h2 {
+    font-size: 2.3rem;
+  }
+
+  .founder-container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  .founder-img {
+    width: 150px;
+    top: 0;
+    right: 50%;
+    transform: translate(50%, -40%);
+  }
+
+  .signature {
+    font-size: 1.15rem;
+  }
+}
+
+/* 📲 Small tablets / large phones (≤768px) */
+@media screen and (max-width: 768px) {
+  .founder-page {
+    padding: 8rem 4rem 4rem 4rem;
+  }
+
+  .founder-container {
+    padding: 5rem 3rem 3rem 3rem;
   }
 
   .founder-container h2 {
@@ -102,32 +162,72 @@
   }
 
   .founder-container p {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+  }
+
+  .founder-img {
+    width: 140px;
   }
 
   .signature {
-    font-size: 1.2rem;
+    text-align: center;
   }
 }
 
-@media screen and (max-width: 768px) {
+/* 📞 Mobile phones (≤576px) */
+@media screen and (max-width: 576px) {
   .founder-page {
-    padding: 4rem 2rem;
+    padding: 8rem 3rem 3rem 4rem;
   }
 
   .founder-container {
-    padding: 2rem 2rem;
+    padding: 4.5rem 2rem 2rem 2rem;
+    box-shadow: 0 5px 15px rgba(0, 191, 255, 0.15);
   }
 
   .founder-container h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .founder-container p {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .founder-img {
+    width: 120px;
+    border-width: 8px;
+    margin-bottom: 1rem;
   }
 
   .signature {
-    font-size: 1.1rem;
+    font-size: 1rem;
+  }
+}
+
+/* 📱 Extra small phones (≤400px) */
+@media screen and (max-width: 450px) {
+  .founder-page {
+    padding: 8rem 2rem 2rem 2rem;
+  }
+
+  .founder-container {
+    padding: 4rem 2rem 2rem 2rem;
+  }
+
+  .founder-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .founder-container p {
+    font-size: 0.95rem;
+  }
+
+  .founder-img {
+    width: 100px;
+  }
+
+  .signature {
+    font-size: 0.95rem;
   }
 }

@@ -14,6 +14,16 @@
   gap: 3rem;
 }
 
+/* Typing Animation */
+.typing7 {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--primary-color);
+  width: 0;
+  animation: typingWhyMedFit 2s steps(14, end) forwards;
+}
+
 .why-medfit-wrapper {
   max-width: 1000px;
   display: flex;
@@ -34,6 +44,8 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: flex;
+  flex-wrap: auto;
 }
 
 .why-intro {
@@ -73,7 +85,7 @@
 
 .why-subheading {
   margin-top: 3rem;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
   color: var(--secondary-color);
 }
@@ -90,7 +102,8 @@
 
 .why-list li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
   gap: 0.8rem;
   font-size: 1.2rem;
   font-weight: 500;
@@ -120,20 +133,105 @@
   color: var(--highlight-color);
 }
 
-/* Typing Animation */
-.typing7 {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 2px solid var(--primary-color);
-  width: 0;
-  animation: typingWhyMedFit 2s steps(14, end) forwards;
+/* ///////////////////////////////////////////////////////// */
+/* ////////////////// WHY MEDFIT AI MEDIA QUERIES /////////// */
+/* ///////////////////////////////////////////////////////// */
+
+/* ---------- Large Screens (1200px–1599px) ---------- */
+@media (max-width: 1599px) {
+  .why-medfit-section {
+    padding: 4rem 10rem;
+  }
+
+  .why-medfit-wrapper h2 {
+    font-size: 2.6rem;
+  }
+
+  .why-intro {
+    font-size: 1.25rem;
+  }
+
+  .why-quote {
+    font-size: 1.25rem;
+    max-width: 650px;
+  }
+
+  .why-subheading {
+    font-size: 2rem;
+  }
+
+  .why-list li {
+    font-size: 1.1rem;
+  }
 }
 
-/* Responsive */
-@media (max-width: 900px) {
+/* ---------- Medium Desktops (992px–1199px) ---------- */
+@media (max-width: 1150px) {
   .why-medfit-section {
-    padding: 4rem 6rem;
+    padding: 4rem 8rem;
+  }
+
+  .why-medfit-wrapper h2 {
+    font-size: 2.4rem;
+  }
+
+  .why-intro {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  .why-quote {
+    font-size: 1.2rem;
+    padding: 1.8rem;
+    max-width: 600px;
+  }
+
+  .why-subheading {
+    font-size: 1.8rem;
+  }
+
+  .why-list li {
+    font-size: 1.1rem;
+  }
+
+  .why-list li span {
+    font-size: 1.5rem;
+  }
+}
+
+/* ---------- Tablets (768px–991px) ---------- */
+@media (max-width: 985px) {
+  .why-medfit-section {
+    padding: 4rem 4rem;
+  }
+
+  .why-medfit-wrapper h2 {
+    font-size: 2.3rem;
+  }
+
+  .why-intro {
+    font-size: 1.15rem;
+  }
+
+  .why-quote {
+    font-size: 1.15rem;
+    padding: 1.5rem;
+  }
+
+  .why-subheading {
+    font-size: 1.6rem;
+  }
+
+  .why-list li {
+    font-size: 1.05rem;
+  }
+}
+
+/* ---------- Large Mobile (576px–767px) ---------- */
+@media (max-width: 830px) {
+  .why-medfit-section {
+    padding: 3.5rem 3rem;
+    gap: 2.5rem;
   }
 
   .why-medfit-wrapper h2 {
@@ -142,9 +240,128 @@
 
   .why-intro {
     font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  .why-quote {
+    font-size: 1.1rem;
+    padding: 1.4rem;
+    margin-top: 1.8rem;
   }
 
   .why-list li {
+    font-size: 1rem;
+  }
+
+  .why-list li span {
+    font-size: 1.4rem;
+  }
+}
+
+/* ---------- Small Mobile (≤575px) ---------- */
+@media (max-width: 720px) {
+  .why-medfit-section {
+    padding: 3rem 2.5rem;
+    gap: 2rem;
+  }
+
+  .why-intro {
     font-size: 1.05rem;
+    line-height: 1.5;
+  }
+
+  .why-quote {
+    font-size: 1.05rem;
+    padding: 1.3rem;
+    border-left: 3px solid var(--secondary-color);
+  }
+
+  .why-subheading {
+    font-size: 1.5rem;
+  }
+
+  .why-list li {
+    font-size: 0.95rem;
+    gap: 0.5rem;
+  }
+}
+
+/* ---------- Extra Small (≤480px) ---------- */
+@media (max-width: 650px) {
+  .why-medfit-wrapper h2 {
+    font-size: 2rem;
+  }
+
+  .why-intro {
+    font-size: 1.05rem;
+  }
+
+  .why-quote {
+    font-size: 1rem;
+    padding: 1.1rem;
+    margin-top: 1.5rem;
+  }
+
+  .why-subheading {
+    font-size: 1.4rem;
+  }
+
+  .why-list li {
+    font-size: 0.9rem;
+  }
+
+  .why-list li span {
+    font-size: 1.3rem;
+  }
+}
+
+/* ---------- Tiny Screens (≤400px) ---------- */
+@media (max-width: 550px) {
+  .why-medfit-section {
+    padding: 3rem 2rem;
+  }
+
+  .why-intro {
+    font-size: 1rem;
+  }
+
+  .why-quote {
+    font-size: 0.95rem;
+    padding: 1rem;
+  }
+
+  .why-subheading {
+    font-size: 1.4rem;
+  }
+
+  .why-list li {
+    font-size: 0.85rem;
+  }
+}
+
+/* ---------- Ultra Small Devices (≤360px) ---------- */
+@media (max-width: 450px) {
+  .why-medfit-section {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .why-medfit-wrapper h2 {
+    font-size: 1.9rem;
+  }
+
+  .why-intro {
+    font-size: 1rem;
+  }
+
+  .why-subheading {
+    font-size: 1.2rem;
+  }
+
+  .why-list li {
+    font-size: 0.8rem;
+  }
+
+  .why-list li span {
+    font-size: 1.2rem;
   }
 }

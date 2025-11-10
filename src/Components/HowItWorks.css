@@ -428,7 +428,7 @@
   }
 
   .how-it-works-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   .how-it-works-card p {
@@ -443,5 +443,36 @@
   .carousel-btn {
     padding: 0.5rem 1rem;
     font-size: 1.4rem;
+  }
+}
+
+/* ---------- Tiny Screens (≤400px) ---------- */
+@media (max-width: 475px) {
+  .how-it-works-section {
+    padding: 2rem;
+  }
+
+  .section-subheading {
+    font-size: 1rem;
+  }
+
+  .how-it-works-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .how-it-works-card p {
+    font-size: 0.85rem;
+  }
+
+  .card-inner {
+    gap: 2rem;
+  }
+  .carousel {
+    max-width: 300px;
+  }
+
+  .carousel-btn {
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
   }
 }

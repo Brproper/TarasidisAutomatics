@@ -194,7 +194,7 @@
   /* background: rgba(255, 255, 255, 0.1); */
   padding: 2rem 4rem;
   /* box-shadow: 0 0 20px rgba(0, 191, 255, 0.15); */
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(4px);
 }
 
 .contact-stats h4 {
@@ -290,25 +290,190 @@
   }
 }
 
-/* Responsive tweaks */
-@media screen and (max-width: 768px) {
-  .contact-container {
-    width: 90%;
-    padding: 2rem;
-    gap: 2rem;
+/* ========================================================= */
+/* =============== CONTACT SECTION RESPONSIVENESS =========== */
+/* ========================================================= */
+
+/* 🖥️ Large screens (default) — your current styles apply */
+
+/* 💻 Medium desktops and large tablets (≤1200px) */
+@media (max-width: 1250px) {
+  .contact-section {
+    padding: 5rem 4rem;
   }
 
-  .contact-description {
-    gap: 1.2rem;
-    margin-bottom: 2rem;
+  .contact-flex-container {
+    gap: 3rem;
   }
 
-  .contact-container p {
+  .contact-header {
+    font-size: 2.4rem;
+  }
+
+  .contact-description p {
     font-size: 1.3rem;
   }
 
-  .contact-form-header,
-  .contact-info h3 {
-    font-size: 1.7rem;
+  .contact-container {
+    padding: 2.5rem;
+    max-width: 500px;
+  }
+
+  .contact-stats {
+    padding: 2rem 3rem;
+  }
+}
+
+/* 📱 Tablets (≤992px) */
+@media (max-width: 1030px) {
+  .contact-section {
+    padding: 4rem 6rem;
+  }
+
+  .contact-flex-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .contact-container,
+  .contact-stats {
+    max-width: 90%;
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+
+  .contact-header {
+    font-size: 2.3rem;
+  }
+
+  .contact-description p {
+    font-size: 1.2rem;
+  }
+
+  .contact-source {
+    font-size: 1.1rem;
+  }
+}
+
+/* 📲 Small tablets / large phones (≤768px) */
+@media (max-width: 800px) {
+  .contact-section {
+    padding: 4rem 3rem;
+  }
+
+  .contact-header {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+  }
+
+  .contact-container {
+    gap: 4rem;
+    padding: 2rem;
+  }
+
+  .contact-stats {
+    padding: 1.8rem 2rem;
+  }
+
+  .contact-container h3 {
+    font-size: 1.6rem;
+  }
+
+  .contact-container p,
+  .contact-stats li {
+    font-size: 1.2rem;
+  }
+
+  .contact-stats h4 {
+    font-size: 1.5rem;
+  }
+
+  .contact-description p {
+    font-size: 1.15rem;
+  }
+
+  .contact-source {
+    font-size: 1rem;
+  }
+}
+
+/* 📞 Mobile phones (≤576px) */
+@media (max-width: 650px) {
+  .contact-section {
+    padding: 3rem 2.5rem;
+  }
+
+  .contact-header {
+    font-size: 2rem;
+  }
+
+  .contact-description {
+    gap: 1rem;
+  }
+
+  .contact-description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .contact-flex-container {
+    gap: 3rem;
+  }
+
+  .contact-container,
+  .contact-stats {
+    padding: 1.5rem;
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  .contact-stats li {
+    font-size: 1.1rem;
+  }
+
+  .social-links a ion-icon {
+    font-size: 1.5rem;
+  }
+
+  .secondary-btn {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .contact-stats li {
+    flex-wrap: wrap;
+    line-height: 1.6;
+  }
+
+  .contact-source {
+    font-size: 0.9rem;
+  }
+}
+
+/* 📱 Extra small phones (≤400px) */
+@media (max-width: 475px) {
+  .contact-section {
+    padding: 2.5rem 2rem;
+  }
+  .contact-header {
+    font-size: 1.9rem;
+  }
+
+  .contact-description p {
+    font-size: 1rem;
+  }
+
+  .contact-container p,
+  .contact-stats li {
+    font-size: 1rem;
+  }
+
+  .contact-stats h4 {
+    font-size: 1.4rem;
+  }
+
+  .contact-source {
+    font-size: 0.8rem;
   }
 }

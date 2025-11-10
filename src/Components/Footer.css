@@ -62,3 +62,115 @@
   transform: scale(1.2);
   color: var(--secondary-color);
 }
+
+/* ========================================================= */
+/* =============== FOOTER RESPONSIVENESS ==================== */
+/* ========================================================= */
+
+/* 💻 Medium screens (≤1200px) */
+@media (max-width: 1200px) {
+  .footer-section {
+    padding: 2rem 3rem;
+  }
+
+  .footer-container p {
+    font-size: 1.1rem;
+  }
+
+  .footer-links a {
+    font-size: 1.1rem;
+  }
+
+  .footer-socials ion-icon {
+    font-size: 1.5rem;
+  }
+}
+
+/* 📱 Tablets (≤992px) */
+@media (max-width: 992px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-links ul {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .footer-links a {
+    font-size: 1.1rem;
+  }
+
+  .footer-socials {
+    gap: 1.5rem;
+  }
+}
+
+/* 📲 Small tablets / large phones (≤768px) */
+@media (max-width: 768px) {
+  .footer-section {
+    padding: 1.8rem 2rem;
+  }
+
+  .footer-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .footer-links ul {
+    gap: 1.2rem;
+  }
+
+  .footer-links a {
+    font-size: 1rem;
+  }
+
+  .footer-socials ion-icon {
+    font-size: 1.4rem;
+  }
+}
+
+/* 📞 Mobile phones (≤576px) */
+@media (max-width: 576px) {
+  .footer-section {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .footer-container {
+    gap: 1.2rem;
+  }
+
+  .footer-links ul {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .footer-links a {
+    font-size: 0.95rem;
+  }
+
+  .footer-socials {
+    gap: 1rem;
+  }
+
+  .footer-socials ion-icon {
+    font-size: 1.3rem;
+  }
+}
+
+/* 📱 Extra small phones (≤400px) */
+@media (max-width: 400px) {
+  .footer-container p {
+    font-size: 0.9rem;
+  }
+
+  .footer-links a {
+    font-size: 0.9rem;
+  }
+
+  .footer-socials ion-icon {
+    font-size: 1.2rem;
+  }
+}

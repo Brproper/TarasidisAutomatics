@@ -108,3 +108,177 @@
   max-height: 500px;
   opacity: 1;
 }
+
+/* ///////////////////////////////////////////////////////// */
+/* ////////////////// FAQ MEDIA QUERIES ///////////////////// */
+/* ///////////////////////////////////////////////////////// */
+
+/* ---------- Large Screens (≥1600px) ---------- */
+@media (min-width: 1600px) {
+  .faq-section {
+    padding: 8rem 12rem;
+  }
+
+  .faq-wrapper h2 {
+    font-size: 3rem;
+  }
+
+  .faq-question-btn {
+    font-size: 1.6rem;
+  }
+
+  .faq-answer {
+    font-size: 1.5rem;
+  }
+}
+
+/* ---------- Medium Desktops (1200px–1599px) ---------- */
+@media (max-width: 1599px) {
+  .faq-section {
+    padding: 6rem 10rem;
+  }
+
+  .faq-wrapper {
+    gap: 5rem;
+  }
+
+  .faq-wrapper h2 {
+    font-size: 2.6rem;
+  }
+
+  .faq-question-btn {
+    font-size: 1.4rem;
+  }
+
+  .faq-answer {
+    font-size: 1.3rem;
+  }
+}
+
+/* ---------- Tablets / Small Desktops (992px–1199px) ---------- */
+@media (max-width: 1199px) {
+  .faq-section {
+    padding: 5rem 8rem;
+  }
+
+  .faq-wrapper h2 {
+    font-size: 2.4rem;
+  }
+
+  .faq-question-btn {
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+  }
+
+  .faq-answer {
+    font-size: 1.25rem;
+  }
+}
+
+/* ---------- Tablets (768px–991px) ---------- */
+@media (max-width: 991px) {
+  .faq-section {
+    padding: 5rem 6rem;
+  }
+
+  .faq-wrapper {
+    gap: 4rem;
+  }
+
+  .faq-wrapper h2 {
+    font-size: 2.3rem;
+    letter-spacing: 2px;
+  }
+
+  .faq-question-btn {
+    font-size: 1.2rem;
+  }
+
+  .faq-answer {
+    font-size: 1.15rem;
+    line-height: 1.5;
+  }
+}
+
+/* ---------- Large Mobile (576px–767px) ---------- */
+@media (max-width: 767px) {
+  .faq-section {
+    padding: 4rem;
+  }
+
+  .faq-wrapper {
+    gap: 3rem;
+  }
+
+  .faq-wrapper h2 {
+    font-size: 2.2rem;
+  }
+
+  .faq-question-btn {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+
+  .faq-answer {
+    font-size: 1.05rem;
+  }
+}
+
+/* ---------- Mobile (≤575px) ---------- */
+@media (max-width: 625px) {
+  .faq-section {
+    padding: 3.5rem 2.5rem;
+  }
+
+  .faq-wrapper {
+    gap: 2.5rem;
+  }
+
+  .faq-wrapper h2 {
+    font-size: 1.8rem;
+  }
+
+  .faq-question-btn {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+
+  .faq-arrow {
+    font-size: 1rem;
+  }
+
+  .faq-answer {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}
+
+/* ---------- Small Mobile (≤450px) ---------- */
+@media (max-width: 520px) {
+  .faq-section {
+    padding: 3rem 2rem;
+  }
+
+  .faq-wrapper h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* ---------- Tiny Mobile (≤360px) ---------- */
+@media (max-width: 445px) {
+  .faq-section {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .faq-wrapper h2 {
+    font-size: 1.3rem;
+  }
+
+  .faq-question-btn {
+    font-size: 0.95rem;
+  }
+
+  .faq-answer {
+    font-size: 0.95rem;
+  }
+}

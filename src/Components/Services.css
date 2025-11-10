@@ -412,8 +412,8 @@
   }
 
   .service-image {
-    width: 300px;
-    height: 300px;
+    width: 325px;
+    height: 325px;
     border: 8px solid #e6f2f6;
   }
 
@@ -439,12 +439,12 @@
   }
 
   .services-section h3 {
-    font-size: 1.6rem;
+    font-size: 2rem;
     letter-spacing: 1px;
   }
 
   .services-intro {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   .service-card {
@@ -452,13 +452,13 @@
   }
 
   .service-image {
-    width: 220px;
-    height: 220px;
+    width: 275px;
+    height: 275px;
     border: 6px solid #e6f2f6;
   }
 
   .service-card h4 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   .service-card p,
