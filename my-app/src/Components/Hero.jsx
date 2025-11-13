@@ -1,6 +1,6 @@
 import "./Hero.css";
 import { useInView } from "react-intersection-observer";
-import useInViewHeader from "../Components/useInViewHeader";
+import useInViewHeader from "./useInViewHeader";
 import landingVideo from "../assets/videos/LandingPageAi4.mp4";
 
 function Hero({ t }) {
@@ -23,7 +23,6 @@ function Hero({ t }) {
           className="background-video"
           preload="none"
           aria-hidden="true"
-          loading="lazy"
         >
           <source src={landingVideo} type="video/mp4" />
           Your browser does not support the video tag.

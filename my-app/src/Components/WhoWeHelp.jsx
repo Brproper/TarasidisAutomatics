@@ -1,5 +1,4 @@
-import React from "react";
-import useInViewHeader from "../Components/useInViewHeader";
+import useInViewHeader from "./useInViewHeader";
 import "./WhoWeHelp.css";
 
 function WhoWeHelp() {
@@ -22,7 +21,7 @@ function WhoWeHelp() {
         {/* Private Clinics & Doctors Card */}
         <div className="who-card">
           <div className="icon-container">
-            <ion-icon name="medkit-outline" className="icon"></ion-icon>
+            <ion-icon name="medkit-outline" class="icon"></ion-icon>
           </div>
           <h3>Private Clinics & Doctors</h3>
           <p>
@@ -54,7 +53,7 @@ function WhoWeHelp() {
         {/* Gyms & Fitness Studios Card */}
         <div className="who-card">
           <div className="icon-container">
-            <ion-icon name="barbell-outline" className="icon"></ion-icon>
+            <ion-icon name="barbell-outline" class="icon"></ion-icon>
           </div>
           <h3>Gyms & Fitness Studios</h3>
           <p>

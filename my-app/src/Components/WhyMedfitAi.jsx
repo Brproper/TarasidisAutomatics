@@ -1,4 +1,4 @@
-import useInViewHeader from "../Components/useInViewHeader";
+import useInViewHeader from "./useInViewHeader";
 
 import "./WhyMedfitAI.css";
 

@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import "./HowItWorks.css";
 import { useInView } from "react-intersection-observer";
-import useInViewHeader from "../Components/useInViewHeader";
+import useInViewHeader from "./useInViewHeader";
 
 import landingVideo2 from "../assets/videos/LandingPageAi2.mp4";
 

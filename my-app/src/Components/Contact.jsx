@@ -1,6 +1,6 @@
 import "./Contact.css";
 import { useInView } from "react-intersection-observer";
-import useInViewHeader from "../Components/useInViewHeader";
+import useInViewHeader from "./useInViewHeader";
 import landingVideo3 from "../assets/videos/LandingPageAi1.mp4";
 
 function Contact() {

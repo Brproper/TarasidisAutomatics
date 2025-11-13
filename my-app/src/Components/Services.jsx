@@ -1,5 +1,5 @@
 import "./Services.css";
-import useInViewHeader from "../Components/useInViewHeader";
+import useInViewHeader from "./useInViewHeader";
 import ChatbotsImg from "../assets/imgs/ChatBots.webp";
 import Sound from "../assets/imgs/Sound.webp";
 import TechBrainAi from "../assets/imgs/TechBrainAi3.webp";
@@ -29,10 +29,7 @@ function Services({ t }) {
         {/* ////////////////////////////////////// */}
         <div className="service-card">
           {/* ION-ICON */}
-          <ion-icon
-            name="chatbubble-ellipses-outline"
-            className="icon"
-          ></ion-icon>
+          <ion-icon name="chatbubble-ellipses-outline" class="icon"></ion-icon>
 
           <h4>{t.service1Title}</h4>
 
@@ -102,7 +99,7 @@ function Services({ t }) {
         {/* ////////////////////////////////////// */}
         <div className="service-card">
           {/* ION-ICON */}
-          <ion-icon name="mic-outline" className="icon"></ion-icon>
+          <ion-icon name="mic-outline" class="icon"></ion-icon>
 
           <h4>{t.service2Title}</h4>
 
@@ -164,7 +161,7 @@ function Services({ t }) {
         {/* ////////////////////////////////////// */}
         <div className="service-card">
           {/* ION-ICON */}
-          <ion-icon name="timer-outline" className="icon"></ion-icon>
+          <ion-icon name="timer-outline" class="icon"></ion-icon>
 
           <h4>{t.service3Title}</h4>
 

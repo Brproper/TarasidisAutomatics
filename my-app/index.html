@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <!-- ✅ Basic Metadata -->
+    <!-- Basic Metadata -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
@@ -11,12 +11,12 @@
     />
     <title>MedFit AI | Intelligent Healthcare & Fitness Automation</title>
 
-    <!-- ✅ Favicon & Manifest -->
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!-- Favicon & Manifest -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link rel="manifest" href="/manifest.json" />
 
-    <!-- ✅ Google Fonts (Optimize with preconnect + display=swap for faster rendering) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,7 +26,7 @@
       onload="this.media='all'"
     />
 
-    <!-- ✅ Flag Icons (load non-critical CSS asynchronously) -->
+    <!-- Flag Icons -->
     <link
       rel="preload"
       href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"
@@ -40,7 +40,7 @@
       />
     </noscript>
 
-    <!-- ✅ Calendly Widget (CSS preload + JS async) -->
+    <!-- Calendly Widget -->
     <link
       rel="preload"
       href="https://assets.calendly.com/assets/external/widget.css"
@@ -58,54 +58,42 @@
       async
     ></script>
 
-    <!-- ✅ Structured Data for SEO -->
+    <!-- Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "MedFit AI",
         "url": "https://medfit.ai",
-        "logo": "%PUBLIC_URL%/logo192.png",
+        "logo": "/logo192.png",
         "description": "AI solutions for healthcare and fitness professionals.",
         "sameAs": ["https://www.linkedin.com/company/medfitai"]
       }
     </script>
 
-    <!-- ✅ Ionicons (defer to avoid render-blocking) -->
     <script
       type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-      defer
+      src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
     <script
       nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-      defer
+      src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
 
-    <!-- ✅ Preload & load main CSS asynchronously -->
-    <link
-      rel="preload"
-      href="%PUBLIC_URL%/static/css/main.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript>
-      <link rel="stylesheet" href="%PUBLIC_URL%/static/css/main.css" />
-    </noscript>
+    <!-- Main CSS (Vite will inject via import in JS) -->
   </head>
 
   <body>
     <noscript>
-      <strong>
-        We’re sorry — this app works best with JavaScript enabled.
-      </strong>
+      <strong
+        >We’re sorry — this app works best with JavaScript enabled.</strong
+      >
     </noscript>
 
-    <!-- ✅ React Root -->
+    <!-- React Root -->
     <div id="root"></div>
 
-    <!-- ✅ Main JS Bundle (defer for non-blocking render) -->
-    <script src="%PUBLIC_URL%/static/js/bundle.js" defer></script>
+    <!-- Vite Entry Point -->
+    <script type="module" src="src/main.jsx"></script>
   </body>
 </html>

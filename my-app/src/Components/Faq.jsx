@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import faqData from "../Components/faqData";
-import useInViewHeader from "../Components/useInViewHeader";
+import faqData from "./faqData";
+import useInViewHeader from "./useInViewHeader";
 
 import "./Faq.css";
 
