@@ -116,7 +116,8 @@
 .hero-description p:hover {
   background-color: var(--primary-color);
   transform: scale(1.02);
-  box-shadow: inset 0 0 0 4px var(--secondary-color),
+  box-shadow:
+    inset 0 0 0 4px var(--secondary-color),
     0 8px 24px rgba(0, 110, 147, 0.3);
 }
 
