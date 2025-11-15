@@ -1,7 +1,7 @@
 import "./Contact.css";
 import { useInView } from "react-intersection-observer";
 import useInViewHeader from "./useInViewHeader";
-import landingVideo3 from "../assets/videos/LandingPageAi1.mp4";
+import landingVideo3 from "../assets/videos/LandingPageAi1.webm";
 
 function Contact() {
   const { ref, inView: inViewVideo } = useInView({

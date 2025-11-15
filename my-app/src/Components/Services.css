@@ -52,10 +52,29 @@
 }
 
 .services-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.service-item {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 3rem;
-  column-gap: 6rem;
+  align-items: center;
+  justify-content: center;
+  gap: 8rem;
+}
+
+/* Zig-zag: swap card and image for even items */
+.service-item:nth-child(even) {
+  direction: rtl; /* flips the order */
+}
+
+.service-item:nth-child(even) .service-card,
+.service-item:nth-child(even) .service-image {
+  direction: ltr; /* keep internal content normal */
 }
 
 /* SERVICE CARD */
@@ -248,8 +267,8 @@
     padding: 5rem 10rem;
   }
 
-  .services-grid {
-    column-gap: 5rem;
+  .services-item {
+    gap: 8rem;
   }
 
   .service-image {
@@ -264,9 +283,8 @@
     padding: 5rem 8rem;
   }
 
-  .services-grid {
-    column-gap: 4rem;
-    row-gap: 3rem;
+  .services-item {
+    gap: 6.5rem;
   }
 
   .service-card {
@@ -297,8 +315,8 @@
     padding: 4rem 6rem;
   }
 
-  .services-grid {
-    gap: 4rem;
+  .services-item {
+    gap: 5rem;
   }
 
   .service-image {
@@ -323,10 +341,23 @@
   }
 
   .services-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4rem;
+    gap: 8rem;
+  }
+
+  .service-item {
+    grid-template-columns: 1fr; /* stack */
+    justify-items: center; /* center horizontally */
+    text-align: center; /* center text inside card */
+    gap: 2.5rem;
+  }
+
+  .service-card,
+  .service-image {
+    margin: 0 auto; /* center both elements */
+  }
+
+  .service-item:nth-child(even) {
+    direction: ltr; /* remove RTL flipping */
   }
 
   .service-card {
@@ -364,6 +395,13 @@
     padding: 3.5rem 4rem;
   }
 
+  .services-grid {
+    gap: 6rem;
+  }
+  .services-item {
+    gap: 1.5rem;
+  }
+
   .services-section h3 {
     font-size: 2.2rem;
   }
@@ -396,6 +434,14 @@
   .services-section {
     padding: 3rem;
     gap: 4rem;
+  }
+
+  .services-grid {
+    gap: 4rem;
+  }
+
+  .service-item {
+    gap: 1rem;
   }
 
   .services-section h3 {
