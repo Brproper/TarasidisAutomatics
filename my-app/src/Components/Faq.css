@@ -98,7 +98,10 @@
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease, opacity 0.4s ease, padding 0.4s ease;
+  transition:
+    max-height 0.5s ease,
+    opacity 0.4s ease,
+    padding 0.4s ease;
 }
 
 /* Expand answer when active */
@@ -116,7 +119,7 @@
 /* ---------- Large Screens (≥1600px) ---------- */
 @media (min-width: 1600px) {
   .faq-section {
-    padding: 8rem 12rem;
+    padding: 6rem 12rem;
   }
 
   .faq-wrapper h2 {
@@ -203,7 +206,7 @@
 /* ---------- Large Mobile (576px–767px) ---------- */
 @media (max-width: 767px) {
   .faq-section {
-    padding: 4rem;
+    padding: 4rem 3.5rem;
   }
 
   .faq-wrapper {
@@ -211,7 +214,7 @@
   }
 
   .faq-wrapper h2 {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
   }
 
   .faq-question-btn {
@@ -227,7 +230,7 @@
 /* ---------- Mobile (≤575px) ---------- */
 @media (max-width: 625px) {
   .faq-section {
-    padding: 3.5rem 2.5rem;
+    padding: 4rem 2.5rem;
   }
 
   .faq-wrapper {
@@ -236,6 +239,7 @@
 
   .faq-wrapper h2 {
     font-size: 1.8rem;
+    letter-spacing: 1.5px;
   }
 
   .faq-question-btn {
@@ -256,18 +260,19 @@
 /* ---------- Small Mobile (≤450px) ---------- */
 @media (max-width: 520px) {
   .faq-section {
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
   }
 
   .faq-wrapper h2 {
     font-size: 1.6rem;
+    letter-spacing: 1.5px;
   }
 }
 
 /* ---------- Tiny Mobile (≤360px) ---------- */
 @media (max-width: 445px) {
   .faq-section {
-    padding: 2.5rem 1.5rem;
+    padding: 3.5rem 1.5rem;
   }
 
   .faq-wrapper h2 {

@@ -224,7 +224,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2.5rem;
+    gap: 1.25rem;
     transition: right 0.3s ease;
     z-index: 1600;
   }
@@ -234,7 +234,7 @@
   }
 
   .navigation-link {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     padding: 1rem 2rem;
   }
 
@@ -280,14 +280,14 @@
   }
 
   .navigation-link {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     padding: 0.8rem 1.2rem;
     text-align: center;
   }
 
   .hamburger {
     width: 26px;
-    height: 22px;
+    height: 19px;
   }
 
   .hamburger span {
@@ -302,31 +302,31 @@
   }
 
   .logo button {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .navigation-link {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .hamburger {
     width: 24px;
-    height: 20px;
+    height: 18px;
   }
 }
 
 /* ----------- Extra Small Devices (≤375px) ----------- */
 @media (max-width: 375px) {
   .navigation-bar {
-    padding: 1.4rem 1.6rem;
+    padding: 2rem 1.6rem;
   }
 
   .logo button {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   .navigation-link:link {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 
   .hamburger {

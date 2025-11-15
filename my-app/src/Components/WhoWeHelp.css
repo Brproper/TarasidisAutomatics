@@ -4,7 +4,7 @@
 
 /* Main section container — centers all content and provides spacing */
 .who-we-help-section {
-  padding: 4rem 12rem;
+  padding: 4rem 8rem;
   background-color: var(--background-color);
   text-align: center;
   color: var(--primary-color);
@@ -225,7 +225,7 @@
 @media (max-width: 1100px) {
   .who-grid {
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 5.5rem;
   }
 
   .who-we-help-section {
@@ -241,7 +241,7 @@
   }
 
   .who-card {
-    padding: 3rem 4rem;
+    padding: 3rem 3.5rem;
   }
 
   .who-card h3 {
@@ -256,11 +256,11 @@
 /* Tablets (portrait) */
 @media (max-width: 900px) {
   .who-we-help-section {
-    padding: 3rem 6rem;
+    padding: 3.5rem 8rem;
   }
 
   .who-card {
-    padding: 2rem 3rem;
+    padding: 2rem 2.5rem;
   }
 
   .who-header {
@@ -279,7 +279,7 @@
 /* Mobile devices (large phones) */
 @media (max-width: 650px) {
   .who-we-help-section {
-    padding: 2.5rem 2.5rem;
+    padding: 3rem 4rem;
     gap: 4rem;
   }
 
@@ -293,7 +293,7 @@
   }
 
   .who-card {
-    padding: 2rem 2.5rem;
+    padding: 2rem 2rem;
   }
 
   .who-card h3 {
@@ -313,7 +313,7 @@
 /* Small phones (below 400px) */
 @media (max-width: 450px) {
   .who-we-help-section {
-    padding: 2rem;
+    padding: 3rem 2.5rem;
   }
 
   .who-header {
@@ -325,7 +325,7 @@
   }
 
   .who-card {
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 1.5rem;
   }
 
   .who-card h3 {

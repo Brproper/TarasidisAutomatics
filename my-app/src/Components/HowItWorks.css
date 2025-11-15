@@ -356,7 +356,7 @@
 /* ---------- Small Mobile (≤575px) ---------- */
 @media (max-width: 650px) {
   .how-it-works-section {
-    padding: 2.5rem 3rem;
+    padding: 4rem 3rem;
   }
 
   .section-heading {
@@ -395,7 +395,7 @@
 /* ---------- Tiny Screens (≤400px) ---------- */
 @media (max-width: 550px) {
   .how-it-works-section {
-    padding: 2rem 2.5rem;
+    padding: 3.5rem 2rem;
   }
 
   .section-heading {
@@ -436,7 +436,7 @@
 /* ---------- Tiny Screens (≤400px) ---------- */
 @media (max-width: 475px) {
   .how-it-works-section {
-    padding: 2rem;
+    padding: 3rem 1.5rem;
   }
 
   .section-subheading {

@@ -36,7 +36,9 @@
   box-shadow: 0 10px 25px rgba(0, 191, 255, 0.15);
   max-width: 900px;
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .founder-container:hover {
@@ -94,7 +96,7 @@
 /* 💻 Large screens (≤1200px) */
 @media screen and (max-width: 1200px) {
   .founder-page {
-    padding: 10rem 6rem 6rem 6rem;
+    padding: 12rem 6rem 6rem 6rem;
   }
 
   .founder-container {
@@ -150,7 +152,7 @@
 /* 📲 Small tablets / large phones (≤768px) */
 @media screen and (max-width: 768px) {
   .founder-page {
-    padding: 8rem 4rem 4rem 4rem;
+    padding: 10rem 4rem 4rem 4rem;
   }
 
   .founder-container {
@@ -177,7 +179,7 @@
 /* 📞 Mobile phones (≤576px) */
 @media screen and (max-width: 576px) {
   .founder-page {
-    padding: 8rem 3rem 3rem 4rem;
+    padding: 9rem 3rem 3rem 4rem;
   }
 
   .founder-container {

@@ -230,7 +230,7 @@
 /* ---------- Large Mobile (576px–767px) ---------- */
 @media (max-width: 830px) {
   .why-medfit-section {
-    padding: 3.5rem 3rem;
+    padding: 4rem 3rem;
     gap: 2.5rem;
   }
 
@@ -261,7 +261,7 @@
 /* ---------- Small Mobile (≤575px) ---------- */
 @media (max-width: 720px) {
   .why-medfit-section {
-    padding: 3rem 2.5rem;
+    padding: 4rem 2.5rem;
     gap: 2rem;
   }
 
@@ -318,7 +318,7 @@
 /* ---------- Tiny Screens (≤400px) ---------- */
 @media (max-width: 550px) {
   .why-medfit-section {
-    padding: 3rem 2rem;
+    padding: 3.5rem 2rem;
   }
 
   .why-intro {
@@ -342,7 +342,7 @@
 /* ---------- Ultra Small Devices (≤360px) ---------- */
 @media (max-width: 450px) {
   .why-medfit-section {
-    padding: 2.5rem 1.5rem;
+    padding: 3rem 2rem;
   }
 
   .why-medfit-wrapper h2 {

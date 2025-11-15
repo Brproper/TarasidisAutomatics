@@ -264,7 +264,7 @@
 /* ====== Large screens (1600px and below) ====== */
 @media (max-width: 1600px) {
   .services-section {
-    padding: 5rem 10rem;
+    padding: 6rem 10rem;
   }
 
   .services-item {
@@ -280,7 +280,7 @@
 /* ====== Medium-large screens (1400px and below) ====== */
 @media (max-width: 1400px) {
   .services-section {
-    padding: 5rem 8rem;
+    padding: 5.5rem 8rem;
   }
 
   .services-item {
@@ -312,7 +312,7 @@
 /* ====== Tablets landscape / Small desktops (1250px and below) ====== */
 @media (max-width: 1250px) {
   .services-section {
-    padding: 4rem 6rem;
+    padding: 5rem 5rem;
   }
 
   .services-item {
@@ -336,7 +336,7 @@
 /* ====== Tablets portrait / Medium screens (992px and below) ====== */
 @media (max-width: 1075px) {
   .services-section {
-    padding: 4rem 8rem;
+    padding: 5rem 8rem;
     gap: 4rem;
   }
 
@@ -392,7 +392,7 @@
 /* ====== Mobile landscape / Small tablets (768px and below) ====== */
 @media (max-width: 850px) {
   .services-section {
-    padding: 3.5rem 4rem;
+    padding: 4.5rem 4rem;
   }
 
   .services-grid {
@@ -432,7 +432,7 @@
 /* ====== Mobile portrait / Large phones (576px and below) ====== */
 @media (max-width: 576px) {
   .services-section {
-    padding: 3rem;
+    padding: 4rem 3rem;
     gap: 4rem;
   }
 
@@ -481,7 +481,7 @@
 /* ====== Extra small phones (400px and below) ====== */
 @media (max-width: 400px) {
   .services-section {
-    padding: 2.5rem 1.5rem;
+    padding: 4rem 2rem;
   }
 
   .services-section h3 {
