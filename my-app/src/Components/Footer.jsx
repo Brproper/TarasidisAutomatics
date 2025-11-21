@@ -5,7 +5,7 @@ function Footer() {
     <footer className="footer-section">
       <div className="footer-container">
         <p>
-          &copy; {new Date().getFullYear()} TarasidisAutomatics <br />
+          &copy; {new Date().getFullYear()} MedFitAi <br />
           All rights reserved.
         </p>
 
@@ -41,7 +41,7 @@ function Footer() {
             <ion-icon name="logo-facebook"></ion-icon>
           </a> */}
           <a
-            href="https://www.linkedin.com/company/tarasidisautomatics"
+            href="https://www.linkedin.com/company/109747993/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -49,7 +49,7 @@ function Footer() {
             <ion-icon name="logo-linkedin"></ion-icon>
           </a>
           <a
-            href="mailto:hello@medfitai.com"
+            href="mailto:info@medfitai.com"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="send us an email"

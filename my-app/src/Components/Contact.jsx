@@ -81,7 +81,7 @@ function Contact() {
             <h3>Follow Us</h3>
             <div className="social-links">
               <a
-                href="mailto:hello@medfitai.com"
+                href="mailto:info@medfitai.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -101,7 +101,7 @@ function Contact() {
                 ></ion-icon>
               </a> */}
               <a
-                href="https://www.linkedin.com/company/tarasidisautomatics"
+                href="https://www.linkedin.com/company/109747993/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
