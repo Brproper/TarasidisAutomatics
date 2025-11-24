@@ -41,7 +41,7 @@ function Services({ t }) {
               <strong>Instant communication</strong> wherever your clients are.
               Our chatbots respond within <strong>seconds</strong>,{" "}
               <strong>capture leads</strong>, and keep your{" "}
-              <strong>inbox organized</strong> — automatically.
+              <strong>inbox organized</strong> automatically.
             </p>
 
             <ul>
@@ -106,7 +106,7 @@ function Services({ t }) {
             <h4>{t.service2Title}</h4>
 
             <p>
-              Your intelligent <strong>phone assistant</strong> — inbound and
+              Your intelligent <strong>phone assistant,</strong> inbound and
               outbound. It answers <strong>every call</strong>,{" "}
               <strong>books and reschedules appointments</strong>, and even
               follows up with <strong>new leads</strong> automatically.
@@ -177,7 +177,7 @@ function Services({ t }) {
               Let AI handle the <strong>repetitive tasks</strong> that drain
               your time. We <strong>automate </strong>
               <strong>reminders, cancellations,</strong> and{" "}
-              <strong>post-visit</strong> messages — so you{" "}
+              <strong>post-visit</strong> messages, so you{" "}
               <strong>never lose</strong> a client again.
             </p>
 
@@ -190,7 +190,7 @@ function Services({ t }) {
               <li>
                 {" "}
                 <span>✓</span>
-                Follow-ups after visits or trials
+                Follow ups after visits or trials
               </li>
               <li>
                 {" "}

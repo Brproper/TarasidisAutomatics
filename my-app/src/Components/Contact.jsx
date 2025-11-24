@@ -43,7 +43,7 @@ function Contact() {
         <div className="contact-description">
           <p>
             <strong>
-              Let’s Build the Future of Healthcare & Fitness — Together
+              Let’s Build the Future of Healthcare & Fitness Together
             </strong>
           </p>
           <p>

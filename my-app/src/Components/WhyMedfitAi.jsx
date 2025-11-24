@@ -14,27 +14,27 @@ export default function WhyMedfitAI() {
 
         <p className="why-intro">
           <strong>MedFit AI</strong> wasn’t built by marketers or generic
-          developers — it was founded by a <strong>medical doctor</strong>,
+          developers, it was founded by a <strong>medical doctor</strong>,
           certified in <strong>fitness coaching</strong>, who learned from
           scratch how to create effective AI solutions.
         </p>
 
         <p className="why-intro">
           We understand the daily challenges of clinics, doctors, and fitness
-          professionals — because we’ve lived close to both worlds.
+          professionals, because we’ve lived close to both worlds.
         </p>
 
         <p className="why-intro">
           That’s why every AI solution we design is built with{" "}
-          <strong>empathy, precision, and measurable impact</strong> — so
+          <strong>empathy, precision, and measurable impact</strong>, so
           professionals can focus on <strong>people, not paperwork</strong>.
         </p>
 
         <div className="why-quote">
           <p>
             {" "}
-            “I created MedFit AI to bridge the gap between care and technology —
-            helping professionals focus on people, not paperwork.”
+            “I created MedFit AI to bridge the gap between care and technology
+            and helping professionals focus on people, not paperwork.”
           </p>
         </div>
 
@@ -56,7 +56,7 @@ export default function WhyMedfitAI() {
           </li>
           <li>
             <span>✓</span> Quick setup, measurable results— save
-            <strong> 10+ hours weekly</strong>, cut no-shows
+            <strong>10+ hours weekly,</strong> cut no-shows
             <strong> 30–40%</strong>
           </li>
           <li>

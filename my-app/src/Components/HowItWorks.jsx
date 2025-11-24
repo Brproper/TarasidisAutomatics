@@ -63,8 +63,8 @@ function HowItWorks({ t }) {
           How It Works
         </h2>
         <p className="section-subheading">
-          It all starts with a <strong>30-minute discovery call</strong> where
-          we map your current <strong>workflow</strong> — how you manage{" "}
+          It all starts with a <strong>30-minute discovery call,</strong> where
+          we map your current <strong>workflow,</strong> how you manage{" "}
           <strong>calls, inquiries, bookings, and reminders</strong>. You simply
           walk us through your daily process, and together we uncover how{" "}
           <strong>AI can save time</strong>,{" "}
@@ -92,14 +92,14 @@ function HowItWorks({ t }) {
                 <h3>{t.howItWorksStep1}</h3>
                 <p>
                   We start with a <strong>30-minute call</strong> to understand
-                  your <strong>workflow</strong> — how you handle{" "}
+                  your <strong>workflow,</strong> how you handle{" "}
                   <strong>calls, inquiries, bookings, and reminders</strong>.
                   You simply walk us through your process, and we identify where{" "}
                   <strong>AI can save the most time</strong> and{" "}
                   <strong>reduce missed revenue</strong>.
                 </p>
                 <p className="italic">
-                  Takes just <strong>30 minutes</strong> — no{" "}
+                  Takes just <strong>30 minutes</strong>, no{" "}
                   <strong>technical setup</strong> required.
                 </p>
               </div>
@@ -114,7 +114,7 @@ function HowItWorks({ t }) {
                   <strong>custom AI Voice Agent and Chatbot</strong> to match
                   your <strong>communication style</strong>,{" "}
                   <strong>tone</strong>, and <strong>workflow</strong>.
-                  Everything connects directly to your tools —{" "}
+                  Everything connects directly to your tools:{" "}
                   <strong>calendar, CRM, or Google Sheets</strong>. Once ready,
                   we test it to ensure it <strong>sounds natural</strong> and{" "}
                   <strong>performs flawlessly</strong>.

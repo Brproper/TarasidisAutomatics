@@ -13,7 +13,7 @@ function WhoWeHelp() {
         </h2>
         <p className="who-intro">
           We partner with professionals who want to save time, reduce stress,
-          and scale effortlessly using AI-driven automation.
+          and scale effortlessly using AI driven automation.
         </p>
       </div>
 
@@ -28,7 +28,7 @@ function WhoWeHelp() {
             Our AI systems help <strong>clinics</strong> and{" "}
             <strong>independent doctors</strong> save <strong>time</strong>,
             reduce <strong>stress</strong>, and deliver a{" "}
-            <strong>smoother patient experience</strong> — without hiring extra
+            <strong>smoother patient experience</strong>, without hiring extra
             staff or missing opportunities.
           </p>
           <ul>
@@ -36,13 +36,13 @@ function WhoWeHelp() {
               <span>✓</span>Every call answered 24/7
             </li>
             <li>
-              <span>✓</span>Appointments auto-booked or rescheduled
+              <span>✓</span>Appointments autobooked or rescheduled
             </li>
             <li>
               <span>✓</span>Smart reminders to reduce no-shows
             </li>
             <li>
-              <span>✓</span>Real-time data logging
+              <span>✓</span>Real time data logging
             </li>
             <li>
               <span>✓</span>Seamless integration with your tools
@@ -59,33 +59,33 @@ function WhoWeHelp() {
           <p>
             We help <strong>gym owners</strong> and{" "}
             <strong>fitness professionals</strong> manage <strong>leads</strong>
-            , <strong>bookings</strong>, and <strong>follow-ups</strong> — so
-            you can spend more time <strong>training clients</strong>, not
-            chasing messages.
+            , <strong>bookings</strong>, and <strong>follow-ups</strong>, so you
+            can spend more time <strong>training clients</strong>, not chasing
+            messages.
           </p>
           <ul>
             <li>
               <span>✓</span>24/7 lead qualification
             </li>
             <li>
-              <span>✓</span>Trial sessions auto-booked via Instagram or WhatsApp
+              <span>✓</span>Trial sessions autobooked via Instagram or WhatsApp
             </li>
             <li>
               <span>✓</span>Automatic reminders for workouts
             </li>
             <li>
-              <span>✓</span>Follow-ups after trials or cancellations
+              <span>✓</span>Follow ups after trials or cancellations
             </li>
             <li>
-              <span>✓</span>Real-time CRM or Sheets updates
+              <span>✓</span>Real time CRM or Sheets updates
             </li>
           </ul>
         </div>
       </div>
 
       <p className="who-footer">
-        Every business is unique — and so is our setup. Each solution is
-        tailored to your specific needs.
+        Every business is unique and so is our setup. Each solution is tailored
+        to your specific needs.
       </p>
     </section>
   );

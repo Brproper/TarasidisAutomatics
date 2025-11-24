@@ -57,7 +57,7 @@ function Hero({ t }) {
               <strong>AI-powered systems</strong> help you{" "}
               <strong>answer every call</strong>,{" "}
               <strong>boost client retention</strong>, and{" "}
-              <strong>grow effortlessly</strong> — with{" "}
+              <strong>grow effortlessly</strong> with{" "}
               <strong>24/7 support</strong>.
             </p>
           </>
