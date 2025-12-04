@@ -5,6 +5,8 @@ import ChatbotsImg from "../assets/imgs/ChatBots.webp";
 import Sound from "../assets/imgs/Sound.webp";
 import TechBrainAi from "../assets/imgs/TechBrainAi3.webp";
 
+import { Link, useNavigate } from "react-router-dom";
+
 function Services({ t }) {
   const { headerRef, inView } = useInViewHeader();
 
@@ -60,11 +62,16 @@ function Services({ t }) {
         </div>
       </div>
 
-      <div className="services-cta">
-        <a href="/servicesPage" className="primary-btn">
-          {t.learnMore}
-        </a>
-      </div>
+      <Link
+        to="/servicesPage"
+        className="primary-btn"
+        onClick={() => {
+          setMenuOpen(false); // close menu if applicable
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
+      >
+        {t.learnMore}
+      </Link>
     </section>
   );
 }
