@@ -134,7 +134,7 @@ function Navigation() {
           }
         }}
       >
-        Get Started
+        Book a Call
       </button>
     </nav>
   );

@@ -22,6 +22,7 @@ const Contact = lazy(() => import("./Components/Contact.jsx"));
 
 // Lazy load other pages
 const Founder = lazy(() => import("./Components/Founder.jsx"));
+const ServicesPage = lazy(() => import("./Components/ServicesPage.jsx"));
 
 // Simple loader
 const Loader = ({ text = "Loading..." }) => (
@@ -84,7 +85,15 @@ export default function App() {
           }
         />
 
-        {/* Redirect unknown routes */}
+        <Route
+          path="/servicesPage"
+          element={
+            <Suspense fallback={<Loader text="Loading ServicesPage..." />}>
+              <ServicesPage />
+            </Suspense>
+          }
+        />
+
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
 

@@ -1,0 +1,526 @@
+/* =========================================================
+=                 SERVICES PAGE — GLOBAL WRAPPER           =
+========================================================= */
+
+.services-section-detailed {
+  padding: 10rem 10rem 6rem 10rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  gap: 6rem;
+  color: var(--primary-color);
+}
+
+/* =========================================================
+=                       HEADINGS & INTRO                   =
+========================================================= */
+
+.services-section-detailed h3 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+
+  background: linear-gradient(
+    to right,
+    var(--secondary-color),
+    var(--highlight-color)
+  );
+  background-size: 150%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Typing Animation */
+.typing3 {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--primary-color);
+  width: 0;
+
+  animation: typingServices 2s steps(14, end) forwards;
+}
+
+.services-intro {
+  max-width: 950px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+=                   GRID LAYOUT (ZIG-ZAG)                  =
+========================================================= */
+
+.services-flex-detailed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.service-item-detailed {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 8rem;
+}
+
+/* Zig-zag: swap card and image for even items */
+.service-item-detailed:nth-child(even) {
+  direction: rtl; /* flips the order */
+}
+
+.service-item-detailed:nth-child(even) .service-card-detailed,
+.service-item-detailed:nth-child(even) .service-image {
+  direction: ltr; /* keep internal content normal */
+}
+
+/* =========================================================
+=                      SERVICE CARD                        =
+========================================================= */
+
+.service-card-detailed {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 2.5rem;
+
+  padding: 3rem;
+  border-radius: 8px;
+  transition: all 0.4s ease;
+  border: 4px solid transparent;
+}
+
+/* Title */
+.service-card-detailed h4 {
+  background: linear-gradient(
+    to right,
+    var(--secondary-color),
+    var(--highlight-color)
+  );
+  background-position: right center;
+  background-size: 150%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 2rem;
+
+  transition: all 0.4s ease;
+}
+
+/* Description */
+.service-card-detailed p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  line-height: 1.4;
+  color: var(--primary-color);
+
+  transition: all 0.4s ease;
+}
+
+/* Bullet Lists */
+.service-card-detailed ul {
+  list-style: none;
+}
+
+.service-card-detailed ul li {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+
+  line-height: 1.6;
+  color: var(--primary-color);
+
+  transition: all 0.4s ease;
+}
+
+.service-card-detailed ul li span {
+  display: inline-block;
+  font-size: 1.6rem;
+
+  margin-right: 0.5rem;
+  color: var(--secondary-color);
+
+  transition: all 0.3s ease;
+}
+
+.service-card-detailed p strong {
+  transition: all 0.4s ease;
+}
+
+/* =========================================================
+=                        SERVICE IMAGE                     =
+========================================================= */
+
+.service-image-detailed {
+  width: 500px;
+  height: 500px;
+
+  overflow: hidden;
+  border-radius: 50%;
+  border: 10px solid rgba(255, 255, 255, 0.469);
+  background: rgba(0, 191, 255, 0.08);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 24px rgba(0, 191, 255, 0.25);
+
+  animation: float 3s ease-in-out infinite;
+  transition: 0.5s ease;
+}
+
+.service-image-detailed img {
+  width: 85%;
+  height: 85%;
+  object-fit: cover;
+
+  border-radius: 500px;
+  border: 5px solid var(--secondary-color);
+  transition: 0.5s ease;
+}
+
+/* Hover Effect */
+.service-image-detailed:hover img {
+  width: 95%;
+  height: 95%;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* =========================================================
+=                      HOVER EFFECTS                       =
+========================================================= */
+
+.service-card-detailed:hover {
+  background: var(--background-color);
+  transform: translateY(-12px);
+  border-color: var(--secondary-color);
+  box-shadow: 0 8px 24px rgba(0, 191, 255, 0.35);
+}
+
+.service-card-detailed:hover h4 {
+  background-position: left center;
+}
+
+.service-card-detailed:hover li {
+  color: var(--secondary-color);
+}
+
+.service-card-detailed:hover li span {
+  transform: scale(1.2);
+  color: var(--highlight-color);
+}
+
+.service-card-detailed:hover p strong {
+  color: var(--highlight-color);
+}
+
+.service-card-detailed:hover .icon {
+  transform: scale(1.15);
+  box-shadow: 0 0 30px rgba(0, 191, 255, 0.8);
+  background-position: right center;
+}
+
+/* =========================================================
+=                        FOOTNOTE                          =
+========================================================= */
+
+.services-based-text {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  font-style: italic;
+
+  background: linear-gradient(
+    to right,
+    var(--secondary-color),
+    var(--highlight-color)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* =========================================================
+=                   RESPONSIVE BEHAVIOR                    =
+========================================================= */
+
+/* ====== Large screens (1600px and below) ====== */
+@media (max-width: 1600px) {
+  .services-section-detailed {
+    padding: 10rem 10rem 6rem 10rem;
+  }
+
+  .service-item-detailed {
+    gap: 8rem;
+  }
+
+  .service-image-detailed {
+    width: 480px;
+    height: 480px;
+  }
+}
+
+/* ====== Medium-large screens (1400px and below) ====== */
+@media (max-width: 1400px) {
+  .services-section-detailed {
+    padding: 9rem 8rem 5.5rem 8rem;
+  }
+
+  .service-item-detailed {
+    gap: 6.5rem;
+  }
+
+  .service-card-detailed {
+    padding: 2.5rem;
+  }
+
+  .service-image-detailed {
+    width: 420px;
+    height: 420px;
+  }
+
+  .services-section-detailed h3 {
+    font-size: 2.4rem;
+  }
+
+  .service-card-detailed h4 {
+    font-size: 1.9rem;
+  }
+
+  .service-card-detailed p {
+    font-size: 1.15rem;
+  }
+
+  .services-based-text {
+    font-size: 1.2rem;
+  }
+}
+
+/* ====== Tablets landscape / Small desktops (1250px and below) ====== */
+@media (max-width: 1250px) {
+  .services-section-detailed {
+    padding: 9rem 5rem 5rem 5rem;
+  }
+
+  .service-item-detailed {
+    gap: 5rem;
+  }
+
+  .service-image-detailed {
+    width: 400px;
+    height: 400px;
+  }
+
+  .service-card-detailed h4 {
+    font-size: 1.8rem;
+  }
+
+  .service-card-detailed p {
+    font-size: 1.1rem;
+  }
+}
+
+/* ====== Tablets portrait / Medium screens (1075px and below) ====== */
+@media (max-width: 1075px) {
+  .services-section-detailed {
+    padding: 9rem 8rem 5rem 8rem;
+    gap: 4rem;
+  }
+
+  .service-item-detailed {
+    grid-template-columns: 1fr; /* stack */
+    justify-items: center; /* center horizontally */
+    text-align: center; /* center text inside card */
+    gap: 2.5rem;
+  }
+
+  .service-card-detailed,
+  .service-image-detailed {
+    margin: 0 auto; /* center both elements */
+  }
+
+  .service-card-detailed {
+    padding: 2rem 3rem;
+    gap: 2rem;
+    max-width: 600px;
+  }
+
+  .service-image-detailed {
+    width: 380px;
+    height: 380px;
+  }
+
+  .services-section-detailed h3 {
+    font-size: 2.4rem;
+  }
+
+  .services-intro {
+    font-size: 1.25rem;
+  }
+
+  .service-card-detailed h4 {
+    font-size: 1.8rem;
+  }
+
+  .service-card-detailed p,
+  .service-card-detailed ul li {
+    font-size: 1.05rem;
+  }
+
+  .services-based-text {
+    font-size: 1.1rem;
+  }
+}
+
+/* ====== Mobile landscape / Small tablets (850px and below) ====== */
+@media (max-width: 850px) {
+  .services-section-detailed {
+    padding: 8rem 4.5rem 4rem 4.5rem;
+  }
+
+  .service-item-detailed {
+    gap: 1.5rem;
+  }
+
+  .services-section-detailed h3 {
+    font-size: 2.2rem;
+  }
+
+  .services-intro {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+
+  .service-card-detailed {
+    padding: 2rem 2.5rem;
+  }
+
+  .service-card-detailed h4 {
+    font-size: 1.7rem;
+  }
+
+  .service-card-detailed p,
+  .service-card-detailed ul li {
+    font-size: 1.05rem;
+  }
+
+  .services-based-text {
+    font-size: 1.05rem;
+  }
+}
+
+/* ====== Mobile portrait / Large phones (576px and below) ====== */
+@media (max-width: 576px) {
+  .services-section-detailed {
+    padding: 7rem 4rem 3rem 4rem;
+
+    gap: 4rem;
+  }
+
+  .service-item-detailed {
+    gap: 1rem;
+  }
+
+  .services-section-detailed h3 {
+    font-size: 2rem;
+  }
+
+  .services-intro {
+    font-size: 1.05rem;
+  }
+
+  .service-card-detailed {
+    padding: 2rem;
+  }
+
+  .service-image-detailed {
+    width: 325px;
+    height: 325px;
+    border: 8px solid rgba(255, 255, 255, 0.469);
+  }
+
+  .service-card-detailed h4 {
+    font-size: 1.6rem;
+  }
+
+  .service-card-detailed p,
+  .service-card-detailed ul li {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .services-based-text {
+    font-size: 1rem;
+  }
+}
+
+/* ====== Extra small phones (400px and below) ====== */
+@media (max-width: 400px) {
+  .services-section-detailed {
+    padding: 7rem 4rem 2rem 4rem;
+  }
+
+  .services-section-detailed h3 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .services-intro {
+    font-size: 1rem;
+  }
+
+  .service-card-detailed {
+    padding: 1.3rem;
+  }
+
+  .service-image-detailed {
+    width: 275px;
+    height: 275px;
+    border: 6px solid rgba(255, 255, 255, 0.469);
+  }
+
+  .service-card-detailed h4 {
+    font-size: 1.4rem;
+  }
+
+  .service-card-detailed p,
+  .service-card-detailed ul li {
+    font-size: 0.9rem;
+  }
+
+  .services-based-text {
+    font-size: 0.95rem;
+  }
+}

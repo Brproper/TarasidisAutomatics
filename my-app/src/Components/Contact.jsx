@@ -40,25 +40,26 @@ function Contact() {
         >
           CONNECT WITH US
         </h3>
-        <div className="contact-description">
-          <p>
+
+        {/* <div className="contact-description"> */}
+        {/* <p>
             <strong>
               Let’s Build the Future of Healthcare & Fitness Together
             </strong>
-          </p>
-          <p>
+          </p> */}
+        {/* <p>
             <strong>AI is transforming</strong> how professionals communicate,
             schedule, and care for clients. <strong>MedFit AI</strong> makes
-            that transformation
-            <strong> simple, personal, and reliable</strong>.
-          </p>
-          <p>
+            that transformation <strong> simple, personal, and reliable</strong>
+            .
+          </p> */}
+        {/* <p>
             Whether you run a <strong>private clinic</strong> or a
             <strong> fitness studio</strong>, our solutions help you
             <strong> save time</strong>, <strong>reduce stress</strong>, and
             <strong> focus on the people you serve</strong>.
-          </p>
-        </div>
+          </p> */}
+        {/* </div> */}
       </div>
 
       {/* Contact Container */}

@@ -63,13 +63,10 @@ function HowItWorks({ t }) {
           How It Works
         </h2>
         <p className="section-subheading">
-          It all starts with a <strong>30-minute discovery call,</strong> where
-          we map your current <strong>workflow,</strong> how you manage{" "}
-          <strong>calls, inquiries, bookings, and reminders</strong>. You simply
-          walk us through your daily process, and together we uncover how{" "}
-          <strong>AI can save time</strong>,{" "}
-          <strong>reduce missed revenue</strong>, and make your operations run
-          effortlessly.
+          A simple, <strong>three-step</strong> process: we learn your{" "}
+          <strong>workflow</strong>, build your <strong>custom AI</strong>{" "}
+          system, and automate your{" "}
+          <strong>calls, bookings, and follow-ups</strong>.
         </p>
       </div>
 

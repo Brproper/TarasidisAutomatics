@@ -64,13 +64,12 @@
 
 /* Description text above columns */
 .contact-description {
-  max-width: 900px;
+  max-width: 1100px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem; /* spacing between paragraphs */
   margin-bottom: 3rem; /* spacing below description */
 }
 

@@ -73,13 +73,6 @@
   transition: all 0.3s ease-in-out; /* smooth hover animation */
 }
 
-.icon-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 2.5rem;
-}
-
 /* Card title */
 .who-card h3 {
   font-size: 1.8rem;

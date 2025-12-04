@@ -257,6 +257,7 @@ body {
   letter-spacing: 1px;
   text-decoration: underline solid 2px transparent;
   text-underline-offset: 2px;
+
   transition: all 0.4s ease;
   position: relative;
 }
@@ -302,4 +303,11 @@ body {
   color: black;
 
   transition: all 0.4s ease;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5rem;
 }
