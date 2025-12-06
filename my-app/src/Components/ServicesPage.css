@@ -363,7 +363,11 @@
     grid-template-columns: 1fr; /* stack */
     justify-items: center; /* center horizontally */
     text-align: center; /* center text inside card */
-    gap: 2.5rem;
+    gap: 1.5rem;
+  }
+
+  .services-flex-detailed {
+    gap: 6rem;
   }
 
   .service-card-detailed,
@@ -410,8 +414,12 @@
     padding: 8rem 4.5rem 4rem 4.5rem;
   }
 
+  .services-flex-detailed {
+    gap: 5rem;
+  }
+
   .service-item-detailed {
-    gap: 1.5rem;
+    gap: 0.5rem;
   }
 
   .services-section-detailed h3 {
@@ -441,16 +449,16 @@
   }
 }
 
-/* ====== Mobile portrait / Large phones (576px and below) ====== */
-@media (max-width: 576px) {
+/* ====== Mobile portrait / Large phones (600px and below) ====== */
+@media (max-width: 600px) {
   .services-section-detailed {
-    padding: 7rem 4rem 3rem 4rem;
+    padding: 7rem 3.5rem 3rem 3.5rem;
 
     gap: 4rem;
   }
 
-  .service-item-detailed {
-    gap: 1rem;
+  .services-flex-detailed {
+    gap: 4.5rem;
   }
 
   .services-section-detailed h3 {
@@ -462,7 +470,7 @@
   }
 
   .service-card-detailed {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 
   .service-image-detailed {
@@ -486,15 +494,19 @@
   }
 }
 
-/* ====== Extra small phones (400px and below) ====== */
-@media (max-width: 400px) {
+/* ====== Extra small phones (450px and below) ====== */
+@media (max-width: 450px) {
   .services-section-detailed {
-    padding: 7rem 4rem 2rem 4rem;
+    padding: 7rem 2rem 2rem 2rem;
   }
 
   .services-section-detailed h3 {
     font-size: 2rem;
     letter-spacing: 1px;
+  }
+
+  .services-flex-detailed {
+    gap: 4rem;
   }
 
   .services-intro {
