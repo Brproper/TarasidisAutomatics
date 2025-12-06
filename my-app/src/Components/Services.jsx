@@ -5,9 +5,19 @@ import ChatbotsImg from "../assets/imgs/ChatBots.webp";
 import Sound from "../assets/imgs/Sound.webp";
 import TechBrainAi from "../assets/imgs/TechBrainAi3.webp";
 
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Services({ t }) {
+  const navigate = useNavigate();
+
+  const handleLearnMore = () => {
+    navigate("/servicesPage");
+    // Scroll after a short delay to ensure the page renders
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 50);
+  };
+
   const { headerRef, inView } = useInViewHeader();
 
   return (
@@ -62,16 +72,9 @@ function Services({ t }) {
         </div>
       </div>
 
-      <Link
-        to="/servicesPage"
-        className="primary-btn"
-        onClick={() => {
-          setMenuOpen(false); // close menu if applicable
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }}
-      >
+      <button className="primary-btn" onClick={handleLearnMore}>
         {t.learnMore}
-      </Link>
+      </button>
     </section>
   );
 }

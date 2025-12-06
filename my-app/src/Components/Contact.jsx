@@ -2,8 +2,23 @@ import "./Contact.css";
 import { useInView } from "react-intersection-observer";
 import useInViewHeader from "./useInViewHeader";
 import landingVideo3 from "../assets/videos/LandingPageAi1.webm";
+import React, { useEffect, useRef } from "react";
 
 function Contact() {
+  const calendlyRef = useRef(null);
+
+  useEffect(() => {
+    // Dynamically load Calendly script
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   const { ref, inView: inViewVideo } = useInView({
     triggerOnce: true,
     threshold: 0.3,
@@ -33,33 +48,19 @@ function Contact() {
       {/* <div className="background-overlay" /> */}
       <div className="video-overlay3"></div>
       {/* Section description text (outside columns) */}
-      <div className="contact-description">
+      <div className="contact-intro-container">
         <h3
           ref={headerRef}
           className={`contact-header ${inView ? "typing6" : ""}`}
         >
           CONNECT WITH US
         </h3>
-
-        {/* <div className="contact-description"> */}
-        {/* <p>
-            <strong>
-              Let’s Build the Future of Healthcare & Fitness Together
-            </strong>
-          </p> */}
-        {/* <p>
-            <strong>AI is transforming</strong> how professionals communicate,
-            schedule, and care for clients. <strong>MedFit AI</strong> makes
-            that transformation <strong> simple, personal, and reliable</strong>
-            .
-          </p> */}
-        {/* <p>
-            Whether you run a <strong>private clinic</strong> or a
-            <strong> fitness studio</strong>, our solutions help you
-            <strong> save time</strong>, <strong>reduce stress</strong>, and
-            <strong> focus on the people you serve</strong>.
-          </p> */}
-        {/* </div> */}
+        <p>
+          Let’s explore how <strong>AI</strong> can <strong>streamline </strong>{" "}
+          your
+          <strong> workflow</strong>, <strong>automate communication</strong>,
+          and elevate your <strong>client experience</strong>.
+        </p>
       </div>
 
       {/* Contact Container */}
@@ -114,56 +115,69 @@ function Contact() {
             </div>
           </div>
 
-          <button
-            className="secondary-btn"
-            aria-label="Book a Call"
-            id="getStarted"
-            onClick={() =>
-              window.open(
-                "https://calendly.com/tarasidis17/discovery-call",
-                "_blank"
-              )
-            }
-          >
-            Book a Call
-          </button>
+          {/* FORM CONTAINER */}
+          {/* ////////////////////////////////////// */}
+          <form className="contact-form">
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder=" Your Full Name"
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="you@example.com"
+                />
+              </div>
+            </div>
+
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="company">Company Name</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  placeholder="Your Company's Name"
+                />
+              </div>
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+                placeholder="How can we help you?"
+              ></textarea>
+            </div>
+
+            <button id="BookACall" type="submit" className="secondary-btn">
+              Send Message
+            </button>
+          </form>
         </div>
 
-        {/* LEFT SIDE — Stats & Industry Data */}
-
-        <div className="contact-stats">
-          <h4>
-            Healthcare and fitness businesses adopting AI automation typically
-            achieve:
-          </h4>
-          <ul>
-            <li>
-              <span>✓</span>
-              <strong>30–40%</strong> fewer no-shows
-            </li>
-            <li>
-              <span>✓</span>
-              <strong>10+ admin hours</strong> saved weekly
-            </li>
-            <li>
-              <span>✓</span>Up to <strong>$150,000/year</strong> recovered
-              revenue
-            </li>
-            <li>
-              <span>✓</span>
-              <strong>20–40%</strong> higher lead conversion
-            </li>
-            <li>
-              <span>✓</span>
-              <strong>70–80%</strong> of inquiries handled automatically
-            </li>
-          </ul>
-          <p className="contact-source">
-            Based on industry data from <strong>McKinsey</strong>,{" "}
-            <strong>Deloitte</strong>, <strong>MGMA</strong>, and{" "}
-            <strong>JMIR</strong>.
-          </p>
-        </div>
+        {/* LEFT SIDE — Caledly */}
+        <div
+          ref={calendlyRef}
+          className="contact-caledly calendly-inline-widget"
+          data-url="https://calendly.com/tarasidis17/discovery-call"
+          // style={{ minWidth: "500px", height: "550px" }}
+        ></div>
       </div>
     </section>
   );
