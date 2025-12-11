@@ -2,13 +2,68 @@ import "./Contact.css";
 import { useInView } from "react-intersection-observer";
 import useInViewHeader from "./useInViewHeader";
 import landingVideo3 from "../assets/videos/LandingPageAi1.webm";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import emailjs from "emailjs-com";
 
 function Contact() {
+  const formRef = useRef(null);
   const calendlyRef = useRef(null);
 
+  const [statusMessage, setStatusMessage] = useState("");
+  const [statusType, setStatusType] = useState(""); // "success" or "error"
+  const [errors, setErrors] = useState({});
+
+  // Form validation
+  const validateForm = (form) => {
+    let newErrors = {};
+
+    if (!form.name.value.trim()) newErrors.name = "Full Name is required.";
+    if (!form.email.value.trim()) newErrors.email = "Email is required.";
+    else if (!/\S+@\S+\.\S+/.test(form.email.value))
+      newErrors.email = "Invalid email.";
+    if (form.message.value.trim().length < 10)
+      newErrors.message = "Message must be at least 10 characters.";
+
+    return newErrors;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = formRef.current;
+    const validationErrors = validateForm(form);
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length > 0) {
+      setStatusMessage("Please fix the errors in the form.");
+      setStatusType("error");
+      return;
+    }
+
+    // Send email using EmailJS
+    emailjs
+      .sendForm(
+        "service_3ybbdhq",
+        "template_j9ihhvr",
+        formRef.current,
+        "JgUF4zEBRoIWxSQEZ"
+      )
+      .then(
+        () => {
+          setStatusMessage("Message sent successfully!");
+          setStatusType("success");
+          formRef.current.reset();
+          setErrors({});
+          setTimeout(() => setStatusMessage(""), 5000);
+        },
+        () => {
+          setStatusMessage("Failed to send message. Please try again.");
+          setStatusType("error");
+          setTimeout(() => setStatusMessage(""), 5000);
+        }
+      );
+  };
+
   useEffect(() => {
-    // Dynamically load Calendly script
     const script = document.createElement("script");
     script.src = "https://assets.calendly.com/assets/external/widget.js";
     script.async = true;
@@ -27,9 +82,6 @@ function Contact() {
   const { headerRef, inView } = useInViewHeader();
 
   return (
-    /* ///////////////////////////////////////////////////
-/////////////////CONTACT SECTION/////////////////////////
-//////////////////////////////////////////////////// */
     <section id="contact" className="contact-section" ref={ref}>
       {inViewVideo && (
         <video
@@ -45,9 +97,8 @@ function Contact() {
         </video>
       )}
 
-      {/* <div className="background-overlay" /> */}
       <div className="video-overlay3"></div>
-      {/* Section description text (outside columns) */}
+
       <div className="contact-intro-container">
         <h3
           ref={headerRef}
@@ -56,19 +107,14 @@ function Contact() {
           CONNECT WITH US
         </h3>
         <p>
-          Let’s explore how <strong>AI</strong> can <strong>streamline </strong>{" "}
-          your
-          <strong> workflow</strong>, <strong>automate communication</strong>,
-          and elevate your <strong>client experience</strong>.
+          Let’s explore how <strong>AI</strong> can <strong>streamline</strong>{" "}
+          your workflow, <strong>automate communication</strong>, and elevate
+          your <strong>client experience</strong>.
         </p>
       </div>
 
-      {/* Contact Container */}
-      {/* ////////////////////////////////////// */}
       <div className="contact-flex-container">
         <div className="contact-container">
-          {/* RIGHT SIDE — Contact Info */}
-
           <div>
             <h3 className="contact-form-header">Get in Touch</h3>
             <p>
@@ -77,8 +123,6 @@ function Contact() {
             </p>
           </div>
 
-          {/* SOCIALS CONTAINER */}
-          {/* ////////////////////////////////////// */}
           <div className="socials-container">
             <h3>Follow Us</h3>
             <div className="social-links">
@@ -87,37 +131,25 @@ function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <ion-icon
-                  name="mail-outline"
-                  aria-label="send us an email"
-                ></ion-icon>
+                <ion-icon name="mail-outline"></ion-icon>
               </a>
-              {/* <a
-                href="https://www.facebook.com/profile.php?id=100013231872326"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <ion-icon
-                  name="logo-facebook"
-                  aria-label="Visit our Facebook page"
-                ></ion-icon>
-              </a> */}
               <a
                 href="https://www.linkedin.com/company/109747993/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <ion-icon
-                  name="logo-linkedin"
-                  aria-label="Visit our Linkedin"
-                ></ion-icon>
+                <ion-icon name="logo-linkedin"></ion-icon>
               </a>
             </div>
           </div>
 
-          {/* FORM CONTAINER */}
-          {/* ////////////////////////////////////// */}
-          <form className="contact-form">
+          {/* FORM */}
+          <form className="contact-form" ref={formRef} onSubmit={handleSubmit}>
+            {/* Status message */}
+            {statusMessage && (
+              <div className={`form-status ${statusType}`}>{statusMessage}</div>
+            )}
+
             <div className="form-row">
               <div className="form-group">
                 <label htmlFor="name">Name</label>
@@ -125,9 +157,12 @@ function Contact() {
                   type="text"
                   id="name"
                   name="name"
-                  required
-                  placeholder=" Your Full Name"
+                  placeholder="Your Full Name"
+                  className={errors.name ? "input-error" : ""}
                 />
+                {errors.name && (
+                  <span className="error-text">{errors.name}</span>
+                )}
               </div>
 
               <div className="form-group">
@@ -136,9 +171,12 @@ function Contact() {
                   type="email"
                   id="email"
                   name="email"
-                  required
                   placeholder="you@example.com"
+                  className={errors.email ? "input-error" : ""}
                 />
+                {errors.email && (
+                  <span className="error-text">{errors.email}</span>
+                )}
               </div>
             </div>
 
@@ -160,9 +198,12 @@ function Contact() {
                 id="message"
                 name="message"
                 rows="4"
-                required
                 placeholder="How can we help you?"
+                className={errors.message ? "input-error" : ""}
               ></textarea>
+              {errors.message && (
+                <span className="error-text">{errors.message}</span>
+              )}
             </div>
 
             <button id="BookACall" type="submit" className="secondary-btn">
@@ -171,15 +212,14 @@ function Contact() {
           </form>
         </div>
 
-        {/* LEFT SIDE — Caledly */}
         <div
           ref={calendlyRef}
           className="contact-caledly calendly-inline-widget"
           data-url="https://calendly.com/tarasidis17/discovery-call"
-          // style={{ minWidth: "500px", height: "550px" }}
         ></div>
       </div>
     </section>
   );
 }
+
 export default Contact;

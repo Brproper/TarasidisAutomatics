@@ -231,6 +231,39 @@
   color: rgba(255, 255, 255, 0.7); /* change color here */
 }
 
+/* ===========================
+   Contact Form Status & Errors
+=========================== */
+.contact-form .form-status {
+  margin-bottom: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contact-form .form-status.success {
+  background-color: #28a745; /* green */
+  color: white;
+}
+
+.contact-form .form-status.error {
+  background-color: #dc3545; /* red */
+  color: white;
+}
+
+.contact-form .input-error {
+  border: 2px solid #dc3545 !important;
+}
+
+.contact-form .error-text {
+  color: #a70213;
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
+  display: block;
+}
+
 /* ============================
    LEFT COLUMN
 ============================ */
