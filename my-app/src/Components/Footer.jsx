@@ -1,6 +1,13 @@
 import "./Footer.css";
 
 function Footer() {
+  const scrollTo = (id) => {
+    const el = document.querySelector(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="footer-section">
       <div className="footer-container">
@@ -13,33 +20,45 @@ function Footer() {
         <nav className="footer-links" aria-label="Footer navigation">
           <ul>
             <li>
-              <a href="#whyMedfitAI">About</a>
+              <button
+                className="footer-link-btn"
+                onClick={() => scrollTo("#whyMedfitAI")}
+              >
+                About
+              </button>
             </li>
+
             <li>
-              <a href="#who-we-help">Who We help</a>
+              <button
+                className="footer-link-btn"
+                onClick={() => scrollTo("#who-we-help")}
+              >
+                Who We Help
+              </button>
             </li>
-            {/* <li>
-              <a href="#who-we-help">Who We Help</a>
-            </li> */}
+
             <li>
-              <a href="#services">Services</a>
+              <button
+                className="footer-link-btn"
+                onClick={() => scrollTo("#services")}
+              >
+                Services
+              </button>
             </li>
+
             <li>
-              <a href="#contact">Contact</a>
+              <button
+                className="footer-link-btn"
+                onClick={() => scrollTo("#contact")}
+              >
+                Contact
+              </button>
             </li>
           </ul>
         </nav>
 
         {/* SOCIAL MEDIA LINKS */}
         <div className="footer-socials">
-          {/* <a
-            href="https://www.facebook.com/profile.php?id=100013231872326"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-          >
-            <ion-icon name="logo-facebook"></ion-icon>
-          </a> */}
           <a
             href="https://www.linkedin.com/company/109747993/"
             target="_blank"

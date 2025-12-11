@@ -31,15 +31,17 @@
   gap: 2rem;
 }
 
-.footer-links a {
+.footer-links button {
   color: var(--background-color);
+  background-color: transparent;
+  border: none;
   text-decoration: none;
   font-size: 1.2rem;
 
   transition: color 0.4s ease;
 }
 
-.footer-links a:hover {
+.footer-links button:hover {
   color: var(--secondary-color);
 }
 
