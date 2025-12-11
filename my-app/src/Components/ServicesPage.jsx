@@ -12,7 +12,7 @@ export default function ServicesPage() {
   const { headerRef, inView } = useInViewHeader();
 
   return (
-    <section id="services" className="services-section-detailed">
+    <section id="servicesPage" className="services-section-detailed">
       <div>
         <h3 ref={headerRef} className={`${inView ? "typing3" : ""}`}>
           {t.servicesTitle}

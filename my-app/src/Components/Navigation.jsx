@@ -125,7 +125,7 @@ function Navigation() {
         onClick={() => {
           const element = document.getElementById("BookACall");
           if (element) {
-            const yOffset = -500; // adjust this value to move up (negative = higher)
+            const yOffset = -900; // adjust this value to move up (negative = higher)
             const y =
               element.getBoundingClientRect().top +
               window.pageYOffset +

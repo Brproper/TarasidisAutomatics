@@ -64,9 +64,16 @@ function Hero({ t }) {
         </div>
 
         {/* Primary CTA */}
-        <a href="#services" className="primary-btn" role="button">
+        <button
+          className="primary-btn"
+          onClick={() => {
+            document.querySelector("#services").scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+        >
           {t.exploreServices}
-        </a>
+        </button>
       </div>
     </header>
   );
