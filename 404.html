@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Redirecting... | MedFit AI</title>
+  <style>
+    body {
+      font-family: 'Jura', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #1e1e2f;
+      color: #f7f9fc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .loader {
+      text-align: center;
+    }
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(0, 191, 255, 0.3);
+      border-top-color: #00bfff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 1rem;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+  <script>
+    // Single Page App redirect for GitHub Pages
+    // Converts path to hash-based routing
+    (function() {
+      var path = window.location.pathname;
+      var search = window.location.search;
+      var hash = window.location.hash;
+
+      // Redirect to index with hash routing
+      if (path !== '/' && path !== '/index.html') {
+        window.location.replace(
+          window.location.origin + '/#' + path + search + hash
+        );
+      } else {
+        // Already at root, just redirect to home
+        window.location.replace(window.location.origin + '/');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div class="loader">
+    <div class="spinner"></div>
+    <p>Redirecting...</p>
+  </div>
+</body>
+</html>

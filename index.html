@@ -11,22 +11,55 @@
     />
     <title>MedFit AI | Intelligent Healthcare & Fitness Automation</title>
 
-    <!-- Favicon & Manifest -->
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://medfitai.com/" />
+    <meta property="og:title" content="MedFit AI | Intelligent Healthcare & Fitness Automation" />
+    <meta property="og:description" content="AI voice agents and automations for healthcare and fitness professionals. Make the right AI decisions before building anything." />
+    <meta property="og:image" content="https://medfitai.com/logo512.png" />
+    <meta property="og:site_name" content="MedFit AI" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://medfitai.com/" />
+    <meta name="twitter:title" content="MedFit AI | Intelligent Healthcare & Fitness Automation" />
+    <meta name="twitter:description" content="AI voice agents and automations for healthcare and fitness professionals. Make the right AI decisions before building anything." />
+    <meta name="twitter:image" content="https://medfitai.com/logo512.png" />
+
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="MedFit AI" />
+    <link rel="canonical" href="https://medfitai.com/" />
+
+    <!-- Favicon & Manifest (defer manifest to avoid blocking) -->
     <link rel="icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/logo192.png" />
-    <link rel="manifest" href="/manifest.json" />
 
-    <!-- Google Fonts -->
+    <!-- Preconnect to external origins for faster resource loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://assets.calendly.com" crossorigin />
+
+    <!-- DNS Prefetch for secondary domains -->
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="https://assets.calendly.com" />
+
+    <!-- Google Fonts with display=swap for better LCP -->
     <link
       href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Nova+Mono&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Space+Grotesk:wght@300..700&family=Tektur:wght@400..900&display=swap"
       rel="stylesheet"
       media="print"
       onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Nova+Mono&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Space+Grotesk:wght@300..700&family=Tektur:wght@400..900&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
 
-    <!-- Flag Icons -->
+    <!-- Flag Icons (deferred - not critical for initial render) -->
     <link
       rel="preload"
       href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"
@@ -40,7 +73,7 @@
       />
     </noscript>
 
-    <!-- Calendly Widget -->
+    <!-- Calendly Widget (deferred - only needed for contact section) -->
     <link
       rel="preload"
       href="https://assets.calendly.com/assets/external/widget.css"
@@ -55,7 +88,7 @@
     </noscript>
     <script
       src="https://assets.calendly.com/assets/external/widget.js"
-      async
+      defer
     ></script>
 
     <!-- Structured Data -->
@@ -71,18 +104,25 @@
       }
     </script>
 
-    <script
-      type="module"
-      src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
+    <!-- Ionicons (deferred to avoid blocking critical path) -->
+    <script nomodule defer src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Manifest (loaded via JS to avoid blocking) -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        const link = document.createElement('link');
+        link.rel = 'manifest';
+        link.href = '/manifest.json';
+        document.head.appendChild(link);
+      }
+    </script>
 
     <!-- Main CSS (Vite will inject via import in JS) -->
-    <script type="module" crossorigin src="/assets/index-DGmtz-43.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CbYwrlNj.css">
+    <script type="module" crossorigin src="/assets/index-BtTywz-m.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/react-vendor-puJ_yQdS.js">
+    <link rel="modulepreload" crossorigin href="/assets/router-DMiggEIh.js">
+    <link rel="modulepreload" crossorigin href="/assets/intersection-0Ydv7uiM.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-CXEQ8ic5.css">
   </head>
 
   <body>
