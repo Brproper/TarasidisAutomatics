@@ -82,7 +82,8 @@ function HowItWorks() {
                   or both, depending on your setup.
                 </p>
                 <p className="micro-line-how">
-                  No tools. No implementation. Just clarity.
+                  No <strong>tools</strong>. No <strong>implementation</strong>.
+                  Just <strong>clarity</strong>.
                 </p>
               </div>
             </div>
@@ -100,7 +101,8 @@ function HowItWorks() {
                   not a sales pitch for tools.
                 </p>
                 <p className="micro-line-how">
-                  Many businesses stop here — and that's perfectly fine.
+                  Many <strong>businesses stop</strong> here — and that's{" "}
+                  <strong>perfectly fine</strong>.
                 </p>
               </div>
             </div>
@@ -119,7 +121,8 @@ function HowItWorks() {
                   real needs.
                 </p>
                 <p className="micro-line-how">
-                  No unnecessary tools. No over-automation.
+                  No <strong>unnecessary tools</strong>. No{" "}
+                  <strong>over-automation</strong>.
                 </p>
               </div>
             </div>
