@@ -11,6 +11,9 @@
   justify-content: center;
   text-align: center;
   color: var(--primary-color);
+  /* Performance: lazy render when off-screen */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
 }
 
 /* Typing Animation now handled by AnimatedHeader component */

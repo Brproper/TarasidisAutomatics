@@ -7,6 +7,33 @@
 /* ///////////////////////////////////////////////////////// */
 
 /* ///////////////////////////////////////////////////////// */
+/* ////////////////// PERFORMANCE UTILITIES //////////////// */
+/* ///////////////////////////////////////////////////////// */
+/* Lazy render off-screen sections for better performance */
+.lazy-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
+/* GPU acceleration for animated elements */
+.gpu-accelerated {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ///////////////////////////////////////////////////////// */
 /* ////////////////// UTILITY CLASSES /////////////////////// */
 /* ///////////////////////////////////////////////////////// */
 /* ANIMATION */

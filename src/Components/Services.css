@@ -12,6 +12,9 @@
   text-align: center;
   gap: 4rem;
   color: var(--primary-color);
+  /* Performance: lazy render when off-screen */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
 }
 
 .services-section h3 {

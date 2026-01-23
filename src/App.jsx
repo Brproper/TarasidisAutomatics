@@ -59,10 +59,6 @@ export default function App() {
               <Suspense fallback={<Loader text="Loading WhyMedfitAI..." />}>
                 <WhyMedfitAI />
               </Suspense>
-              {/* 
-              <Suspense fallback={<Loader text="Loading FAQ..." />}>
-                <Faq />
-              </Suspense> */}
 
               <Suspense fallback={<Loader text="Loading Contact..." />}>
                 <Contact />

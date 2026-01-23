@@ -20,6 +20,9 @@
   /* Make sure content appears above */
   z-index: 0;
   overflow: hidden;
+  /* Performance: lazy render when off-screen */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 700px;
 }
 
 .contact-wrapper {

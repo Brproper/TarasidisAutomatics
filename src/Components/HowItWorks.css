@@ -11,6 +11,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* Performance: lazy render when off-screen */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
 }
 
 .video-overlay2 {

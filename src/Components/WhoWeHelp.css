@@ -12,6 +12,9 @@
   flex-direction: column;
   align-items: center;
   gap: 6rem; /* spacing between header, grid, and footer */
+  /* Performance: lazy render when off-screen */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
 }
 
 /* Section title styling */
