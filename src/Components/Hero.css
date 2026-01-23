@@ -161,7 +161,6 @@
   .hero-description p {
     font-size: 1.15rem;
   }
-
 }
 
 /* --------- Tablets (≤992px) --------- */
@@ -191,11 +190,10 @@
   .hero-description p {
     font-size: 1.1rem;
   }
-
 }
 
 /* --------- Mobile (≤600px) --------- */
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 900px) {
   .hero-section {
     padding: 3.5rem 7rem;
   }
@@ -223,7 +221,7 @@
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 750px) {
   .hero-section {
     padding: 3.5rem 4rem;
   }
@@ -234,12 +232,12 @@
 }
 
 /* --------- Extra Small Devices (≤400px) --------- */
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 650px) {
   .hero-section {
     padding: 3rem 3rem;
   }
   .hero-section h1 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     letter-spacing: 1.5px;
   }
 
@@ -250,11 +248,10 @@
   .hero-description p {
     font-size: 0.95rem;
   }
-
 }
 
 /* --------- Extra Small Devices (≤400px) --------- */
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 525px) {
   .hero-section {
     padding: 3rem 2rem;
   }
@@ -271,5 +268,4 @@
   .hero-description p {
     font-size: 0.9rem;
   }
-
 }
