@@ -1,41 +1,23 @@
 import React, { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import useScrollToSection from "./useScrollToSection";
 import "./Navigation.css";
 
 function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const location = useLocation();
   const navigate = useNavigate();
+  const scrollToSection = useScrollToSection();
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
 
   const handleLogoClick = () => {
-    if (location.pathname !== "/") {
-      navigate("/");
-      // Wait for navigation to complete
-      setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 300);
-    } else {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
+    navigate("/");
+    setTimeout(() => window.location.reload(), 100);
   };
 
   const handleScrollToSection = (id) => {
     setMenuOpen(false);
-
-    const scroll = () => {
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    };
-
-    if (location.pathname !== "/") {
-      // Go home first, then scroll
-      navigate("/");
-      setTimeout(scroll, 400);
-    } else {
-      scroll();
-    }
+    scrollToSection(id);
   };
 
   return (
@@ -122,17 +104,7 @@ function Navigation() {
       {/* GET STARTED */}
       <button
         className="get-started"
-        onClick={() => {
-          const element = document.getElementById("BookACall");
-          if (element) {
-            const yOffset = -900; // adjust this value to move up (negative = higher)
-            const y =
-              element.getBoundingClientRect().top +
-              window.pageYOffset +
-              yOffset;
-            window.scrollTo({ top: y, behavior: "smooth" });
-          }
-        }}
+        onClick={() => handleScrollToSection("contact")}
       >
         Book a Call
       </button>

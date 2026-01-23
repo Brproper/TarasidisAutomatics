@@ -23,7 +23,7 @@
   background: linear-gradient(
     to bottom,
     rgba(30, 30, 47, 1),
-    rgba(0, 191, 255, 0.3)
+    rgba(0, 191, 255, 0.2)
   );
   z-index: -1;
 }
@@ -46,41 +46,20 @@
   font-size: 2.6rem;
   letter-spacing: 3px;
   margin-bottom: 1rem;
-  line-height: 1.4; /* <-- allows comfortable spacing between lines */
+  line-height: 1.4;
   text-align: center;
   word-break: break-word;
-
-  background: linear-gradient(to right, #abebef, var(--secondary-color));
   background-size: 150%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
-/* Typing Animation / Style */
-.typing1 {
-  max-width: 950px;
-
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 2px solid var(--primary-color);
-  width: 0;
-
-  animation: typingHero 5s steps(33, end) forwards;
-}
+/* Typing Animation now handled by AnimatedHeader component */
 
 /* HERO SUBTITLE */
 .hero-section h2 {
   font-size: 1.6rem;
   font-weight: bold;
   letter-spacing: 1.5px;
-  background: linear-gradient(to right, #abebef, var(--secondary-color));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 /* HERO DESCRIPTION */
@@ -94,58 +73,66 @@
 }
 
 .hero-description p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 400;
   letter-spacing: 1.5px;
-  max-width: 100%;
+  max-width: 700px;
   width: 100%;
   padding: 1.5rem 2rem;
   line-height: 1.8;
-  border-radius: 8px;
-  background-color: rgba(30, 30, 47, 0.5);
-  backdrop-filter: blur(10px);
-
-  color: var(--background-color);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-  transition: all 0.4s ease;
+  border-radius: 6px;
+  background-color: rgba(30, 30, 47, 0.3);
+  backdrop-filter: blur(15px);
   cursor: pointer;
+  border: 4px solid transparent;
+  color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+  transition: all 0.4s ease;
 }
 
 .hero-description p strong {
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 
 .hero-description p:hover {
-  background-color: var(--primary-color);
-  transform: scale(1.02);
-  box-shadow:
-    inset 0 0 0 4px var(--secondary-color),
-    0 8px 24px rgba(0, 110, 147, 0.3);
+  border: 4px solid var(--secondary-color);
+  background-color: rgba(30, 30, 47, 0.8);
+  transform: scale(1.04);
 }
 
 .hero-description p:hover strong {
   color: var(--secondary-color);
 }
 
-/* PRIMARY BUTTON */
-.primary-btn {
-  display: inline-block;
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-  text-decoration: none;
-  color: var(--background-color);
-  background-color: var(--secondary-color);
-  border-radius: 6px;
-  transition: all 0.3s ease;
+/* BUTTONS CONTAINER */
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 350px;
+
+  margin-top: 2rem;
 }
 
-.primary-btn:hover,
-.primary-btn:focus {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 191, 255, 0.4);
-  outline: none;
+/* Hero-specific button overrides */
+.hero-buttons .primary-btn {
+  width: 100%;
+}
+
+.hero-buttons .secondary-btn {
+  width: 100%;
+  color: #ffffff;
+  background-color: rgba(30, 30, 47, 0.2);
+  border: 2px solid var(--secondary-color);
+}
+
+.hero-buttons .secondary-btn:hover,
+.hero-buttons .secondary-btn:focus {
+  background-color: rgba(0, 191, 255, 0.2);
+  color: #ffffff;
 }
 
 /* ///////////////////////////////////////////////////////// */
@@ -172,13 +159,9 @@
   }
 
   .hero-description p {
-    font-size: 1.1rem;
-    padding: 1.2rem 1.5rem;
+    font-size: 1.15rem;
   }
 
-  .primary-btn {
-    padding: 0.9rem 1.8rem;
-  }
 }
 
 /* --------- Tablets (≤992px) --------- */
@@ -206,14 +189,9 @@
   }
 
   .hero-description p {
-    width: 100%;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
   }
 
-  .primary-btn {
-    font-size: 1.1rem;
-    padding: 0.8rem 1.4rem;
-  }
 }
 
 /* --------- Mobile (≤600px) --------- */
@@ -241,7 +219,6 @@
 
   .hero-description p {
     font-size: 1rem;
-    padding: 0.8rem 1rem;
     line-height: 1.7;
   }
 }
@@ -274,11 +251,6 @@
     font-size: 0.95rem;
   }
 
-  .primary-btn {
-    width: 100%;
-    text-align: center;
-    font-size: 1rem;
-  }
 }
 
 /* --------- Extra Small Devices (≤400px) --------- */
@@ -300,9 +272,4 @@
     font-size: 0.9rem;
   }
 
-  .primary-btn {
-    width: 100%;
-    text-align: center;
-    font-size: 1rem;
-  }
 }

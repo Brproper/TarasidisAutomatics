@@ -1,12 +1,8 @@
+import useScrollToSection from "./useScrollToSection";
 import "./Footer.css";
 
 function Footer() {
-  const scrollTo = (id) => {
-    const el = document.querySelector(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const scrollToSection = useScrollToSection();
 
   return (
     <footer className="footer-section">
@@ -22,7 +18,7 @@ function Footer() {
             <li>
               <button
                 className="footer-link-btn"
-                onClick={() => scrollTo("#whyMedfitAI")}
+                onClick={() => scrollToSection("whyMedfitAI")}
               >
                 About
               </button>
@@ -31,7 +27,7 @@ function Footer() {
             <li>
               <button
                 className="footer-link-btn"
-                onClick={() => scrollTo("#who-we-help")}
+                onClick={() => scrollToSection("who-we-help")}
               >
                 Who We Help
               </button>
@@ -40,7 +36,7 @@ function Footer() {
             <li>
               <button
                 className="footer-link-btn"
-                onClick={() => scrollTo("#services")}
+                onClick={() => scrollToSection("services")}
               >
                 Services
               </button>
@@ -49,7 +45,7 @@ function Footer() {
             <li>
               <button
                 className="footer-link-btn"
-                onClick={() => scrollTo("#contact")}
+                onClick={() => scrollToSection("contact")}
               >
                 Contact
               </button>

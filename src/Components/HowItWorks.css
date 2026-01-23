@@ -45,14 +45,7 @@
   color: transparent;
 }
 
-.typing4 {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 0;
-  border-right: 2px solid var(--primary-color);
-  animation: typingHowItWorks 2s steps(13, end) forwards;
-}
+/* Typing Animation now handled by AnimatedHeader component */
 
 .header-container {
   display: flex;
@@ -151,6 +144,18 @@
 
 .how-it-works-card:hover .italic strong {
   color: var(--secondary-color);
+}
+
+/* Micro-line paragraph - smaller, subtle text for HowItWorks */
+.how-it-works-card .micro-line-how {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  text-align: center;
+  margin-top: -1rem;
+  color: rgba(240, 240, 255, 0.9);
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .card-inner {
@@ -302,6 +307,10 @@
     font-size: 1.2rem;
   }
 
+  .how-it-works-card .micro-line-how {
+    font-size: 1rem;
+  }
+
   .carousel {
     max-width: 625px;
   }
@@ -343,6 +352,10 @@
     font-size: 1.1rem;
   }
 
+  .how-it-works-card .micro-line-how {
+    font-size: 0.95rem;
+  }
+
   .carousel {
     max-width: 550px;
   }
@@ -379,6 +392,10 @@
   .how-it-works-card p {
     font-size: 1rem;
     line-height: 1.5;
+  }
+
+  .how-it-works-card .micro-line-how {
+    font-size: 0.9rem;
   }
 
   .carousel {
@@ -420,6 +437,10 @@
 
   .how-it-works-card p {
     font-size: 0.95rem;
+  }
+
+  .how-it-works-card .micro-line-how {
+    font-size: 0.85rem;
   }
 
   .carousel {

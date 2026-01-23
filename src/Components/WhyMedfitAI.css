@@ -13,15 +13,7 @@
   color: var(--primary-color);
 }
 
-/* Typing Animation */
-.typing7 {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 2px solid var(--primary-color);
-  width: 0;
-  animation: typingWhyMedFit 2s steps(14, end) forwards;
-}
+/* Typing Animation now handled by AnimatedHeader component */
 
 .why-medfit-wrapper {
   max-width: 1000px;

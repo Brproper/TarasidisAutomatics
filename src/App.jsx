@@ -10,19 +10,17 @@ import "./index.css";
 import Navigation from "./Components/Navigation.jsx";
 import Footer from "./Components/Footer.jsx";
 import Hero from "./Components/Hero.jsx"; // Keep Hero always visible
-import translations from "./Components/translations.jsx";
 
 // Lazy load homepage sections
 const WhoWeHelp = lazy(() => import("./Components/WhoWeHelp.jsx"));
 const Services = lazy(() => import("./Components/Services.jsx"));
 const HowItWorks = lazy(() => import("./Components/HowItWorks.jsx"));
 const WhyMedfitAI = lazy(() => import("./Components/WhyMedfitAI.jsx"));
-const Faq = lazy(() => import("./Components/Faq.jsx"));
+// const Faq = lazy(() => import("./Components/Faq.jsx"));
 const Contact = lazy(() => import("./Components/Contact.jsx"));
 
 // Lazy load other pages
 const Founder = lazy(() => import("./Components/Founder.jsx"));
-const ServicesPage = lazy(() => import("./Components/ServicesPage.jsx"));
 
 // Simple loader
 const Loader = ({ text = "Loading..." }) => (
@@ -30,12 +28,10 @@ const Loader = ({ text = "Loading..." }) => (
 );
 
 export default function App() {
-  const t = translations.en;
-
   return (
     <Router>
       {/* Always visible */}
-      <Navigation t={t} />
+      <Navigation />
 
       <Routes>
         {/* Landing page */}
@@ -44,7 +40,7 @@ export default function App() {
           element={
             <main>
               {/* Hero always visible */}
-              <Hero t={t} />
+              <Hero />
 
               {/* Lazy-loaded WhoWeHelp and Services */}
               <Suspense fallback={<Loader text="Loading WhoWeHelp..." />}>
@@ -52,21 +48,21 @@ export default function App() {
               </Suspense>
 
               <Suspense fallback={<Loader text="Loading Services..." />}>
-                <Services t={t} />
+                <Services />
               </Suspense>
 
               {/* Lazy-loaded below-the-fold sections */}
               <Suspense fallback={<Loader text="Loading HowItWorks..." />}>
-                <HowItWorks t={t} />
+                <HowItWorks />
               </Suspense>
 
               <Suspense fallback={<Loader text="Loading WhyMedfitAI..." />}>
                 <WhyMedfitAI />
               </Suspense>
-
+              {/* 
               <Suspense fallback={<Loader text="Loading FAQ..." />}>
                 <Faq />
-              </Suspense>
+              </Suspense> */}
 
               <Suspense fallback={<Loader text="Loading Contact..." />}>
                 <Contact />
@@ -81,15 +77,6 @@ export default function App() {
           element={
             <Suspense fallback={<Loader text="Loading Founder..." />}>
               <Founder />
-            </Suspense>
-          }
-        />
-
-        <Route
-          path="/servicesPage"
-          element={
-            <Suspense fallback={<Loader text="Loading ServicesPage..." />}>
-              <ServicesPage />
             </Suspense>
           }
         />

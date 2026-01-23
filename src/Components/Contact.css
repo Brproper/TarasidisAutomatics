@@ -16,11 +16,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8rem;
 
   /* Make sure content appears above */
   z-index: 0;
   overflow: hidden;
+}
+
+.contact-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8rem;
 }
 
 .video-overlay3 {
@@ -36,6 +45,19 @@
     rgba(102, 165, 186, 0.5)
   );
   z-index: -1;
+}
+
+.contact-header {
+  font-size: 2.6rem;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+
+  background: linear-gradient(to left, #1864ab, var(--primary-color));
+  background-size: 150%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .contact-intro-container {
@@ -60,44 +82,6 @@
   color: transparent;
 }
 
-.contact-header {
-  font-size: 2.6rem;
-  letter-spacing: 2px;
-  margin-bottom: 2rem;
-
-  background: linear-gradient(to left, #1864ab, var(--primary-color));
-  background-size: 150%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-}
-
-/* Typing Animation / Style */
-.typing6 {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 2px solid var(--background-color);
-  width: 0;
-
-  animation: typingContact 2.5s steps(18, end) forwards;
-}
-
-.contact-info-text p {
-  text-align: center;
-  font-size: 1.4rem;
-  line-height: 1.7;
-  font-weight: 600;
-
-  background: linear-gradient(to right, #1864ab, var(--primary-color));
-  background-size: 150%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-}
-
 /* ============================
    CONTACT FLEX CONTAINER
 ============================ */
@@ -109,169 +93,13 @@
 }
 
 /* ============================
-   RIGHT COLUMN
-============================ */
-.contact-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; /* aligns content from top */
-  padding: 3rem 4rem;
-  border-radius: 8px;
-  gap: 3.5rem; /* consistent spacing between elements */
-  max-width: 550px;
-  background-color: rgba(30, 30, 47, 0.25);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.contact-container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-}
-
-/* Headers inside container */
-.contact-container h3 {
-  font-size: 1.8rem;
-  letter-spacing: 1.5px;
-  text-align: center;
-  background: linear-gradient(to right, #abebef, var(--secondary-color));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 1rem;
-}
-
-/* Paragraphs inside container */
-.contact-container p {
-  font-size: 1.4rem;
-  line-height: 1.6;
-  color: var(--background-color);
-  text-align: center;
-}
-
-.contact-email div {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.social-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.social-links a ion-icon {
-  font-size: 2rem;
-  color: var(--secondary-color);
-  transition:
-    transform 0.3s ease,
-    color 0.3s ease;
-}
-
-.social-links a ion-icon:hover {
-  transform: scale(1.2);
-  color: var(--background-color);
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.form-row {
-  display: flex;
-  gap: 2rem;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.form-group label {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  font-size: 1.4rem;
-  letter-spacing: 1px;
-
-  color: var(--secondary-color);
-}
-
-.form-group input,
-.form-group textarea {
-  padding: 0.8rem 1rem;
-  border-radius: 4px;
-  border: 2px solid transparent;
-  background: rgba(30, 30, 47, 0.3);
-  color: var(--background-color);
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  outline: none;
-  transition: border 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  border: 2px solid var(--secondary-color);
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.7); /* change color here */
-}
-
-/* ===========================
-   Contact Form Status & Errors
-=========================== */
-.contact-form .form-status {
-  margin-bottom: 1rem;
-  padding: 0.8rem 1rem;
-  border-radius: 4px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.contact-form .form-status.success {
-  background-color: #28a745; /* green */
-  color: white;
-}
-
-.contact-form .form-status.error {
-  background-color: #dc3545; /* red */
-  color: white;
-}
-
-.contact-form .input-error {
-  border: 2px solid #dc3545 !important;
-}
-
-.contact-form .error-text {
-  color: #a70213;
-  font-weight: bold;
-  font-size: 0.95rem;
-  margin-top: 0.3rem;
-  display: block;
-}
-
-/* ============================
    LEFT COLUMN
 ============================ */
 .contact-caledly {
-  height: 850px;
+  height: 500px;
   width: 550px;
   padding: 0.25rem;
-  border-radius: 4px;
+  border-radius: 12px;
   border: 5px solid transparent;
   box-shadow: 0 0 20px rgba(0, 191, 255, 0.15);
 }
@@ -440,6 +268,10 @@
   .contact-caledly {
     height: 700px;
   }
+
+  .contact-micro-copy p {
+    font-size: 1.2rem;
+  }
 }
 
 /* 📞 Phones — 650px and below */
@@ -481,6 +313,10 @@
 
   .contact-caledly {
     height: 650px;
+  }
+
+  .contact-micro-copy p {
+    font-size: 1.1rem;
   }
 }
 
@@ -526,5 +362,9 @@
 
   .contact-caledly {
     height: 600px;
+  }
+
+  .contact-micro-copy p {
+    font-size: 1rem;
   }
 }

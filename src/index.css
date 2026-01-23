@@ -21,115 +21,7 @@
   }
 }
 
-/* Typing animation 1 */
-@keyframes typingHero {
-  0% {
-    width: 0;
-    border-right: 2px solid var(--background-color);
-  }
-  99% {
-    border-right: 2px solid var(--background-color);
-  }
-  100% {
-    width: 32ch;
-    border-right-color: transparent;
-  }
-}
-
-@keyframes typingWhoWeHelp {
-  0% {
-    width: 0;
-    border-right: 2px solid var(--highlight-color);
-  }
-  99% {
-    border-right: 2px solid var(--highlight-color);
-  }
-  100% {
-    width: 10.5ch;
-    border-right-color: transparent;
-  }
-}
-
-@keyframes typingServices {
-  0% {
-    width: 0;
-    border-right: 2px solid var(--highlight-color);
-  }
-  99% {
-    border-right: 2px solid var(--highlight-color);
-  }
-  100% {
-    width: 13.5ch;
-    border-right-color: transparent;
-  }
-}
-
-@keyframes typingHowItWorks {
-  0% {
-    width: 0;
-    border-right: 2px solid var(--background-color);
-  }
-  99% {
-    border-right: 2px solid var(--background-color);
-  }
-  100% {
-    width: 10.5ch;
-    border-right-color: transparent;
-  }
-}
-
-@keyframes typingFaq {
-  0% {
-    width: 0;
-    border-right: 2px solid var(--highlight-color);
-  }
-  99% {
-    border-right: 2px solid var(--highlight-color);
-  }
-  100% {
-    width: 23.5ch;
-    border-right-color: transparent;
-  }
-}
-
-@keyframes typingContact {
-  0% {
-    width: 0;
-    border-right: 2px solid var(--background-color);
-  }
-  99% {
-    border-right: 2px solid var(--background-color);
-  }
-  100% {
-    width: 15ch;
-    border-right-color: transparent;
-  }
-}
-
-@keyframes typingWhyMedFit {
-  0% {
-    width: 0;
-    border-right: 2px solid var(--highlight-color);
-  }
-  99% {
-    border-right: 2px solid var(--highlight-color);
-  }
-  100% {
-    width: 12ch;
-    border-right-color: transparent;
-  }
-}
-
-@keyframes blink {
-  0%,
-  100% {
-    border-color: transparent;
-  }
-
-  50% {
-    border-color: white;
-  }
-}
+/* Typing animations consolidated into AnimatedHeader.css */
 
 /* COLOR VARIABLES */
 /* ///////////////////////////////// */
@@ -173,15 +65,9 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-
   width: 100%;
   height: 100%;
   object-fit: cover;
-
-  /* DELETE this:
-  aspect-ratio: 4 / 3;
-  */
-
   transform-origin: center;
   z-index: -1;
   opacity: 1;
@@ -192,9 +78,10 @@ body {
 /* ///////////////////////////// */
 .primary-btn {
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: bold;
   letter-spacing: 2px;
+  max-width: 400px;
 
   padding: 1rem 2rem;
   background-color: var(--secondary-color);
@@ -218,11 +105,11 @@ body {
 /* ///////////////////////////// */
 .secondary-btn {
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   font-weight: bold;
   letter-spacing: 2px;
 
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   background-color: var(--background-color);
   color: var(--primary-color);
 
@@ -267,6 +154,48 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 2.5rem;
+}
+
+/* GRADIENT TEXT UTILITIES */
+/* ///////////////////////////// */
+.gradient-text {
+  background: linear-gradient(
+    to right,
+    var(--secondary-color),
+    var(--highlight-color)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.gradient-text-reverse {
+  background: linear-gradient(
+    to left,
+    var(--highlight-color),
+    var(--secondary-color)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.gradient-text-blue {
+  background: linear-gradient(to right, #1864ab, var(--primary-color));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.gradient-text-hero {
+  background: linear-gradient(to right, #abebef, var(--secondary-color));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 /* ========================================================= */
