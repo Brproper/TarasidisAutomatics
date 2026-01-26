@@ -1,8 +1,8 @@
 import "./Services.css";
 import AnimatedHeader from "./AnimatedHeader";
-import ChatbotsImg from "../assets/imgs/ChatBots.webp";
-import Sound from "../assets/imgs/Sound.webp";
-import TechBrainAi from "../assets/imgs/TechBrainAi3.webp";
+import EducationImg from "../assets/imgs/Educate.jpg";
+import AuditImg from "../assets/imgs/Audit.jpg";
+import ImplementImg from "../assets/imgs/Implement.jpg";
 
 function Services() {
   const handleLearnMore = () => {
@@ -33,7 +33,7 @@ function Services() {
         <div className="service-card">
           {/* <ion-icon name="chatbubble-ellipses-outline" class="icon"></ion-icon> */}
           <div className="service-image-main">
-            <img src={ChatbotsImg} alt="Educate" loading="lazy" />
+            <img src={EducationImg} alt="Educate" loading="lazy" />
           </div>
           <h4 className="gradient-text">Educate</h4>
           <p>
@@ -48,7 +48,7 @@ function Services() {
         <div className="service-card">
           {/* <ion-icon name="mic-outline" class="icon"></ion-icon> */}
           <div className="service-image-main">
-            <img src={Sound} alt="Audit" loading="lazy" />
+            <img src={AuditImg} alt="Audit" loading="lazy" />
           </div>
           <h4 className="gradient-text">Audit</h4>
           <p>
@@ -63,7 +63,7 @@ function Services() {
         <div className="service-card">
           {/* <ion-icon name="timer-outline" class="icon"></ion-icon> */}
           <div className="service-image-main">
-            <img src={TechBrainAi} alt="Implement" loading="lazy" />
+            <img src={ImplementImg} alt="Implement" loading="lazy" />
           </div>
           <h4 className="gradient-text">Implement</h4>
           <p>
