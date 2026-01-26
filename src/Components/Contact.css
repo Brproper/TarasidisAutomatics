@@ -189,7 +189,6 @@
 @media (max-width: 650px) {
   .contact-section {
     padding: 3.5rem 3rem;
-    gap: 5rem;
   }
 
   .contact-header {
@@ -238,5 +237,31 @@
 
   .contact-micro-copy p {
     font-size: 1rem;
+  }
+}
+
+/* 📱 Extra small phones — 450px and below */
+@media (max-width: 450px) {
+  .contact-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .contact-header {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+
+  .contact-intro-container p {
+    max-width: 300px;
+    font-size: 0.95rem;
+  }
+
+  .contact-caledly {
+    width: 330px;
+    height: 330px;
+  }
+
+  .contact-wrapper {
+    gap: 3rem;
   }
 }

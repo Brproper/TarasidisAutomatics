@@ -236,14 +236,14 @@
 /* ---------- Ultra Small Devices (≤360px) ---------- */
 @media (max-width: 450px) {
   .why-medfit-section {
-    padding: 3rem 2rem;
+    padding: 2.5rem 2rem;
   }
 
   .why-medfit-wrapper h2 {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
 
   .why-intro {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 }

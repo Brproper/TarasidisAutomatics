@@ -289,11 +289,12 @@
 /* Small phones (below 400px) */
 @media (max-width: 450px) {
   .who-we-help-section {
-    padding: 3rem 2.5rem;
+    padding: 3rem 2rem;
   }
 
   .who-header {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
   }
 
   .who-intro {

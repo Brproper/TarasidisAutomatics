@@ -326,7 +326,7 @@
 /* ====== Mobile portrait / Large phones (576px and below) ====== */
 @media (max-width: 576px) {
   .services-section {
-    padding: 2rem 2rem;
+    padding: 2.5rem 2rem;
     gap: 2rem;
   }
 
@@ -337,6 +337,7 @@
 
   .services-section h3 {
     font-size: 1.9rem;
+    letter-spacing: 1.5px;
   }
 
   .services-subtitle {
@@ -364,13 +365,14 @@
 }
 
 /* ====== Extra small phones (400px and below) ====== */
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .services-section {
-    padding: 1.5rem 1.5rem;
+    padding: 2.5rem 1.5rem;
   }
 
   .services-section h3 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
   }
 
   .services-subtitle {
