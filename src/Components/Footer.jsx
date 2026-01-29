@@ -1,5 +1,6 @@
 import useScrollToSection from "./useScrollToSection";
 import "./Footer.css";
+import logo from "../assets/imgs/logo.png";
 
 function Footer() {
   const scrollToSection = useScrollToSection();
@@ -7,10 +8,13 @@ function Footer() {
   return (
     <footer className="footer-section">
       <div className="footer-container">
-        <p>
-          &copy; {new Date().getFullYear()} MedFitAi <br />
-          All rights reserved.
-        </p>
+        <div className="footer-brand">
+          <img src={logo} alt="MedFitAI Logo" className="footer-logo" />
+          <p>
+            &copy; {new Date().getFullYear()} MedFitAi <br />
+            All rights reserved.
+          </p>
+        </div>
 
         {/* FOOTER LINKS */}
         <nav className="footer-links" aria-label="Footer navigation">

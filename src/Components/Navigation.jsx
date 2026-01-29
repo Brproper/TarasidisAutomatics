@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useScrollToSection from "./useScrollToSection";
 import "./Navigation.css";
+import logo from "../assets/imgs/logo.png";
 
 function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,15 +28,15 @@ function Navigation() {
       aria-label="Main Navigation"
     >
       {/* LOGO */}
-      <h1 className="logo">
+      <div className="logo">
         <button
           onClick={handleLogoClick}
           aria-label="Go to homepage"
           className="logo-btn"
         >
-          MedFitAI
+          <img src={logo} alt="MedFitAI Logo" className="logo-img" />
         </button>
-      </h1>
+      </div>
 
       {/* HAMBURGER MENU */}
       <button

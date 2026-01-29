@@ -21,6 +21,29 @@
   font-size: 1.2rem;
 }
 
+/* FOOTER BRAND */
+/* //////////////////////////////// */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.footer-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(0.85) sepia(10%) hue-rotate(180deg);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.footer-logo:hover {
+  filter: none;
+  transform: scale(1.08);
+}
+
 /* FOOTER LINKS */
 /* //////////////////////////////// */
 .footer-links ul {
@@ -110,6 +133,13 @@
   }
 }
 
+/* ----------- Tablet (≤900px) - Logo ----------- */
+@media (max-width: 900px) {
+  .footer-logo {
+    height: 35px;
+  }
+}
+
 /* 📲 Small tablets / large phones (≤768px) */
 @media (max-width: 768px) {
   .footer-section {
@@ -159,6 +189,13 @@
 
   .footer-socials ion-icon {
     font-size: 1.3rem;
+  }
+}
+
+/* ----------- Mobile (≤480px) - Logo ----------- */
+@media (max-width: 480px) {
+  .footer-logo {
+    height: 30px;
   }
 }
 

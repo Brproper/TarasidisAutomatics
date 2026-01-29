@@ -56,8 +56,7 @@ function Hero() {
           <button
             className="secondary-btn"
             onClick={() => {
-              // TODO: Link to questionnaire page/form
-              console.log("Questionnaire clicked");
+              window.open("https://forms.gle/h885zafRyB4YcHAY7", "_blank");
             }}
           >
             Take the Free AI Readiness Questionnaire
