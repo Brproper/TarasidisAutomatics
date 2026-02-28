@@ -47,6 +47,7 @@
   letter-spacing: 3px;
   margin-bottom: 1rem;
   line-height: 1.4;
+  min-height: 2.8em; /* reserve 2 lines so font-swap never shifts content below */
   text-align: center;
   word-break: break-word;
   background-size: 150%;

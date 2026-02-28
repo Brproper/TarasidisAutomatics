@@ -13,7 +13,7 @@ export default function LazyVideo({
   });
 
   return (
-    <div ref={ref} style={{ width: "100%", height: "100%" }}>
+    <div ref={ref} style={{ position: "absolute", inset: 0, pointerEvents: "none" }}>
       {inView && (
         <video
           autoPlay

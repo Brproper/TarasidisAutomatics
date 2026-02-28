@@ -85,24 +85,6 @@
       />
     </noscript>
 
-    <!-- Calendly Widget (deferred - only needed for contact section) -->
-    <link
-      rel="preload"
-      href="https://assets.calendly.com/assets/external/widget.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript>
-      <link
-        href="https://assets.calendly.com/assets/external/widget.css"
-        rel="stylesheet"
-      />
-    </noscript>
-    <script
-      src="https://assets.calendly.com/assets/external/widget.js"
-      defer
-    ></script>
-
     <!-- Structured Data -->
     <script type="application/ld+json">
       {
@@ -153,7 +135,7 @@
       window.MEDFITAI_API_URL =
         "https://mefitai-chatbot-production.up.railway.app";
     </script>
-    <script src="https://mefitai-chatbot-production.up.railway.app/static/widget.js"></script>
+    <script src="https://mefitai-chatbot-production.up.railway.app/static/widget.js" defer></script>
 
     <!-- Main CSS (Vite will inject via import in JS) -->
   </head>
