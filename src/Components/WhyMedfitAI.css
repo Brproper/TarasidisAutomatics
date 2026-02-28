@@ -4,7 +4,7 @@
 
 .why-medfit-section {
   padding: 5rem 12rem;
-  background: linear-gradient(to top, #f7f9fc, rgba(0, 191, 255, 0.08));
+  background: linear-gradient(to bottom, #f0f4f8, var(--background-color));
   display: flex;
   flex-direction: column;
   align-items: center;
