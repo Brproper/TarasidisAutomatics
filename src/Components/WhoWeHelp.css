@@ -49,9 +49,16 @@
 .who-card {
   cursor: pointer;
   background: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   padding: 3rem;
   border-radius: 8px;
   box-shadow: 0 8px 24px rgba(0, 191, 255, 0.15);
+
   border: 4px solid transparent;
   text-align: left;
   transition: all 0.3s ease-in-out; /* smooth hover animation */
@@ -162,7 +169,7 @@
   color: var(--highlight-color);
 }
 
-.who-card:hover .icon {
+.who-card:hover .icon-container {
   transform: scale(1.15);
   box-shadow: 0 0 30px rgba(0, 191, 255, 0.8);
   background-position: right center;

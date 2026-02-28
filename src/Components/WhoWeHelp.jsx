@@ -27,7 +27,36 @@ function WhoWeHelp() {
         {/* Healthcare Clinics & Professionals Card */}
         <div className="who-card">
           <div className="icon-container">
-            <ion-icon name="medkit-outline" class="icon"></ion-icon>
+            <svg
+              className="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              fill="none"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                d="M320 80H192a32 32 0 00-32 32v48h192V112a32 32 0 00-32-32z"
+                stroke="currentColor"
+                strokeWidth="32"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              {/* Bag body: square top corners, rounded bottom corners */}
+              <path
+                d="M48 160 L464 160 L464 428 A32 32 0 0 1 432 460 L80 460 A32 32 0 0 1 48 428 Z"
+                stroke="currentColor"
+                strokeWidth="32"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M256 224v160M176 304h160"
+                stroke="currentColor"
+                strokeWidth="32"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </div>
           <h3 className="gradient-text">Healthcare Clinics & Professionals</h3>
           <p>
@@ -54,7 +83,22 @@ function WhoWeHelp() {
         {/* Fitness Businesses & Professionals Card */}
         <div className="who-card">
           <div className="icon-container">
-            <ion-icon name="barbell-outline" class="icon"></ion-icon>
+            <svg
+              className="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              fill="none"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                d="M48 256h416M128 112v288M64 160v192M384 112v288M448 160v192"
+                stroke="currentColor"
+                strokeWidth="40"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </div>
           <h3 className="gradient-text">Fitness Businesses & Professionals</h3>
           <p>

@@ -1,13 +1,22 @@
 import "./Hero.css";
 import AnimatedHeader from "./AnimatedHeader";
-import LazyVideo from "./LazyVideo";
 import landingVideo from "../assets/videos/LandingPageAi4.mp4";
 
 function Hero() {
   return (
     <header className="hero-section" id="about">
-      {/* Background Video */}
-      <LazyVideo src={landingVideo} type="video/mp4" />
+      {/* Background Video — rendered immediately as it is the LCP element */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="background-video"
+        preload="auto"
+        aria-hidden="true"
+      >
+        <source src={landingVideo} type="video/mp4" />
+      </video>
 
       <div className="video-overlay"></div>
 

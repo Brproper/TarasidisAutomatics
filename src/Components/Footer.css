@@ -76,14 +76,15 @@
   justify-content: center;
 }
 
-.footer-socials ion-icon {
-  font-size: 1.6rem;
+.footer-socials .footer-icon {
+  width: 1.6rem;
+  height: 1.6rem;
   color: var(--highlight-color);
 
   transition: transform 0.5s ease;
 }
 
-.footer-socials ion-icon:hover {
+.footer-socials .footer-icon:hover {
   transform: scale(1.2);
   color: var(--secondary-color);
 }
@@ -106,7 +107,7 @@
     font-size: 1.1rem;
   }
 
-  .footer-socials ion-icon {
+  .footer-socials .footer-icon {
     font-size: 1.5rem;
   }
 }
@@ -159,7 +160,7 @@
     font-size: 1rem;
   }
 
-  .footer-socials ion-icon {
+  .footer-socials .footer-icon {
     font-size: 1.4rem;
   }
 }
@@ -187,7 +188,7 @@
     gap: 1rem;
   }
 
-  .footer-socials ion-icon {
+  .footer-socials .footer-icon {
     font-size: 1.3rem;
   }
 }
@@ -209,7 +210,7 @@
     font-size: 0.9rem;
   }
 
-  .footer-socials ion-icon {
+  .footer-socials .footer-icon {
     font-size: 1.2rem;
   }
 }
