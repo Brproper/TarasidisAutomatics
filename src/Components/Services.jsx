@@ -17,7 +17,7 @@ function Services() {
         style={{
           "--typing-width": "18ch",
           "--typing-duration": "2.5s",
-          "--typing-steps": "20",
+          "--typing-steps": "18",
           "--typing-cursor-color": "var(--highlight-color)",
         }}
       >

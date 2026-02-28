@@ -30,9 +30,9 @@ function Contact() {
             as="h3"
             className="contact-header"
             style={{
-              "--typing-width": "23ch",
-              "--typing-duration": "3s",
-              "--typing-steps": "23",
+              "--typing-width": "27.5ch",
+              "--typing-duration": "3.8s",
+              "--typing-steps": "27",
               "--typing-cursor-color": "var(--background-color)",
             }}
           >
@@ -49,7 +49,7 @@ function Contact() {
           <div
             ref={calendlyRef}
             className="contact-caledly calendly-inline-widget"
-            data-url="https://calendly.com/tarasidis17/discovery-call"
+            data-url="https://calendly.com/tarasidis17/discovery-call?hide_event_type_details=1"
           ></div>
         </div>
       </div>

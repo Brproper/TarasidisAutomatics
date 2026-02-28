@@ -229,6 +229,14 @@
     font-size: 1.5rem;
     letter-spacing: 1.75px;
   }
+
+  .hero-description p {
+    border-width: 3px;
+  }
+
+  .hero-description p:hover {
+    border-width: 3px;
+  }
 }
 
 /* --------- Extra Small Devices (≤400px) --------- */
@@ -287,5 +295,10 @@
 
   .hero-description p {
     font-size: 0.9rem;
+    border-width: 2px;
+  }
+
+  .hero-description p:hover {
+    border-width: 2px;
   }
 }

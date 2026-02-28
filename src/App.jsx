@@ -15,6 +15,7 @@ import Hero from "./Components/Hero.jsx"; // Keep Hero always visible
 const WhoWeHelp = lazy(() => import("./Components/WhoWeHelp.jsx"));
 const Services = lazy(() => import("./Components/Services.jsx"));
 const HowItWorks = lazy(() => import("./Components/HowItWorks.jsx"));
+const MeetOurTeam = lazy(() => import("./Components/MeetOurTeam.jsx"));
 const WhyMedfitAI = lazy(() => import("./Components/WhyMedfitAI.jsx"));
 // const Faq = lazy(() => import("./Components/Faq.jsx"));
 const Contact = lazy(() => import("./Components/Contact.jsx"));
@@ -54,6 +55,10 @@ export default function App() {
               {/* Lazy-loaded below-the-fold sections */}
               <Suspense fallback={<Loader text="Loading HowItWorks..." />}>
                 <HowItWorks />
+              </Suspense>
+
+              <Suspense fallback={<Loader text="Loading MeetOurTeam..." />}>
+                <MeetOurTeam />
               </Suspense>
 
               <Suspense fallback={<Loader text="Loading WhyMedfitAI..." />}>

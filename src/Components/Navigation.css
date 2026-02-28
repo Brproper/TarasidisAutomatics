@@ -179,7 +179,7 @@
 /* ----------- Small Tablets / Large Mobiles (≤855px) - Hamburger Menu ----------- */
 @media (max-width: 855px) {
   .navigation-bar {
-    padding: 2rem 2.5rem;
+    padding: 1rem 2.5rem;
   }
 
   .navigation-links {
@@ -240,7 +240,7 @@
 /* ----------- Regular Mobile (≤600px) ----------- */
 @media (max-width: 600px) {
   .navigation-bar {
-    padding: 2rem 2rem;
+    padding: 1rem 2rem;
   }
 
   .navigation-link {
@@ -262,7 +262,7 @@
 /* ----------- Small Mobile (≤480px) ----------- */
 @media (max-width: 480px) {
   .navigation-bar {
-    padding: 2rem 1.8rem;
+    padding: 1rem 1.8rem;
   }
 
   .navigation-link {
@@ -278,7 +278,7 @@
 /* ----------- Extra Small Devices (≤375px) ----------- */
 @media (max-width: 375px) {
   .navigation-bar {
-    padding: 2rem 1.6rem;
+    padding: 1rem 1.6rem;
   }
 
   .navigation-link {

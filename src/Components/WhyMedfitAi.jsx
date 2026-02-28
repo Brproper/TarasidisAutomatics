@@ -9,8 +9,8 @@ export default function WhyMedfitAI() {
           as="h2"
           style={{
             "--typing-width": "12ch",
-            "--typing-duration": "2s",
-            "--typing-steps": "14",
+            "--typing-duration": "1.8s",
+            "--typing-steps": "12",
             "--typing-cursor-color": "var(--highlight-color)",
           }}
         >

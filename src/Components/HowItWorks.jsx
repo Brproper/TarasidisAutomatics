@@ -41,8 +41,8 @@ function HowItWorks() {
           className="section-heading"
           style={{
             "--typing-width": "10.5ch",
-            "--typing-duration": "2s",
-            "--typing-steps": "13",
+            "--typing-duration": "1.7s",
+            "--typing-steps": "11",
             "--typing-cursor-color": "var(--background-color)",
           }}
         >

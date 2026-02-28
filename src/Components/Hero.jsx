@@ -20,7 +20,7 @@ function Hero() {
           style={{
             "--typing-width": "39ch",
             "--typing-duration": "5.5s",
-            "--typing-steps": "40",
+            "--typing-steps": "39",
             "--typing-cursor-color": "var(--background-color)",
           }}
         >
