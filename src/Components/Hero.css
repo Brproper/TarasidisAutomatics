@@ -48,8 +48,15 @@
   margin-bottom: 1rem;
   line-height: 1.4;
   text-align: center;
-  word-break: break-word;
+  white-space: nowrap;  /* Keeps height stable (single line) before & during animation */
+  overflow: hidden;     /* Clips any text that exceeds the element width */
   background-size: 150%;
+}
+
+/* Hide the h1 before the animation class is applied — prevents the
+   one-frame flash of full text that causes the CLS on the <p> below */
+.hero-section h1:not(.animated-typing) {
+  visibility: hidden;
 }
 
 /* Typing Animation now handled by AnimatedHeader component */
